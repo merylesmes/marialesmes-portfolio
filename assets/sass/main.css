@@ -805,13 +805,13 @@ meter {
   height: 40vh;
 }
 .trabajos .gallery #patito_feo {
-  background-image: url("/assets/img/patito_feo.png");
+  background-image: url("/assets/img/patito/portadas/patito_feo_hover.png");
 }
 .trabajos .gallery #tribaldos {
-  background-image: url("/assets/img/tribaldos.png");
+  background-image: url("/assets/img/Tribaldos/tribaldos_hero.png");
 }
 .trabajos .gallery #casoN1 {
-  background-image: url("/assets/img/CASO Nº.png");
+  background-image: url("/assets//img/CASO Nº.png");
 }
 .trabajos .gallery .fotoR {
   display: flex;
@@ -907,7 +907,8 @@ meter {
   position: relative;
   width: 100%;
   height: 40vh;
-  background-image: url("/assets/img/patito_feo_hover.png");
+  background-image: url("/assets/img/patito/portadas/patito_feo_hover.png");
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1139,6 +1140,7 @@ meter {
 }
 .proyect_patito .proyect_content_patito .programas .title {
   font-size: 0.9rem;
+  color: whitesmoke;
 }
 .proyect_patito .proyect_content_patito .programas .programas_icon {
   display: flex;
@@ -1163,6 +1165,7 @@ meter {
   height: 40vh;
   background-image: url("/assets/img/Tribaldos/tribaldos_hero.png");
   display: flex;
+  background-size: cover;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -1494,10 +1497,10 @@ meter {
 
 * {
   font-family: "Sora";
+  cursor: none !important;
 }
 
 body {
-  cursor: none;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
