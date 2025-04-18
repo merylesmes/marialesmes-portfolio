@@ -92,4 +92,19 @@ git merge main
 
 ---
 
-💬 Si tienes dudas, ¡no dudes en preguntar al equipo!
+---
+
+## 🔀 Mergear ramas manualmente
+
+Si prefieres hacer el merge desde la terminal, sigue estos pasos:
+
+```bash
+# Ve a la rama principal
+git checkout main
+
+# Actualízala
+git pull origin main
+
+# Mergea la rama que trabajaste
+git merge nombre-de-la-rama
+
