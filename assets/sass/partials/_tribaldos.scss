@@ -17,6 +17,7 @@
         height: 40vh; // Altura de la sección hero, puede ajustarse a 100vh si se desea pantalla completa
         background-image: url('/assets/img/Tribaldos/tribaldos_hero.png'); // Imagen de fondo del proyecto
         display: flex;
+        background-size: cover;
         justify-content: center;
         align-items: center;
         text-align: center;

@@ -21,12 +21,13 @@
     // border: solid 1px salmon;
     font-family: "Sora";
     // background-color: whitesmoke;
+    cursor: none !important;
 
 }
 
 body {
 
-    cursor: none;
+    // cursor: none;
 
     display: flex;
     flex-direction: column;

@@ -77,7 +77,7 @@ document.addEventListener("mousemove", (e) => {
 
 document.addEventListener("mouseover", (e) => {
     const hovered = e.target;
-    const isInteractive = hovered.matches("a, button, input, textarea, select, label, [data-interactivo], .hoverable")
+    const isInteractive = hovered.closest("a, button, input, textarea, select, label, [data-interactivo], .hoverable")
         || getComputedStyle(hovered).cursor === "pointer";
 
     if (isInteractive) {
