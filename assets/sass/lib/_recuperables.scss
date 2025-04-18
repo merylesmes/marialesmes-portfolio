@@ -1,0 +1,43 @@
+@mixin titulo_portfolio {
+    font-family: "Ophelia", sans-serif;
+}
+
+@mixin titulos_contenidos {
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    @include titulo_portfolio;
+    font-size: 1.75rem;
+}
+
+@mixin margenes_contenido {
+    padding: 0 10rem 0;
+    width: 800px;
+    margin-bottom: 3rem;
+}
+
+@mixin body_text {
+    font-size: .90rem;
+    // color: $color_gray;
+}
+
+
+@mixin icons_programa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    gap: .75rem;
+
+}
+
+@mixin programas_title {
+    // color: whitesmoke;
+    font-size: .90rem;
+}
+
+
+@mixin imgs {
+    width: 100%;
+    object-fit: cover; // o 'contain' si querés que no se recorte nada
+    display: block;
+}

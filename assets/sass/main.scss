@@ -1,0 +1,64 @@
+@import "lib/reset";
+@import "lib/fuentes";
+@import "lib/mixins";
+@import "lib/recuperables";
+
+@import "partials/gradient_bg";
+@import "partials/inicio";
+@import "partials/trabajos";
+// INDIVIDUALES DE TRABAJOS
+@import "partials/patito";
+@import "partials/tribaldos";
+
+
+
+
+
+
+
+
+* {
+    // border: solid 1px salmon;
+    font-family: "Sora";
+    // background-color: whitesmoke;
+
+}
+
+body {
+
+    cursor: none;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; // Asegura que todo ocupe el alto de la pantalla
+    margin: 0;
+    overflow-x: hidden;
+
+    // Oculta scrollbar en la mayoría de navegadores
+    // scrollbar-width: none; // Firefox
+    // -ms-overflow-style: none; // IE/Edge
+    &::-webkit-scrollbar {
+        display: none; // Chrome, Safari
+    }
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(255, 0, 119);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease, backdrop-filter 0.2s ease;
+    z-index: 1000000001;
+    background-color: rgba(255, 105, 180, 0.2); // hotpink suave
+    backdrop-filter: blur(2px);
+
+    &.interactive {
+        width: 35px;
+        height: 35px;
+        background-color: rgba(255, 105, 180, 0.4);
+        backdrop-filter: blur(4px);
+    }
+}

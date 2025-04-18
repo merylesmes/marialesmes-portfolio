@@ -1,0 +1,503 @@
+// ===================== NAVBAR =====================
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 40px;
+    background-color: whitesmoke;
+
+    .icon_ml {
+        display: flex;
+        align-items: center;
+
+        img {
+            display: flex;
+            width: 50px;
+        }
+    }
+
+    .menu_button {
+        position: relative;
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            border-radius: 4px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+
+            a {
+                display: block;
+                padding: 10px 15px;
+                color: #333;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: #f1f1f1;
+                }
+            }
+
+            &.show {
+                display: block;
+            }
+        }
+    }
+}
+
+/* ===================== NAVBAR 2 ===================== */
+.nav2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 40px;
+    /* Ajusta la altura según lo que necesites */
+    background-color: whitesmoke;
+
+    .icon_ml {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 50px;
+            /* Ajusta el tamaño del logo */
+        }
+    }
+
+    .menu_button {
+        position: relative;
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            display: inline-block;
+        }
+    }
+
+    .center-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+
+        .back-btn {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            color: $color_gray;
+
+            span {
+                font-size: 1rem;
+                @include body_text;
+                &:hover{
+                    color: $color_rosa;
+                }
+            }
+            &:hover{
+                color: $color_rosa;
+            }
+        }
+    }
+}
+
+/* Estilos para la flecha de volver al inicio */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: $color_rosa;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.75rem;
+    display: none; /* Por defecto, está oculta */
+    z-index: 9999;
+    transition: opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+    color: whitesmoke;
+}
+
+/* Aparece la flecha cuando el usuario hace scroll */
+.show {
+    display: block;
+}
+
+// ===================== MENÚ LATERAL =====================
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    padding: 2rem;
+    background-color: whitesmoke;
+    transition: right 0.3s ease-in-out;
+    z-index: 10001;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+
+    * {
+        background-color: inherit;
+    }
+
+    &.show {
+        right: 0;
+    }
+
+    .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        span {
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        button {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: rgb(255, 0, 119);
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 1rem 0;
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: rgba(255, 0, 119, 0.77);
+                }
+            }
+        }
+    }
+}
+
+// ===================== CAPA DESENFOCADA =====================
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(240, 240, 240, 0.5);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+// ===================== INTRO BACKGROUND =====================
+.container_intro_bg {
+    flex-grow: 1;
+}
+
+// ===================== CONTENEDOR INFO INICIO =====================
+.container_info {
+    position: fixed;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    padding: 2rem;
+    color: whitesmoke;
+
+    .title_portfolio {
+        font-family: "Ophelia";
+        font-size: clamp(3rem, 20vw, 17.5rem);
+        line-height: 7rem;
+    }
+
+    .info_portfolio {
+        width: 25ch;
+        text-align: right;
+
+        .info_text {}
+
+        .info_work_button {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: flex-end;
+
+            .text {
+                border-bottom: 2px solid rgb(255, 0, 119);
+                width: fit-content;
+            }
+
+            .arrow {
+                color: $color_rosa;
+            }
+        }
+    }
+}
+
+// ===================== FOOTER GENERAL =====================
+.container_footer {
+    position: relative;
+    bottom: auto;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    border-top: solid 0.5px rgba(128, 128, 128, 0.629);
+    background-color: whitesmoke;
+
+    .redes {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .behance {
+            display: flex;
+            align-items: center;
+
+            .behance_nombre {}
+
+            .arrow {}
+        }
+
+        .instagram {
+            display: flex;
+            align-items: center;
+
+            .instagram_nombre {}
+
+            .arrow {}
+        }
+    }
+
+    .info_background {}
+
+    .correo {
+        display: flex;
+        align-items: center;
+
+        .correo_nombre {}
+
+        .arrow {}
+    }
+}
+
+// ===================== FOOTER FIJO EN INTRO =====================
+.container_footer_intro {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem;
+    z-index: 10;
+    background-color: whitesmoke;
+
+    .redes {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+
+        .behance,
+        .instagram {
+            display: flex;
+            align-items: center;
+
+            .behance_nombre,
+            .instagram_nombre {
+                margin-right: 0.5rem;
+            }
+
+            .arrow {}
+        }
+    }
+
+    .info_background {
+        font-size: .75rem;
+        color: $color_rosa;
+    }
+
+    .correo {
+        display: flex;
+        align-items: center;
+
+        .correo_nombre {
+            margin-right: 0.5rem;
+        }
+
+        .arrow {}
+    }
+}
+
+// ===================== MEDIA QUERIES RESPONSIVE =====================
+@media screen and (max-width: 1024px) {
+    .container_info {
+        flex-direction: column;
+        align-items: baseline;
+        bottom: 100px;
+        padding: 1rem;
+
+        .title_portfolio {
+            font-size: clamp(2rem, 10vw, 8rem);
+        }
+
+        .info_portfolio {
+            width: 100%;
+            text-align: left;
+            font-size: 0.95rem; // REDUCE TAMAÑO DE TEXTO
+
+            .info_work_button {
+                justify-content: flex-start;
+
+                .text {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    .container_footer,
+    .container_footer_intro {
+        flex-direction: row; // MANTENEMOS EN FILA PARA NO CRECER EN ALTO
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+
+        .redes,
+        .correo {
+            font-size: 0.85rem;
+            gap: 0.25rem;
+        }
+
+        .info_background {
+            font-size: 0.7rem;
+        }
+    }
+
+    .nav {
+        padding: 1rem;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .icon_ml img {
+            width: 40px;
+        }
+
+        .menu_button .btn {
+            padding: 6px 12px;
+            font-size: 0.9rem;
+        }
+    }
+
+    .side-menu {
+        width: 100%;
+        padding: 1.5rem;
+
+        .menu-header span {
+            font-size: 1rem;
+        }
+
+        ul li a {
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .container_info {
+        gap: 1rem;
+
+        .title_portfolio {
+            font-size: clamp(2rem, 15vw, 5rem);
+        }
+
+        .info_portfolio {
+            width: 100%;
+            font-size: 0.85rem;
+
+            .info_work_button {
+                .text {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+    .nav {
+        padding: 1rem;
+
+        .icon_ml img {
+            width: 36px;
+        }
+
+        .menu_button .btn {
+            font-size: 0.8rem;
+        }
+    }
+
+    .container_footer,
+    .container_footer_intro {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+
+        .redes,
+        .correo {
+            font-size: 0.75rem;
+        }
+
+        .info_background {
+            font-size: 0.65rem;
+        }
+    }
+}

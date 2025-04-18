@@ -1,0 +1,422 @@
+// ==============================================================================
+// SECCIÓN: .proyect
+// ==============================================================================
+
+.proyect_tribaldos {
+    width: 100%;
+    background-color: #cecece;
+    @include imgs; // Incluir imágenes de fondo y otros estilos reutilizables
+    padding-top: 46px;
+
+    // =======================================================================
+    // SECCIÓN: HERO PROYECTO
+    // =======================================================================
+    .hero_proyect {
+        position: relative;
+        width: 100%;
+        height: 40vh; // Altura de la sección hero, puede ajustarse a 100vh si se desea pantalla completa
+        background-image: url('/assets/img/Tribaldos/tribaldos_hero.png'); // Imagen de fondo del proyecto
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black; // Color del texto en la sección hero
+        overflow: hidden;
+
+        // Capa de oscurecimiento para mejorar el contraste
+        .overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        // Contenido principal dentro de la sección hero
+        .hero_content {
+            position: relative;
+            width: 20ch;
+            z-index: 2;
+            line-height: 3.75rem;
+            padding: 1rem;
+
+            h1 {
+                @include titulo_portfolio; // Estilo de título reutilizable
+                font-size: 4rem;
+                color: black;
+            }
+
+            h2 {
+                font-size: 1rem;
+                color: black;
+            }
+        }
+    }
+
+    // =======================================================================
+    // SECCIÓN: INFORMACIÓN DEL PROYECTO
+    // =======================================================================
+    .proyect_content_tribaldos {
+        .info_proyect {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            width: 600px;
+            padding: 2.5rem 2rem 0 2rem;
+
+            .brief {
+                margin: 0 auto;
+                max-width: 60%; // Ancho máximo para la sección brief
+
+                .info_brief {
+                    // Estilos para la información de briefing
+
+                    #briefing_title {
+                        color: black;
+                        margin-bottom: 1rem;
+                    }
+
+                    #briefing_content {
+                        color: $color_marron; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text; // Estilo de texto reutilizable
+                    }
+                }
+            }
+
+            .plus_info {
+                margin: 0 auto;
+
+                .asignatura {
+                    // Estilos para la asignatura
+
+                    #asignatura_title {
+                        color: black;
+                        margin-bottom: 1rem;
+                    }
+
+                    #asignatura_content {
+                        color: $color_marron; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text;
+                    }
+                }
+
+                .tiempo {
+                    // Estilos para la duración
+
+                    #tiempo_title {
+                        color: black;
+                        margin-bottom: 1rem;
+                    }
+
+                    #tiempo_content {
+                        color: $color_marron; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text;
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: CATEGORÍAS DEL PROYECTO
+        // =======================================================================
+        .categories {
+            margin: 0 auto;
+            display: flex;
+            width: 600px;
+            @include body_text;
+            padding: 0 2rem;
+            color: #797979;
+            font-weight: bold;
+            margin-bottom: 5rem;
+        }
+
+        // =======================================================================
+        // SECCIÓN: VIDEO PROYECTO (imagen de portada o video)
+        // =======================================================================
+        #video_proyect {
+            background-image: url(/assets/img/hero.png); // Imagen de fondo del video
+            margin-bottom: 5rem;
+        }
+
+        // =======================================================================
+        // SECCIÓN: REFERENCIAS (títulos, textos, enlaces)
+        // =======================================================================
+        .referencias {
+            padding: 0 10rem 0;
+            width: 800px;
+            margin-bottom: 5rem;
+
+            .title {
+                color: black;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .content {
+                @include body_text;
+                color: $color_marron; // Sustituido por variable $color_gray
+            }
+
+        }
+
+        // =======================================================================
+        // SECCIÓN: CONTRACUBIERTA (sección de cubiertas)
+        // =======================================================================
+        .contracubierta {
+            @include margenes_contenido;
+            width: 100%;
+            margin-bottom: 5rem;
+
+            .title {
+                @include titulos_contenidos; // Estilo de título reutilizable
+                color: black;
+            }
+
+            .contenedor_cubiertas {
+                display: flex;
+                gap: 3rem;
+
+                .imagenes_cubiertas {
+                    display: flex;
+                    gap: 1rem;
+
+                    img {
+                        @include imgs;
+                        width: 350px;
+                    }
+                }
+
+                .cubierta_content {
+                    color: $color_marron; // Sustituido por variable $color_gray
+
+                    @include body_text;
+                    width: 35ch;
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: ACABADOS
+        // =======================================================================
+        .acabados {
+            @include margenes_contenido;
+            width: 100%;
+            margin-bottom: 5rem;
+
+            .title {
+                @include titulos_contenidos; // Estilo de título reutilizable
+                color: black;
+            }
+
+            .acabados_content {
+                @include body_text;
+                color: $color_marron;
+                margin-bottom: 1rem;
+
+            }
+
+            .acabados_list {
+                @include body_text;
+                color: $color_marron;
+                list-style: none; // quitamos el estilo por defecto
+                padding-left: 1.75rem;
+
+                margin-bottom: 2rem;
+
+                li {
+                    position: relative;
+                    padding-left: 1rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0.6em;
+                        width: 0.5em;
+                        height: 0.25em;
+                        background-color: $color_rosa;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            .immagenes_acabados_content {
+                display: flex;
+                flex-direction: column;
+
+                gap: 2rem;
+
+                .acabados_img {
+                    display: flex;
+                    gap: 2rem;
+
+
+
+
+                    img {
+                        @include imgs;
+                        width: 180px;
+
+                    }
+                }
+
+                .acabados_img2 {
+                    display: flex;
+                    gap: 2rem;
+
+
+
+                    img {
+                        @include imgs;
+                        width: 300px;
+
+
+
+                    }
+                }
+            }
+
+
+        }
+
+        // =======================================================================
+        // SECCIÓN: CARRUSEL (para imágenes deslizantes)
+        // =======================================================================
+        .carrusel_tribaldos {
+            @include margenes_contenido;
+            width: 100%;
+            max-width: 100vw;
+            padding: 0 10rem 0;
+            text-align: left;
+            margin-bottom: 4rem;
+
+            .title {
+                @include titulos_contenidos;
+                color: black;
+                margin-bottom: 1rem;
+            }
+
+            .carrusel-wrapper {
+                position: relative;
+                width: fit-content;
+                margin-right: auto; // Esto alinea el carrusel a la derecha
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .prev,
+                .next {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: transparent;
+                    border: none;
+                    font-size: 3rem;
+                    color: black;
+                    padding: 1rem;
+                    cursor: pointer;
+                    z-index: 10;
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: $color_rosa;
+                    }
+                }
+
+                .prev {
+                    left: -3rem; // Ajuste para el botón de "anterior"
+                }
+
+                .next {
+                    right: -3rem; // Ajuste para el botón de "siguiente"
+                }
+
+                .carrusel-viewport {
+                    width: 964px;
+                    height: 482px;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .carrusel-track {
+                    display: flex;
+                    transition: transform 0.5s ease;
+                    width: fit-content;
+                }
+
+                .slide {
+                    flex: 0 0 auto;
+                    width: 964px;
+                    height: 482px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 964px;
+                        height: 482px;
+                        object-fit: contain;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: PACKAGING
+        // =======================================================================
+
+        .packaging {
+            @include margenes_contenido;
+            margin-bottom: 5rem;
+
+            .title {
+                @include titulos_contenidos;
+                color: black;
+                margin-bottom: 1rem;
+            }
+
+            .content {
+                @include body_text;
+                color: $color_marron;
+                margin-bottom: 2rem;
+            }
+
+            .images_packaging {
+                display: flex;
+                gap: 2rem;
+
+                img {
+                    @include imgs;
+                    width: 300px;
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: PROGRAMAS (sección para mostrar programas o habilidades)
+        // =======================================================================
+        .programas_tribaldos {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 3rem;
+
+            .title {
+                @include programas_title;
+                color: black
+            }
+
+            .programas_icon {
+                @include icons_programa;
+            }
+        }
+    }
+}
