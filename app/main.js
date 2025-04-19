@@ -95,10 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     const slides = document.querySelectorAll('.slide');
-
+    
     let currentIndex = 0;
-    const slideWidth = 964;
-
+    
+    // Determinamos el slideWidth dependiendo de la página
+    const slideWidth= slides[0].offsetWidth;
+        
     function updateCarrusel() {
         const offset = -currentIndex * slideWidth;
         track.style.transform = `translateX(${offset}px)`;
@@ -130,7 +132,20 @@ document.addEventListener('DOMContentLoaded', () => {
             goToNextSlide();
         }
     });
+
+    // Si las imágenes cambian de tamaño dinámicamente o si la ventana cambia de tamaño, recalculamos el slideWidth
+    window.addEventListener('resize', () => {
+        if (document.body.classList.contains('pagina-877px')) {
+            slideWidth = 877;
+        } else if (document.body.classList.contains('pagina-964px')) {
+            slideWidth = 964;
+        } else {
+            slideWidth = slides[0].offsetWidth;
+        }
+        updateCarrusel();
+    });
 });
+
 
 
 // Mostrar la flecha cuando el usuario haga scroll hacia abajo

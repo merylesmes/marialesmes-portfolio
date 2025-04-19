@@ -1,7 +1,6 @@
 // ==============================================================================
 // SECCIÓN: .proyect
 // ==============================================================================
-
 .proyect_tribaldos {
     width: 100%;
     background-color: #cecece;
@@ -294,13 +293,13 @@
             padding: 0 10rem 0;
             text-align: left;
             margin-bottom: 4rem;
-
+        
             .title {
                 @include titulos_contenidos;
                 color: black;
                 margin-bottom: 1rem;
             }
-
+        
             .carrusel-wrapper {
                 position: relative;
                 width: fit-content;
@@ -308,7 +307,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
+                background-size: cover;
+        
                 .prev,
                 .next {
                     position: absolute;
@@ -322,50 +322,52 @@
                     cursor: pointer;
                     z-index: 10;
                     transition: color 0.3s;
-
+        
                     &:hover {
                         color: $color_rosa;
                     }
                 }
-
+        
                 .prev {
                     left: -3rem; // Ajuste para el botón de "anterior"
                 }
-
+        
                 .next {
                     right: -3rem; // Ajuste para el botón de "siguiente"
                 }
-
+        
                 .carrusel-viewport {
-                    width: 964px;
-                    height: 482px;
+                    width: 877px;  /* Ancho del contenedor de la imagen */
+                    height: 620px; /* Alto del contenedor de la imagen */
+                    background-size: cover;
                     overflow: hidden;
                     position: relative;
                 }
-
+        
                 .carrusel-track {
                     display: flex;
                     transition: transform 0.5s ease;
-                    width: fit-content;
+                    // width: calc(877px * 19); /* Ajusta este valor según el número de imágenes */
                 }
-
+        
                 .slide {
                     flex: 0 0 auto;
-                    width: 964px;
-                    height: 482px;
+                    width: 877px;  /* Ancho del contenedor de la imagen */
+                    height: 620px; /* Alto del contenedor de la imagen */
                     display: flex;
                     justify-content: center;
                     align-items: center;
-
+        
                     img {
-                        width: 964px;
-                        height: 482px;
-                        object-fit: contain;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain; /* Asegura que la imagen no se deforme */
                         display: block;
                     }
                 }
             }
         }
+        
 
         // =======================================================================
         // SECCIÓN: PACKAGING
