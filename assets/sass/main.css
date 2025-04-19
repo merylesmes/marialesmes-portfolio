@@ -1468,58 +1468,123 @@ meter {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 5rem;
   background-color: black;
   color: rgb(255, 0, 119);
 }
 .about-section .about-wrapper {
   flex: 1;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 5rem;
 }
 .about-section .about-wrapper .left-side {
   flex: 1;
 }
 .about-section .about-wrapper .left-side .nombre {
-  font-size: 2.5rem;
+  font-family: "Ophelia", sans-serif;
+  width: 5ch;
+  font-size: 5rem;
   margin-bottom: 1rem;
+  line-height: 5.25rem;
 }
-.about-section .about-wrapper .left-side .descripcion p {
-  font-size: 1rem;
+.about-section .about-wrapper .left-side .descripcion {
   margin-bottom: 0.8rem;
   line-height: 1.6;
 }
-.about-section .about-wrapper .right-side {
-  flex: 0 0 300px;
+.about-section .about-wrapper .left-side .descripcion #title_description {
+  color: whitesmoke;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about-section .about-wrapper .left-side .descripcion #content_description {
+  width: 50ch;
+  color: #ADADAD;
+}
+.about-section .about-wrapper .left-side .descripcion #content_description p {
+  margin-bottom: 1.5rem;
 }
 .about-section .about-wrapper .right-side img {
   width: 100%;
-  max-height: 800px;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
+  width: 650px;
 }
-.about-section .skills {
-  margin-top: 2rem;
-  text-align: center;
+.about-section .studies {
+  margin-bottom: 5rem;
+}
+.about-section .studies .title {
+  font-size: 2rem;
+  font-family: "Ophelia", sans-serif;
+  color: rgb(255, 0, 119);
+  margin-bottom: 1.5rem;
+}
+.about-section .studies .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.about-section .studies .content .estudio .title {
+  font-family: "sora";
+  color: whitesmoke;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.about-section .studies .content .estudio .lugar {
+  color: #ADADAD;
 }
 .about-section .skills h2 {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-family: "Ophelia", sans-serif;
+  color: rgb(255, 0, 119);
+  margin-bottom: 1.5rem;
+}
+.about-section .skills .categorias_content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.about-section .skills .categorias_content .categorias {
+  position: relative;
+}
+.about-section .skills .categorias_content .categorias .title {
+  color: whitesmoke;
   margin-bottom: 1rem;
 }
-.about-section .skills ul {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  list-style: none;
-  padding: 0;
+.about-section .skills .categorias_content .categorias ul {
+  margin-bottom: 3rem;
 }
-.about-section .skills ul li {
-  background-color: #f4f4f4;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
+.about-section .skills .categorias_content .categorias ul li {
+  position: relative;
+  padding-left: 2rem;
+  color: #ADADAD;
+}
+.about-section .skills .categorias_content .categorias ul li::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0.6em;
+  width: 0.5em;
+  height: 0.25em;
+  background-color: rgb(255, 0, 119);
+  border-radius: 50%;
+}
+.about-section .skills .categorias_content .categorias .programs {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+.about-section .skills .categorias_content .categorias .programs img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  width: 30px;
 }
 
 * {
@@ -1528,6 +1593,7 @@ meter {
 }
 
 body {
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
