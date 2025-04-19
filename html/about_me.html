@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
-    <title>Trabajos</title>
+    <title>Sobre Mi</title>
 </head>
 
 <body>
@@ -41,51 +41,37 @@
             </ul>
         </nav>
         <div id="scrollProgress"></div>
-        <div class="trabajos">
-            <div class="hero">
-                <!-- Background gradient added here -->
-                <div class="gradient-bg">
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <filter id="goo">
-                                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                                <feColorMatrix in="blur" mode="matrix"
-                                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
-                                <feBlend in="SourceGraphic" in2="goo" />
-                            </filter>
-                        </defs>
-                    </svg>
-                    <div class="gradients-container">
-                        <div class="g1"></div>
-                        <div class="g2"></div>
-                        <div class="g3"></div>
-                        <div class="g4"></div>
-                        <div class="g5"></div>
-                        <div class="interactive"></div>
+
+
+        <main class="about-section">
+            <div class="about-wrapper">
+                <div class="left-side">
+                    <h1 class="nombre">María Lesmes</h1>
+                    <div class="descripcion">
+                        <p>¡Hola! Soy María Lesmes, diseñadora gráfica con pasión por el detalle y la estética visual.</p>
+                        <p>Me especializo en proyectos que mezclan ilustración, branding y diseño web.</p>
+                        <p>Cuando no estoy diseñando, me encanta dibujar y experimentar con nuevas herramientas creativas.</p>
+                        <p>¡Gracias por visitar mi portfolio!</p>
                     </div>
                 </div>
-                <div class="overlay"></div>
-                <h1 id="workId">Trabajos</h1>
-                <h2 id="trabajoId">Works</h2>
-            </div>
-
-            <div class="gallery">
-                <a href="./patito.html" id="patito_feo" class="fotoR">
-                    <p class="right">El Hombre Pájaro</p>
-                </a>
-                <div id="casoN1" class="fotoL">
-                    <p class="left">Caso nº1</p>
+                <div class="right-side">
+                    <img src="/assets/img/aboutme/fotos_aboutme.png" alt="Foto de María Lesmes">
                 </div>
-                <a href="./tribaldos.html" id="tribaldos" class="fotoR">
-                    <p class="right">Tribaldos</p>
-                </a>
-
-                <div id="#" class="fotoL">
-                    <p class="left">MERY TE AMO</p>
-                </div>
-                <div id="carrusel"></div>
             </div>
-        </div>
+        
+            <div class="skills">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>Illustrator</li>
+                    <li>Photoshop</li>
+                    <li>Figma</li>
+                    <li>HTML/CSS</li>
+                    <li>Diseño UI</li>
+                </ul>
+            </div>
+        </main>
+        
+
         <div class="container_footer">
             <div class="redes">
                 <div class="behance">

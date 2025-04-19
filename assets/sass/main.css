@@ -266,7 +266,7 @@ meter {
   left: 0;
   z-index: 10000;
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color: whitesmoke;
 }
 .nav .icon_ml {
@@ -309,61 +309,26 @@ meter {
 .nav .menu_button .menu.show {
   display: block;
 }
-
-/* ===================== NAVBAR 2 ===================== */
-.nav2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-  width: 100%;
-  height: 40px;
-  /* Ajusta la altura según lo que necesites */
-  background-color: whitesmoke;
-}
-.nav2 .icon_ml {
-  display: flex;
-  align-items: center;
-}
-.nav2 .icon_ml img {
-  width: 50px;
-  /* Ajusta el tamaño del logo */
-}
-.nav2 .menu_button {
-  position: relative;
-}
-.nav2 .menu_button .btn {
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-block;
-}
-.nav2 .center-content {
+.nav .center-content {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
-.nav2 .center-content .back-btn {
+.nav .center-content .back-btn {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: #ADADAD;
 }
-.nav2 .center-content .back-btn span {
+.nav .center-content .back-btn span {
   font-size: 1rem;
   font-size: 0.9rem;
 }
-.nav2 .center-content .back-btn span:hover {
+.nav .center-content .back-btn span:hover {
   color: rgb(255, 0, 119);
 }
-.nav2 .center-content .back-btn:hover {
+.nav .center-content .back-btn:hover {
   color: rgb(255, 0, 119);
 }
 
@@ -503,6 +468,7 @@ meter {
   bottom: auto;
   left: 0;
   width: 100%;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -532,6 +498,7 @@ meter {
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1493,6 +1460,66 @@ meter {
   align-items: center;
   width: 40px;
   gap: 0.75rem;
+}
+
+.about-section {
+  flex-grow: 1;
+  min-height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: black;
+  color: rgb(255, 0, 119);
+}
+.about-section .about-wrapper {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.about-section .about-wrapper .left-side {
+  flex: 1;
+}
+.about-section .about-wrapper .left-side .nombre {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.about-section .about-wrapper .left-side .descripcion p {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+.about-section .about-wrapper .right-side {
+  flex: 0 0 300px;
+}
+.about-section .about-wrapper .right-side img {
+  width: 100%;
+  max-height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-section .skills {
+  margin-top: 2rem;
+  text-align: center;
+}
+.about-section .skills h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.about-section .skills ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+.about-section .skills ul li {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
 }
 
 * {

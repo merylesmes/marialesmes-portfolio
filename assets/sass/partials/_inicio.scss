@@ -9,7 +9,7 @@
     left: 0;
     z-index: 10000;
     width: 100%;
-    height: 40px;
+    height: 50px;
     background-color: whitesmoke;
 
     .icon_ml {
@@ -59,46 +59,6 @@
             }
         }
     }
-}
-
-/* ===================== NAVBAR 2 ===================== */
-.nav2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    width: 100%;
-    height: 40px;
-    /* Ajusta la altura según lo que necesites */
-    background-color: whitesmoke;
-
-    .icon_ml {
-        display: flex;
-        align-items: center;
-
-        img {
-            width: 50px;
-            /* Ajusta el tamaño del logo */
-        }
-    }
-
-    .menu_button {
-        position: relative;
-
-        .btn {
-            padding: 8px 16px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-            display: inline-block;
-        }
-    }
-
     .center-content {
         display: flex;
         align-items: center;
@@ -282,6 +242,7 @@
     bottom: auto;
     left: 0;
     width: 100%;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -331,6 +292,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
