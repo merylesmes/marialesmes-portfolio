@@ -23,18 +23,18 @@
         color: black; // Color del texto en la sección hero
         overflow: hidden;
 
-        // Capa de oscurecimiento para mejorar el contraste
-        .overlay {
-            position: absolute;
-            inset: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
+        // // Capa de oscurecimiento para mejorar el contraste
+        // .overlay {
+        //     position: absolute;
+        //     inset: 0;
+        //     background-color: rgba(0, 0, 0, 0.4);
+        //     z-index: 1;
+        // }
 
         // Contenido principal dentro de la sección hero
         .hero_content {
             position: relative;
-            width: 20ch;
+            max-width: 300px;
             z-index: 2;
             line-height: 3.75rem;
             padding: 1rem;
