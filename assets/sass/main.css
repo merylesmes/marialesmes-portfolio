@@ -773,12 +773,14 @@ meter {
 }
 .trabajos .gallery #patito_feo {
   background-image: url("/assets/img/patito/portadas/patito_feo_hover.png");
+  color: whitesmoke;
 }
 .trabajos .gallery #tribaldos {
   background-image: url("/assets/img/Tribaldos/tribaldos_hero.png");
 }
-.trabajos .gallery #casoN1 {
-  background-image: url("/assets//img/CASO Nº.png");
+.trabajos .gallery #lehenik {
+  background-image: url("/assets/img/lehenik/hero.png");
+  color: whitesmoke;
 }
 .trabajos .gallery .fotoR {
   display: flex;
@@ -891,7 +893,7 @@ meter {
 }
 .proyect_patito .hero_proyect .hero_content {
   position: relative;
-  width: 20ch;
+  max-width: 300px;
   z-index: 2;
   line-height: 3.75rem;
   padding: 1rem;
@@ -1139,15 +1141,9 @@ meter {
   color: black;
   overflow: hidden;
 }
-.proyect_tribaldos .hero_proyect .overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
 .proyect_tribaldos .hero_proyect .hero_content {
   position: relative;
-  width: 20ch;
+  max-width: 300px;
   z-index: 2;
   line-height: 3.75rem;
   padding: 1rem;
@@ -1455,6 +1451,363 @@ meter {
   color: black;
 }
 .proyect_tribaldos .proyect_content_tribaldos .programas_tribaldos .programas_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  gap: 0.75rem;
+}
+
+.proyect_lehenik {
+  width: 100%;
+  background-color: black;
+  color: rgb(255, 0, 119);
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  padding-top: 46px;
+}
+.proyect_lehenik .hero_proyect {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  background-image: url("/assets/img/lehenik/hero.png");
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: whitesmoke;
+  overflow: hidden;
+}
+.proyect_lehenik .hero_proyect .hero_content {
+  position: relative;
+  max-width: 450px;
+  z-index: 2;
+  line-height: 3.75rem;
+  padding: 1rem;
+}
+.proyect_lehenik .hero_proyect .hero_content h2 {
+  font-size: 1rem;
+}
+.proyect_lehenik .submenu-trabajo {
+  position: sticky;
+  top: 49px;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+  margin-top: 0;
+  border-bottom: 1px solid rgb(255, 0, 119);
+  border-top: 1px solid rgb(255, 0, 119);
+}
+.proyect_lehenik .submenu-trabajo ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.proyect_lehenik .submenu-trabajo ul li {
+  margin: 0 20px;
+  font-size: 0.75rem;
+}
+.proyect_lehenik .submenu-trabajo ul li a {
+  color: #ADADAD;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.proyect_lehenik .submenu-trabajo ul li a:hover {
+  color: rgb(255, 0, 119);
+}
+.proyect_lehenik #investigacion,
+.proyect_lehenik #naming,
+.proyect_lehenik #paleta,
+.proyect_lehenik #tipografia,
+.proyect_lehenik #logotipo,
+.proyect_lehenik #tratamiento,
+.proyect_lehenik #señaletica,
+.proyect_lehenik #programa #aplicaciones {
+  scroll-margin-top: 100px;
+}
+.proyect_lehenik .proyect_content_lehenik .info_proyect {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  width: 600px;
+  padding: 2.5rem 2rem 0 2rem;
+}
+.proyect_lehenik .proyect_content_lehenik .info_proyect .brief {
+  margin: 0 auto;
+  max-width: 60%;
+}
+.proyect_lehenik .proyect_content_lehenik .info_proyect .brief .info_brief #briefing_title {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+.proyect_lehenik .proyect_content_lehenik .info_proyect .brief .info_brief #briefing_content {
+  color: #ADADAD;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.proyect_lehenik .proyect_content_lehenik .info_proyect .plus_info {
+  margin: 0 auto;
+}
+.proyect_lehenik .proyect_content_lehenik .info_proyect .plus_info .asignatura #asignatura_title {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+.proyect_lehenik .proyect_content_lehenik .info_proyect .plus_info .asignatura #asignatura_content {
+  color: #ADADAD;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.proyect_lehenik .proyect_content_lehenik .info_proyect .plus_info .tiempo #tiempo_title {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+.proyect_lehenik .proyect_content_lehenik .info_proyect .plus_info .tiempo #tiempo_content {
+  color: #ADADAD;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+.proyect_lehenik .proyect_content_lehenik .categories {
+  margin: 0 auto;
+  display: flex;
+  width: 600px;
+  font-size: 0.9rem;
+  padding: 0 2rem;
+  color: #ADADAD;
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik #video_proyect {
+  background-image: url(/assets/img/hero.png);
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik .investigacion {
+  padding: 0 10rem 0;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik .investigacion .title {
+  color: rgb(255, 0, 119);
+  margin-bottom: 1rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik .investigacion .investigacion_content {
+  display: flex;
+  gap: 2rem;
+}
+.proyect_lehenik .proyect_content_lehenik .investigacion .investigacion_content .content_images {
+  display: flex;
+  gap: 1rem;
+  height: 350px;
+}
+.proyect_lehenik .proyect_content_lehenik .investigacion .investigacion_content .content_text {
+  font-size: 0.9rem;
+  color: #ADADAD;
+  width: 405px;
+}
+.proyect_lehenik .proyect_content_lehenik .naming {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 3rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik .naming .title {
+  color: rgb(255, 0, 119);
+  margin-bottom: 1rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik .naming .content_naming {
+  display: flex;
+  gap: 4rem;
+}
+.proyect_lehenik .proyect_content_lehenik .naming .content_naming img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  width: 350px;
+}
+.proyect_lehenik .proyect_content_lehenik .naming .content_naming .content_text {
+  color: #ADADAD;
+  font-size: 0.9rem;
+  max-width: 400px;
+}
+.proyect_lehenik .proyect_content_lehenik .naming .content_naming .content_text .content_title {
+  color: whitesmoke;
+  font-size: large;
+}
+.proyect_lehenik .proyect_content_lehenik .naming .content_naming .content_text .lehenik_text {
+  margin-bottom: 3rem;
+}
+.proyect_lehenik .proyect_content_lehenik .naming .content_naming .content_text .tematica_text {
+  margin-bottom: 3rem;
+}
+.proyect_lehenik .proyect_content_lehenik .paleta {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 3rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik .paleta .title {
+  color: rgb(255, 0, 119);
+  margin-bottom: 1rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content {
+  font-size: 0.9rem;
+  color: #ADADAD;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: flex-end;
+  gap: 3rem;
+}
+.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content .paleta_img img {
+  width: 600px;
+}
+.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content .paleta_text {
+  max-width: 400px;
+}
+.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content .paleta_text .colores_title {
+  color: whitesmoke;
+  font-size: large;
+}
+.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content .paleta_text .colores_text {
+  margin-bottom: 2rem;
+  margin-top: 0.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 100vw;
+  padding: 0 10rem 0;
+  text-align: left;
+  margin-bottom: 4rem;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .title {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .prev,
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  color: whitesmoke;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .prev:hover,
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .next:hover {
+  color: rgb(255, 0, 119);
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .prev {
+  left: -3rem;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .next {
+  right: -3rem;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .carrusel-viewport {
+  width: 877px; /* Ancho del contenedor de la imagen */
+  height: 620px; /* Alto del contenedor de la imagen */
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .carrusel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .slide {
+  flex: 0 0 auto;
+  width: 877px; /* Ancho del contenedor de la imagen */
+  height: 620px; /* Alto del contenedor de la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; /* Asegura que la imagen no se deforme */
+  display: block;
+}
+.proyect_lehenik .proyect_content_lehenik .packaging {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik .packaging .title {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+.proyect_lehenik .proyect_content_lehenik .packaging .content {
+  font-size: 0.9rem;
+  color: #ADADAD;
+  margin-bottom: 2rem;
+}
+.proyect_lehenik .proyect_content_lehenik .packaging .images_packaging {
+  display: flex;
+  gap: 2rem;
+}
+.proyect_lehenik .proyect_content_lehenik .packaging .images_packaging img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  width: 300px;
+}
+.proyect_lehenik .proyect_content_lehenik .programas_tribaldos {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 3rem;
+}
+.proyect_lehenik .proyect_content_lehenik .programas_tribaldos .title {
+  font-size: 0.9rem;
+  color: black;
+}
+.proyect_lehenik .proyect_content_lehenik .programas_tribaldos .programas_icon {
   display: flex;
   justify-content: center;
   align-items: center;
