@@ -1,0 +1,237 @@
+// ==============================================================================
+// SECCIÓN: .proyect
+// ==============================================================================
+#proyect_muesli {
+    width: 100%;
+    background-color: #E5E5E5;
+    @include imgs; // Incluir imágenes de fondo y otros estilos reutilizables
+    padding-top: 46px;
+
+    // =======================================================================
+    // SECCIÓN: HERO PROYECTO
+    // =======================================================================
+    .hero_proyect {
+        position: relative;
+        width: 100%;
+        height: 40vh; // Altura de la sección hero, puede ajustarse a 100vh si se desea pantalla completa
+        background-image: url('/assets/img/muesli/hero.png'); // Imagen de fondo del proyecto
+        display: flex;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: black; // Color del texto en la sección hero
+        overflow: hidden;
+
+        // Contenido principal dentro de la sección hero
+        .hero_content {
+            position: relative;
+            max-width: 300px;
+            z-index: 2;
+            line-height: 3.75rem;
+            padding: 1rem;
+
+            h1 {
+                @include titulo_portfolio; // Estilo de título reutilizable
+                font-size: 4rem;
+                color: black;
+            }
+
+            h2 {
+                font-size: 1rem;
+                color: black;
+            }
+        }
+    }
+
+    // =======================================================================
+    // SECCIÓN: INFORMACIÓN DEL PROYECTO
+    // =======================================================================
+    .proyect_content_muesli {
+        .info_proyect {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            width: 600px;
+            padding: 2.5rem 2rem 0 2rem;
+
+            .brief {
+                margin: 0 auto;
+                max-width: 60%; // Ancho máximo para la sección brief
+
+                .info_brief {
+                    // Estilos para la información de briefing
+
+                    #briefing_title {
+                        color: black;
+                        margin-bottom: 1rem;
+                    }
+
+                    #briefing_content {
+                        color: $color_marron; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text; // Estilo de texto reutilizable
+                    }
+                }
+            }
+
+            .plus_info {
+                margin: 0 auto;
+
+                .asignatura {
+                    // Estilos para la asignatura
+
+                    #asignatura_title {
+                        color: black;
+                        margin-bottom: 1rem;
+                    }
+
+                    #asignatura_content {
+                        color: $color_marron; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text;
+                    }
+                }
+
+                .tiempo {
+                    // Estilos para la duración
+
+                    #tiempo_title {
+                        color: black;
+                        margin-bottom: 1rem;
+                    }
+
+                    #tiempo_content {
+                        color: $color_marron; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text;
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: CATEGORÍAS DEL PROYECTO
+        // =======================================================================
+        #categories {
+            margin: 0 auto;
+            display: flex;
+            width: 600px;
+            @include body_text;
+            padding: 0 2rem;
+            color: #797979;
+            font-weight: bold;
+            margin-bottom: 8rem;
+        }
+
+        // =======================================================================
+        // SECCIÓN: OBJETIVOS
+        // =======================================================================
+        #objetivos{
+            padding: 0 10rem 0;
+            width: 800px;
+            margin-bottom: 5rem;
+            color: $color_marron;
+
+            .title {
+                color: $color_azul;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+        }
+
+
+        // =======================================================================
+        // SECCIÓN: PROPUESTA DE DISEÑO
+        // =======================================================================
+        #diseno{
+            padding: 0 10rem 0;
+            width: 100%;
+            margin-bottom: 5rem;
+            .title{
+                color: $color_azul;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+            .content{
+                display: flex;
+                gap: 6rem;
+
+                span{
+                    margin-bottom: 1.5rem;
+                    @include body_text;
+                    max-width: 400px;
+                    color: $color_marron;
+                    li {
+                        position: relative;
+                        padding-left: 1.8em;
+    
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0.8em;
+                            top: 0.6em;
+                            width: 0.5em;
+                            height: 0.25em;
+                            background-color: $color_azul;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                img{
+                    width: 750px;
+                }
+            }
+        }
+
+
+        // =======================================================================
+        // SECCIÓN: REDISEÑO DEL LOGOTIPO
+        // =======================================================================
+        #logotipo{
+            @include margenes_contenido;
+            width: 100%;
+            margin-bottom: 5rem;
+
+            .title {
+                color: $color_azul;
+                margin-bottom: 2rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+            .programa_content{
+                display: flex;
+                gap: 2rem;
+                .galeria{
+                    display: grid;
+                    grid-template-columns: 1fr 2fr; // Izquierda: 2 imágenes apiladas, derecha: 1 grande
+                    gap: 1rem;
+                    .columna_izq{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        img{
+                            width: auto;
+                            height: 210px;
+                        }
+                    }
+                    .columna_der{
+                        img{
+                            width: auto;
+                            height: 435px;
+                        }
+                    }
+                }
+                .text_content{
+                    color: $color_marron;
+                    max-width: 300px;
+                }
+            }
+        }
+
+
+    }   
+}
