@@ -81,6 +81,14 @@ git pull origin main
 git merge main
 ```
 
+O continuar con la rama subida:
+ ```bash
+git fetch origin
+git checkout nombre-rama
+
+```
+
+
 ---
 
 ## ✅ Buenas prácticas
