@@ -158,8 +158,9 @@
 
         #patito_feo {
             background-image: url('/assets/img/patito/portadas/patito_feo_hover.png');
-            color: whitesmoke;
-
+            &:hover{
+                color: whitesmoke;
+            }
         }
 
         #tribaldos {
@@ -168,7 +169,9 @@
 
         #lehenik {
             background-image: url('/assets/img/lehenik/hero.png');
+            &:hover{
                 color: whitesmoke;
+            }
         }
 
         .fotoR {
@@ -182,9 +185,9 @@
             display: flex;
             justify-content: right;
             align-items: center;
-            color: rgb(255, 0, 119);
+            color: $color_rosa;
             z-index: 888;
-            border-bottom: 1px solid rgb(255, 0, 119);
+            border-bottom: 1px solid $color_rosa;
 
 
 
@@ -213,7 +216,6 @@
 
         .right {
             z-index: 988;
-
             max-width: 500px;
             @include titulo_portfolio;
             font-size: 6rem;

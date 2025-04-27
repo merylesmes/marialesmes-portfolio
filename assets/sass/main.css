@@ -773,6 +773,8 @@ meter {
 }
 .trabajos .gallery #patito_feo {
   background-image: url("/assets/img/patito/portadas/patito_feo_hover.png");
+}
+.trabajos .gallery #patito_feo:hover {
   color: whitesmoke;
 }
 .trabajos .gallery #tribaldos {
@@ -780,6 +782,8 @@ meter {
 }
 .trabajos .gallery #lehenik {
   background-image: url("/assets/img/lehenik/hero.png");
+}
+.trabajos .gallery #lehenik:hover {
   color: whitesmoke;
 }
 .trabajos .gallery .fotoR {
@@ -1528,8 +1532,8 @@ meter {
 .proyect_lehenik #tipografia,
 .proyect_lehenik #logotipo,
 .proyect_lehenik #tratamiento,
-.proyect_lehenik #señaletica,
-.proyect_lehenik #programa #aplicaciones {
+.proyect_lehenik #senaletica,
+.proyect_lehenik #programa, .proyect_lehenik #aplicaciones {
   scroll-margin-top: 100px;
 }
 .proyect_lehenik .proyect_content_lehenik .info_proyect {
@@ -1588,83 +1592,83 @@ meter {
   background-image: url(/assets/img/hero.png);
   margin-bottom: 5rem;
 }
-.proyect_lehenik .proyect_content_lehenik .investigacion {
+.proyect_lehenik .proyect_content_lehenik #investigacion {
   padding: 0 10rem 0;
   margin-bottom: 5rem;
 }
-.proyect_lehenik .proyect_content_lehenik .investigacion .title {
+.proyect_lehenik .proyect_content_lehenik #investigacion .title {
   color: rgb(255, 0, 119);
   margin-bottom: 1rem;
   font-family: "Ophelia", sans-serif;
   font-size: 1.75rem;
 }
-.proyect_lehenik .proyect_content_lehenik .investigacion .investigacion_content {
+.proyect_lehenik .proyect_content_lehenik #investigacion .investigacion_content {
   display: flex;
   gap: 2rem;
 }
-.proyect_lehenik .proyect_content_lehenik .investigacion .investigacion_content .content_images {
+.proyect_lehenik .proyect_content_lehenik #investigacion .investigacion_content .content_images {
   display: flex;
   gap: 1rem;
   height: 350px;
 }
-.proyect_lehenik .proyect_content_lehenik .investigacion .investigacion_content .content_text {
+.proyect_lehenik .proyect_content_lehenik #investigacion .investigacion_content .content_text {
   font-size: 0.9rem;
   color: #ADADAD;
   width: 405px;
 }
-.proyect_lehenik .proyect_content_lehenik .naming {
+.proyect_lehenik .proyect_content_lehenik #naming {
   padding: 0 10rem 0;
   width: 800px;
   margin-bottom: 3rem;
   width: 100%;
   margin-bottom: 5rem;
 }
-.proyect_lehenik .proyect_content_lehenik .naming .title {
+.proyect_lehenik .proyect_content_lehenik #naming .title {
   color: rgb(255, 0, 119);
   margin-bottom: 1rem;
   font-family: "Ophelia", sans-serif;
   font-size: 1.75rem;
 }
-.proyect_lehenik .proyect_content_lehenik .naming .content_naming {
+.proyect_lehenik .proyect_content_lehenik #naming .content_naming {
   display: flex;
   gap: 4rem;
 }
-.proyect_lehenik .proyect_content_lehenik .naming .content_naming img {
+.proyect_lehenik .proyect_content_lehenik #naming .content_naming img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
   width: 350px;
 }
-.proyect_lehenik .proyect_content_lehenik .naming .content_naming .content_text {
+.proyect_lehenik .proyect_content_lehenik #naming .content_naming .content_text {
   color: #ADADAD;
   font-size: 0.9rem;
   max-width: 400px;
 }
-.proyect_lehenik .proyect_content_lehenik .naming .content_naming .content_text .content_title {
+.proyect_lehenik .proyect_content_lehenik #naming .content_naming .content_text .content_title {
   color: whitesmoke;
   font-size: large;
 }
-.proyect_lehenik .proyect_content_lehenik .naming .content_naming .content_text .lehenik_text {
+.proyect_lehenik .proyect_content_lehenik #naming .content_naming .content_text .lehenik_text {
   margin-bottom: 3rem;
 }
-.proyect_lehenik .proyect_content_lehenik .naming .content_naming .content_text .tematica_text {
+.proyect_lehenik .proyect_content_lehenik #naming .content_naming .content_text .tematica_text {
   margin-bottom: 3rem;
 }
-.proyect_lehenik .proyect_content_lehenik .paleta {
+.proyect_lehenik .proyect_content_lehenik #paleta {
   padding: 0 10rem 0;
   width: 800px;
   margin-bottom: 3rem;
   width: 100%;
   margin-bottom: 5rem;
 }
-.proyect_lehenik .proyect_content_lehenik .paleta .title {
+.proyect_lehenik .proyect_content_lehenik #paleta .title {
   color: rgb(255, 0, 119);
   margin-bottom: 1rem;
   font-family: "Ophelia", sans-serif;
   font-size: 1.75rem;
 }
-.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content {
+.proyect_lehenik .proyect_content_lehenik #paleta .paleta_content {
   font-size: 0.9rem;
   color: #ADADAD;
   margin-bottom: 1rem;
@@ -1672,21 +1676,243 @@ meter {
   align-items: flex-end;
   gap: 3rem;
 }
-.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content .paleta_img img {
+.proyect_lehenik .proyect_content_lehenik #paleta .paleta_content .paleta_img img {
   width: 600px;
 }
-.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content .paleta_text {
+.proyect_lehenik .proyect_content_lehenik #paleta .paleta_content .paleta_text {
   max-width: 400px;
 }
-.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content .paleta_text .colores_title {
+.proyect_lehenik .proyect_content_lehenik #paleta .paleta_content .paleta_text .colores_title {
   color: whitesmoke;
   font-size: large;
 }
-.proyect_lehenik .proyect_content_lehenik .paleta .paleta_content .paleta_text .colores_text {
+.proyect_lehenik .proyect_content_lehenik #paleta .paleta_content .paleta_text .colores_text {
   margin-bottom: 2rem;
   margin-top: 0.75rem;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos {
+.proyect_lehenik .proyect_content_lehenik #tipografia {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 3rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik #tipografia .title {
+  color: rgb(255, 0, 119);
+  margin-bottom: 2rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content {
+  font-size: 0.9rem;
+  color: #ADADAD;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 4rem;
+}
+.proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content .tipo_text {
+  max-width: 350px;
+}
+.proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content .tipo_text .title_title {
+  color: whitesmoke;
+  font-size: large;
+}
+.proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content .tipo_text .title_text {
+  margin-bottom: 2rem;
+  margin-top: 0.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content .image_content img {
+  width: 800px;
+}
+.proyect_lehenik .proyect_content_lehenik #logotipo {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 3rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik #logotipo .title {
+  color: rgb(255, 0, 119);
+  margin-bottom: 2rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik #logotipo .logo_content {
+  font-size: 0.9rem;
+  color: #ADADAD;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 4rem;
+}
+.proyect_lehenik .proyect_content_lehenik #logotipo .logo_content .logo_construccion {
+  display: flex;
+  flex-direction: column;
+}
+.proyect_lehenik .proyect_content_lehenik #logotipo .logo_content .logo_construccion .logo_superior {
+  display: flex;
+  gap: 3rem;
+}
+.proyect_lehenik .proyect_content_lehenik #logotipo .logo_content .logo_construccion .logo_superior .logo_img img {
+  width: 580px;
+}
+.proyect_lehenik .proyect_content_lehenik #logotipo .logo_content .logo_construccion .logo_superior .logo_text {
+  color: #ADADAD;
+  max-width: 330px;
+}
+.proyect_lehenik .proyect_content_lehenik #logotipo .logo_content .logo_construccion .logo_colores {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.proyect_lehenik .proyect_content_lehenik #logotipo .logo_content .logo_construccion .logo_colores .logo_bn img,
+.proyect_lehenik .proyect_content_lehenik #logotipo .logo_content .logo_construccion .logo_colores .logo_color img {
+  width: 283px;
+  height: auto;
+}
+.proyect_lehenik .proyect_content_lehenik #tratamiento {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 3rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik #tratamiento .title {
+  color: rgb(255, 0, 119);
+  margin-bottom: 2rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik #tratamiento .tratamiento_content {
+  font-size: 0.9rem;
+  color: #ADADAD;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 3rem;
+}
+.proyect_lehenik .proyect_content_lehenik #tratamiento .tratamiento_content .tratamiento_image img {
+  width: 770px;
+}
+.proyect_lehenik .proyect_content_lehenik #tratamiento .tratamiento_content .tratamiento_text {
+  max-width: 400px;
+}
+.proyect_lehenik .proyect_content_lehenik #tratamiento .tratamiento_content .tratamiento_text .content_title {
+  color: whitesmoke;
+  font-size: large;
+}
+.proyect_lehenik .proyect_content_lehenik #tratamiento .tratamiento_content .tratamiento_text .content_text {
+  margin-bottom: 2rem;
+  margin-top: 0.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 3rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica .title {
+  color: rgb(255, 0, 119);
+  margin-bottom: 2rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica .texto_superior {
+  color: #ADADAD;
+  margin-bottom: 4rem;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica .texto_superior p {
+  color: #ADADAD;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  max-width: 500px;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica .contenedor_iconos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 3rem;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica .contenedor_iconos .icono_item {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 200px;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica .contenedor_iconos .icono_item .icono {
+  height: auto;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica .contenedor_iconos .icono_item .icono img {
+  max-width: 90px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica .contenedor_iconos .icono_item .titulo {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+.proyect_lehenik .proyect_content_lehenik #senaletica .contenedor_iconos .icono_item .descripcion {
+  color: #ADADAD;
+  font-size: 0.875rem;
+  text-align: left;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+.proyect_lehenik .proyect_content_lehenik #programa {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 3rem;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.proyect_lehenik .proyect_content_lehenik #programa .title {
+  color: rgb(255, 0, 119);
+  margin-bottom: 2rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+}
+.proyect_lehenik .proyect_content_lehenik #programa .programa_content {
+  display: flex;
+  gap: 2rem;
+}
+.proyect_lehenik .proyect_content_lehenik #programa .programa_content .galeria {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  width: 832px;
+}
+.proyect_lehenik .proyect_content_lehenik #programa .programa_content .galeria .columna_izq {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.proyect_lehenik .proyect_content_lehenik #programa .programa_content .galeria .columna_izq img {
+  width: auto;
+  height: 210px;
+}
+.proyect_lehenik .proyect_content_lehenik #programa .programa_content .galeria .columna_der img {
+  width: auto;
+  height: 435px;
+}
+.proyect_lehenik .proyect_content_lehenik #programa .programa_content .text_content {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+}
+.proyect_lehenik .proyect_content_lehenik #programa .programa_content .text_content .titulo {
+  color: whitesmoke;
+  font-size: large;
+}
+.proyect_lehenik .proyect_content_lehenik #programa .programa_content .text_content .texto {
+  color: #ADADAD;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.proyect_lehenik .proyect_content_lehenik #aplicaciones {
   padding: 0 10rem 0;
   width: 800px;
   margin-bottom: 3rem;
@@ -1696,15 +1922,36 @@ meter {
   text-align: left;
   margin-bottom: 4rem;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .title {
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .title {
   color: whitesmoke;
   margin-bottom: 1rem;
   font-family: "Ophelia", sans-serif;
   font-size: 1.75rem;
-  color: whitesmoke;
+  color: rgb(255, 0, 119);
   margin-bottom: 1rem;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper {
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .aplicaciones_list {
+  font-size: 0.9rem;
+  color: #ADADAD;
+  list-style: none;
+  padding-left: 1.75rem;
+  margin-bottom: 2rem;
+}
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .aplicaciones_list li {
+  position: relative;
+  padding-left: 1rem;
+}
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .aplicaciones_list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.5em;
+  height: 0.25em;
+  background-color: rgb(255, 0, 119);
+  border-radius: 50%;
+}
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper {
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
@@ -1714,8 +1961,8 @@ meter {
   justify-content: center;
   background-size: cover;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .prev,
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .next {
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .prev,
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1728,73 +1975,48 @@ meter {
   z-index: 10;
   transition: color 0.3s;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .prev:hover,
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .next:hover {
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .prev:hover,
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .next:hover {
   color: rgb(255, 0, 119);
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .prev {
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .prev {
   left: -3rem;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .next {
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .next {
   right: -3rem;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .carrusel-viewport {
-  width: 877px; /* Ancho del contenedor de la imagen */
-  height: 620px; /* Alto del contenedor de la imagen */
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .carrusel-viewport {
+  width: 877px;
+  /* Ancho del contenedor de la imagen */
+  height: 620px;
+  /* Alto del contenedor de la imagen */
   background-size: cover;
   overflow: hidden;
   position: relative;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .carrusel-track {
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .carrusel-track {
   display: flex;
   transition: transform 0.5s ease;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .slide {
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .slide {
   flex: 0 0 auto;
-  width: 877px; /* Ancho del contenedor de la imagen */
-  height: 620px; /* Alto del contenedor de la imagen */
+  width: 877px;
+  /* Ancho del contenedor de la imagen */
+  height: 620px;
+  /* Alto del contenedor de la imagen */
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.proyect_lehenik .proyect_content_lehenik .carrusel_tribaldos .carrusel-wrapper .slide img {
+.proyect_lehenik .proyect_content_lehenik #aplicaciones .carrusel-wrapper .slide img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain; /* Asegura que la imagen no se deforme */
+     object-fit: contain;
+  /* Asegura que la imagen no se deforme */
   display: block;
 }
-.proyect_lehenik .proyect_content_lehenik .packaging {
-  padding: 0 10rem 0;
-  width: 800px;
-  margin-bottom: 3rem;
-  margin-bottom: 5rem;
-}
-.proyect_lehenik .proyect_content_lehenik .packaging .title {
-  color: whitesmoke;
-  margin-bottom: 1rem;
-  font-family: "Ophelia", sans-serif;
-  font-size: 1.75rem;
-  color: whitesmoke;
-  margin-bottom: 1rem;
-}
-.proyect_lehenik .proyect_content_lehenik .packaging .content {
-  font-size: 0.9rem;
-  color: #ADADAD;
-  margin-bottom: 2rem;
-}
-.proyect_lehenik .proyect_content_lehenik .packaging .images_packaging {
-  display: flex;
-  gap: 2rem;
-}
-.proyect_lehenik .proyect_content_lehenik .packaging .images_packaging img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  display: block;
-  width: 300px;
-}
-.proyect_lehenik .proyect_content_lehenik .programas_tribaldos {
+.proyect_lehenik .proyect_content_lehenik .programas_lehenik {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -1803,11 +2025,11 @@ meter {
   gap: 1rem;
   padding-bottom: 3rem;
 }
-.proyect_lehenik .proyect_content_lehenik .programas_tribaldos .title {
+.proyect_lehenik .proyect_content_lehenik .programas_lehenik .title {
   font-size: 0.9rem;
-  color: black;
+  color: whitesmoke;
 }
-.proyect_lehenik .proyect_content_lehenik .programas_tribaldos .programas_icon {
+.proyect_lehenik .proyect_content_lehenik .programas_lehenik .programas_icon {
   display: flex;
   justify-content: center;
   align-items: center;

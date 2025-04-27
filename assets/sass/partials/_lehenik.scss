@@ -59,6 +59,7 @@
             li {
                 margin: 0 20px;
                 font-size: 0.75rem;
+
                 a {
                     color: $color_gray;
                     text-decoration: none;
@@ -78,10 +79,9 @@
     #tipografia,
     #logotipo,
     #tratamiento,
-    #señaletica,
-    #programa
-    #aplicaciones{
-        scroll-margin-top: 100px;   // ajusta según la suma del alto de tu nav + submenú
+    #senaletica,
+    #programa, #aplicaciones {
+        scroll-margin-top: 100px; // ajusta según la suma del alto de tu nav + submenú
     }
 
     // =======================================================================
@@ -150,8 +150,8 @@
                 }
             }
         }
-        
-            // =======================================================================
+
+        // =======================================================================
         // SECCIÓN: CATEGORÍAS DEL PROYECTO
         // =======================================================================
         .categories {
@@ -176,7 +176,7 @@
         // =======================================================================
         // SECCIÓN: INVESTIGACIÓN (títulos, textos, enlaces)
         // =======================================================================
-        .investigacion {
+        #investigacion {
             padding: 0 10rem 0;
             margin-bottom: 5rem;
 
@@ -186,14 +186,17 @@
                 @include titulo_portfolio;
                 font-size: 1.75rem;
             }
-            .investigacion_content{
+
+            .investigacion_content {
                 display: flex;
                 gap: 2rem;
-                .content_images{
+
+                .content_images {
                     display: flex;
                     gap: 1rem;
                     height: 350px;
                 }
+
                 .content_text {
                     @include body_text;
                     color: $color_gray; // Sustituido por variable $color_gray
@@ -205,7 +208,7 @@
         // =======================================================================
         // NAMING (sección de cubiertas)
         // =======================================================================
-        .naming {
+        #naming {
             @include margenes_contenido;
             width: 100%;
             margin-bottom: 5rem;
@@ -220,6 +223,7 @@
             .content_naming {
                 display: flex;
                 gap: 4rem;
+
                 img {
                     @include imgs;
                     width: 350px;
@@ -229,18 +233,21 @@
                     color: $color_gray; // Sustituido por variable $color_gray
                     @include body_text;
                     max-width: 400px;
-                    .content_title{
+
+                    .content_title {
                         color: whitesmoke;
                         font-size: large;
                     }
-                    .lehenik_text{
+
+                    .lehenik_text {
                         margin-bottom: 3rem;
                     }
 
-                    .tematica_text{
+                    .tematica_text {
                         margin-bottom: 3rem;
 
                     }
+
                     // .target_text{
                     //     margin-bottom: 67px;
 
@@ -252,7 +259,7 @@
         // =======================================================================
         // SECCIÓN: PALETA
         // =======================================================================
-        .paleta {
+        #paleta {
             @include margenes_contenido;
             width: 100%;
             margin-bottom: 5rem;
@@ -271,44 +278,344 @@
                 display: flex;
                 align-items: flex-end;
                 gap: 3rem;
-                .paleta_img{
-                    img{
+
+                .paleta_img {
+                    img {
                         width: 600px;
                     }
                 }
-                .paleta_text{
+
+                .paleta_text {
                     max-width: 400px;
-                    .colores_title{
+
+                    .colores_title {
                         color: whitesmoke;
                         font-size: large;
-
                     }
-                    .colores_text{
+
+                    .colores_text {
                         margin-bottom: 2rem;
                         margin-top: 0.75rem;
                     }
-                    
+
                 }
             }
         }
 
         // =======================================================================
-        // SECCIÓN: CARRUSEL (para imágenes deslizantes)
+        // SECCIÓN: TIPOGRAFIA
         // =======================================================================
-        .carrusel_tribaldos {
+        #tipografia {
+            @include margenes_contenido;
+            width: 100%;
+            margin-bottom: 5rem;
+
+            .title {
+                color: $color_rosa;
+                margin-bottom: 2rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .tipo_content {
+                @include body_text;
+                color: $color_gray;
+                margin-bottom: 1rem;
+                display: flex;
+                gap: 4rem;
+
+                .tipo_text {
+                    max-width: 350px;
+
+                    .title_title {
+                        color: whitesmoke;
+                        font-size: large;
+                    }
+
+                    .title_text {
+                        margin-bottom: 2rem;
+                        margin-top: 0.75rem;
+                    }
+                }
+
+                .image_content {
+                    img {
+                        width: 800px;
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: TIPOGRAFIA
+        // =======================================================================
+        #logotipo {
+            @include margenes_contenido;
+            width: 100%;
+            margin-bottom: 5rem;
+
+            .title {
+                color: $color_rosa;
+                margin-bottom: 2rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .logo_content {
+                @include body_text;
+                color: $color_gray;
+                margin-bottom: 1rem;
+                display: flex;
+                gap: 4rem;
+
+                .logo_construccion {
+                    display: flex;
+                    flex-direction: column;
+
+                    .logo_superior {
+                        display: flex;
+                        gap: 3rem;
+
+                        .logo_img {
+                            img {
+                                width: 580px;
+                            }
+                        }
+
+                        .logo_text {
+                            color: $color_gray;
+                            max-width: 330px;
+                        }
+                    }
+
+                    .logo_colores {
+                        display: flex;
+                        // flex-direction: column;
+                        gap: 1rem;
+                        margin-top: 1rem;
+
+                        .logo_bn,
+                        .logo_color {
+                            img {
+                                width: 283px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: TRATAMIENTO
+        // =======================================================================
+        #tratamiento {
+            @include margenes_contenido;
+            width: 100%;
+            margin-bottom: 5rem;
+
+            .title {
+                color: $color_rosa;
+                margin-bottom: 2rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .tratamiento_content {
+                @include body_text;
+                color: $color_gray;
+                margin-bottom: 1rem;
+                display: flex;
+                gap: 3rem;
+
+                .tratamiento_image {
+                    img {
+                        width: 770px;
+                    }
+                }
+
+                .tratamiento_text {
+                    max-width: 400px;
+
+                    .content_title {
+                        color: whitesmoke;
+                        font-size: large;
+                    }
+
+                    .content_text {
+                        margin-bottom: 2rem;
+                        margin-top: 0.75rem;
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: SEÑALETICA
+        // =======================================================================
+        #senaletica {
+            @include margenes_contenido;
+            width: 100%;
+            margin-bottom: 5rem;
+
+            .title {
+                color: $color_rosa;
+                margin-bottom: 2rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .texto_superior {
+                color: $color_gray;
+                p {
+                    color: $color_gray;
+                    font-size: 1rem;
+                    margin-bottom: 0.5rem;
+                    line-height: 1.5;
+                    max-width: 500px;
+                }
+
+                margin-bottom: 4rem;
+            }
+
+            .contenedor_iconos {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: left;
+                gap: 3rem;
+
+                .icono_item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: left;
+                    width: 200px;
+
+                    .icono {
+
+                        height: auto;
+                        img {
+                            max-width: 90px;
+                            height: 60px;
+                            object-fit: contain;
+                        }
+                    }
+
+                    .titulo {
+                        color: whitesmoke;
+                        font-weight: bold;
+                        font-size: 1rem;
+                        margin-top: 1rem;
+                        text-align: left;
+                    }
+
+                    .descripcion {
+                        color: $color_gray;
+                        font-size: 0.875rem;
+                        text-align: left;
+                        margin-top: 0.5rem;
+                        line-height: 1.4;
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: PROGRAMA DE MANO
+        // =======================================================================
+        #programa{
+            @include margenes_contenido;
+            width: 100%;
+            margin-bottom: 5rem;
+
+            .title {
+                color: $color_rosa;
+                margin-bottom: 2rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+            .programa_content{
+                display: flex;
+                gap: 2rem;
+                .galeria{
+                    display: grid;
+                    grid-template-columns: 1fr 2fr; // Izquierda: 2 imágenes apiladas, derecha: 1 grande
+                    gap: 1rem;
+                    width: 832px;
+                    .columna_izq{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        img{
+                            width: auto;
+                            height: 210px;
+                        }
+                    }
+                    .columna_der{
+                        img{
+                            width: auto;
+                            height: 435px;
+                        }
+                    }
+                }
+                .text_content{
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 350px;
+                    .titulo{
+                        color: whitesmoke;
+                        font-size: large;
+                    }
+                    .texto{
+                        color: $color_gray;
+                        margin-top: 1rem;
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+
+
+        // =======================================================================
+        // SECCIÓN: APLICACIONES
+        // =======================================================================
+        #aplicaciones {
             @include margenes_contenido;
             width: 100%;
             max-width: 100vw;
             padding: 0 10rem 0;
             text-align: left;
             margin-bottom: 4rem;
-        
+
             .title {
                 @include titulos_contenidos;
-                color: whitesmoke;
+                color: $color_rosa;
                 margin-bottom: 1rem;
             }
-        
+            .aplicaciones_list {
+                @include body_text;
+                color: $color_gray;
+                list-style: none; // quitamos el estilo por defecto
+                padding-left: 1.75rem;
+
+                margin-bottom: 2rem;
+
+                li {
+                    position: relative;
+                    padding-left: 1rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0.6em;
+                        width: 0.5em;
+                        height: 0.25em;
+                        background-color: $color_rosa;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
             .carrusel-wrapper {
                 position: relative;
                 width: fit-content;
@@ -317,7 +624,7 @@
                 align-items: center;
                 justify-content: center;
                 background-size: cover;
-        
+
                 .prev,
                 .next {
                     position: absolute;
@@ -331,88 +638,64 @@
                     cursor: pointer;
                     z-index: 10;
                     transition: color 0.3s;
-        
+
                     &:hover {
                         color: $color_rosa;
                     }
                 }
-        
+
                 .prev {
                     left: -3rem; // Ajuste para el botón de "anterior"
                 }
-        
+
                 .next {
                     right: -3rem; // Ajuste para el botón de "siguiente"
                 }
-        
+
                 .carrusel-viewport {
-                    width: 877px;  /* Ancho del contenedor de la imagen */
-                    height: 620px; /* Alto del contenedor de la imagen */
+                    width: 877px;
+                    /* Ancho del contenedor de la imagen */
+                    height: 620px;
+                    /* Alto del contenedor de la imagen */
                     background-size: cover;
                     overflow: hidden;
                     position: relative;
                 }
-        
+
                 .carrusel-track {
                     display: flex;
                     transition: transform 0.5s ease;
                     // width: calc(877px * 19); /* Ajusta este valor según el número de imágenes */
                 }
-        
+
                 .slide {
                     flex: 0 0 auto;
-                    width: 877px;  /* Ancho del contenedor de la imagen */
-                    height: 620px; /* Alto del contenedor de la imagen */
+                    width: 877px;
+                    /* Ancho del contenedor de la imagen */
+                    height: 620px;
+                    /* Alto del contenedor de la imagen */
                     display: flex;
                     justify-content: center;
                     align-items: center;
-        
+
                     img {
                         width: 100%;
                         height: 100%;
-                        object-fit: contain; /* Asegura que la imagen no se deforme */
+                        object-fit: contain;
+                        /* Asegura que la imagen no se deforme */
                         display: block;
                     }
                 }
             }
         }
+
+
         
-
-        // =======================================================================
-        // SECCIÓN: PACKAGING
-        // =======================================================================
-
-        .packaging {
-            @include margenes_contenido;
-            margin-bottom: 5rem;
-
-            .title {
-                @include titulos_contenidos;
-                color: whitesmoke;
-                margin-bottom: 1rem;
-            }
-
-            .content {
-                @include body_text;
-                color: $color_gray;
-                margin-bottom: 2rem;
-            }
-
-            .images_packaging {
-                display: flex;
-                gap: 2rem;
-
-                img {
-                    @include imgs;
-                    width: 300px;
-                }
-            }
-        }
 
         // =======================================================================
         // SECCIÓN: PROGRAMAS (sección para mostrar programas o habilidades)
         // =======================================================================
-        .programas_tribaldos {
+        .programas_lehenik {
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -423,7 +706,7 @@
 
             .title {
                 @include programas_title;
-                color: black
+                color: whitesmoke
             }
 
             .programas_icon {
