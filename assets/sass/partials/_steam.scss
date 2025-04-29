@@ -1,0 +1,316 @@
+// ==============================================================================
+// SECCIÓN: .proyect
+// ==============================================================================
+#proyect_steam {
+    width: 100%;
+    background-color: #292F3C;
+    @include imgs; // Incluir imágenes de fondo y otros estilos reutilizables
+    padding-top: 46px;
+    color: $color_gray;
+
+    // =======================================================================
+    // SECCIÓN: HERO PROYECTO
+    // =======================================================================
+    .hero_proyect {
+        position: relative;
+        width: 100%;
+        height: 40vh; // Altura de la sección hero, puede ajustarse a 100vh si se desea pantalla completa
+        background-image: url('/assets/img/Steam/hero_fuera.png'); // Imagen de fondo del proyecto
+        display: flex;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: whitesmoke; // Color del texto en la sección hero
+        overflow: hidden;
+
+        // Contenido principal dentro de la sección hero
+        .hero_content {
+            position: relative;
+            z-index: 2;
+            line-height: 3.75rem;
+            padding: 1rem;
+
+            img {
+                width: 500px;
+            }
+
+            h2 {
+                font-size: 1rem;
+                color: whitesmoke;
+            }
+        }
+    }
+
+    // =======================================================================
+    // SECCIÓN: INFORMACIÓN DEL PROYECTO
+    // =======================================================================
+    .proyect_content_steam {
+        .info_proyect {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            width: 800px;
+            padding: 2.5rem 2rem 0 2rem;
+            margin-bottom: 5rem;
+
+            .brief {
+                margin: 0 auto;
+                max-width: 60%; // Ancho máximo para la sección brief
+
+                .info_brief {
+                    // Estilos para la información de briefing
+
+                    #briefing_title {
+                        color: whitesmoke;
+                        margin-bottom: 1rem;
+                    }
+
+                    #briefing_content {
+                        margin-bottom: 1.5rem;
+                        @include body_text; // Estilo de texto reutilizable
+                    }
+
+                    .categories {
+                        display: flex;
+                        width: 600px;
+                        @include body_text;
+                        color: whitesmoke;
+                        font-weight: bold;
+                        margin-bottom: 5rem;
+                    }
+
+                }
+            }
+
+            .plus_info {
+                margin: 0 auto;
+                width: 150px;
+
+                .asignatura {
+                    // Estilos para la asignatura
+
+                    #asignatura_title {
+                        color: whitesmoke;
+                        margin-bottom: 1rem;
+                    }
+
+                    #asignatura_content {
+                        margin-bottom: 1.5rem;
+                        @include body_text;
+                    }
+                }
+
+                .tiempo {
+                    // Estilos para la duración
+
+                    #tiempo_title {
+                        color: whitesmoke;
+                        margin-bottom: 1rem;
+                    }
+
+                    #tiempo_content {
+                        color: $color_gray; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text;
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: OBJETIVOS / ANALISIS / PROPUESTA VISUAL
+        // =======================================================================
+        .seccion_inicio {
+            padding: 0 10rem 0;
+            width: 800px;
+            margin-bottom: 5rem;
+
+            .title {
+                color: $color_azul_steam;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .content_text {
+                max-width: 600px;
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: VIDEO
+        // =======================================================================
+        #video_proyect {
+            // background-image: url(/assets/img/Steam/hero_dentro.png); // Imagen de fondo del video
+            margin-bottom: 5rem;
+        }
+
+
+
+
+        // =======================================================================
+        // SECCIÓN: MENU NAV
+        // =======================================================================
+        .submenu-trabajo {
+            position: sticky;
+            top: 49px; // Altura de tu header (ajústalo si es más alto)
+            background-color: #313B4C;
+            width: 100%;
+            z-index: 999;
+            padding: 10px 0;
+            margin-top: 0;
+            border-bottom: 1px solid $color_azul_steam;
+            border-top: 1px solid $color_azul_steam;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin: 0 20px;
+                    font-size: 0.75rem;
+
+                    a {
+                        color: $color_gray;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: $color_azul_steam;
+                        }
+                    }
+                }
+            }
+        }
+
+        #filosofia,
+        #tipografia,
+        #paleta,
+        #logotipo,
+        #isotipo,
+        #hi-fi {
+            scroll-margin-top: 100px;
+        }
+
+
+
+        // =======================================================================
+        // SECCIÓN: FILOSOFIA
+        // =======================================================================
+        .imagen_centrada {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 12rem;
+        }
+        #filosofia{
+            margin-top: 7rem;
+            img{
+                width: 800px;
+            }
+        }
+
+
+        // =======================================================================
+        // SECCIÓN: TIPOGRAFIA
+        // =======================================================================
+        #tipografia{
+            #img1{
+                width: 1200px;
+                margin-bottom: 10rem;
+            }
+            #img2{
+                width:600px;
+            }
+        }
+        .imagen_centrada_columnas{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        // =======================================================================
+        // SECCIÓN: PALETA
+        // =======================================================================
+        #paleta{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: LOGOTIPO
+        // =======================================================================
+        #logotipo{
+            margin-bottom: 10rem;
+            img{
+                width: 1000px;
+            }
+            #img_margin{
+                margin-top: 1rem;
+                margin-bottom: 12rem;
+            }
+            #referencias{
+                margin-top: 10rem;
+                margin-bottom: 7rem;
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: ISOTIPO
+        // =======================================================================
+        #isotipo{
+            margin-bottom: 10rem;
+            img{
+                margin-bottom: 3rem;
+            }
+            #errores{
+                margin-top: 7rem;
+            }
+        }
+
+
+        // =======================================================================
+        // SECCIÓN: ISOTIPO
+        // =======================================================================
+        #hi-fi{
+            img{
+                margin-bottom: 7rem;
+            }
+            
+        }
+
+
+
+        // =======================================================================
+        // SECCIÓN: PROGRAMAS (sección para mostrar programas o habilidades)
+        // =======================================================================
+        .programas_steam {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 7rem;
+
+            .title {
+                @include programas_title;
+                color: whitesmoke
+            }
+
+            .programas_icon {
+                @include icons_programa;
+            }
+        }
+    }
+}
