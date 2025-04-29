@@ -789,6 +789,12 @@ meter {
 .trabajos .gallery #muesli {
   background-image: url("/assets/img/muesli/hero.png");
 }
+.trabajos .gallery #steam {
+  background-image: url("/assets/img/Steam/hero_fuera.png");
+}
+.trabajos .gallery #steam:hover {
+  color: whitesmoke;
+}
 .trabajos .gallery .fotoR {
   display: flex;
   width: 100%;
@@ -868,6 +874,70 @@ meter {
   background-color: transparent;
   padding-left: 2rem;
   line-height: 5.75rem;
+}
+.trabajos #galeria {
+  padding: 2rem;
+  margin-top: 4rem;
+}
+.trabajos #galeria .galeria_titulo {
+  font-family: "Ophelia", sans-serif;
+  text-align: center;
+  font-size: 5rem;
+  color: rgb(255, 0, 119);
+  margin-bottom: 2rem;
+}
+.trabajos #galeria .galeria_fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.trabajos #galeria .galeria_fotos a {
+  text-decoration: none;
+}
+.trabajos #galeria .galeria_fotos .foto_hover {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.trabajos #galeria .galeria_fotos .foto_hover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: filter 0.3s ease;
+  display: block;
+}
+.trabajos #galeria .galeria_fotos .foto_hover .texto_hover {
+  position: absolute;
+  text-align: left;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 5rem 4rem;
+}
+.trabajos #galeria .galeria_fotos .foto_hover .texto_hover h3 {
+  font-family: "Ophelia", sans-serif;
+  color: rgb(255, 0, 119);
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+.trabajos #galeria .galeria_fotos .foto_hover .texto_hover p {
+  color: #ADADAD;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.trabajos #galeria .galeria_fotos .foto_hover:hover {
+  border: 1px solid rgb(255, 0, 119);
+  border-radius: 24px;
+}
+.trabajos #galeria .galeria_fotos .foto_hover:hover img {
+  filter: brightness(0) invert(1);
+}
+.trabajos #galeria .galeria_fotos .foto_hover:hover .texto_hover {
+  opacity: 1;
 }
 
 .proyect_patito {
@@ -2440,6 +2510,227 @@ meter {
   color: #747474;
 }
 #proyect_muesli .proyect_content_muesli .programas_muesli .programas_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  gap: 0.75rem;
+}
+
+#proyect_steam {
+  width: 100%;
+  background-color: #292F3C;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  padding-top: 46px;
+  color: #ADADAD;
+}
+#proyect_steam .hero_proyect {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  background-image: url("/assets/img/Steam/hero_fuera.png");
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: whitesmoke;
+  overflow: hidden;
+}
+#proyect_steam .hero_proyect .hero_content {
+  position: relative;
+  z-index: 2;
+  line-height: 3.75rem;
+  padding: 1rem;
+}
+#proyect_steam .hero_proyect .hero_content img {
+  width: 500px;
+}
+#proyect_steam .hero_proyect .hero_content h2 {
+  font-size: 1rem;
+  color: whitesmoke;
+}
+#proyect_steam .proyect_content_steam .info_proyect {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  width: 800px;
+  padding: 2.5rem 2rem 0 2rem;
+  margin-bottom: 5rem;
+}
+#proyect_steam .proyect_content_steam .info_proyect .brief {
+  margin: 0 auto;
+  max-width: 60%;
+}
+#proyect_steam .proyect_content_steam .info_proyect .brief .info_brief #briefing_title {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+#proyect_steam .proyect_content_steam .info_proyect .brief .info_brief #briefing_content {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+#proyect_steam .proyect_content_steam .info_proyect .brief .info_brief .categories {
+  display: flex;
+  width: 600px;
+  font-size: 0.9rem;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-bottom: 5rem;
+}
+#proyect_steam .proyect_content_steam .info_proyect .plus_info {
+  margin: 0 auto;
+  width: 150px;
+}
+#proyect_steam .proyect_content_steam .info_proyect .plus_info .asignatura #asignatura_title {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+#proyect_steam .proyect_content_steam .info_proyect .plus_info .asignatura #asignatura_content {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+#proyect_steam .proyect_content_steam .info_proyect .plus_info .tiempo #tiempo_title {
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+#proyect_steam .proyect_content_steam .info_proyect .plus_info .tiempo #tiempo_content {
+  color: #ADADAD;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+#proyect_steam .proyect_content_steam .seccion_inicio {
+  padding: 0 10rem 0;
+  width: 800px;
+  margin-bottom: 5rem;
+}
+#proyect_steam .proyect_content_steam .seccion_inicio .title {
+  color: #4394D1;
+  margin-bottom: 1rem;
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+}
+#proyect_steam .proyect_content_steam .seccion_inicio .content_text {
+  max-width: 600px;
+}
+#proyect_steam .proyect_content_steam #video_proyect {
+  margin-bottom: 5rem;
+}
+#proyect_steam .proyect_content_steam .submenu-trabajo {
+  position: sticky;
+  top: 49px;
+  background-color: #313B4C;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+  margin-top: 0;
+  border-bottom: 1px solid #4394D1;
+  border-top: 1px solid #4394D1;
+}
+#proyect_steam .proyect_content_steam .submenu-trabajo ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#proyect_steam .proyect_content_steam .submenu-trabajo ul li {
+  margin: 0 20px;
+  font-size: 0.75rem;
+}
+#proyect_steam .proyect_content_steam .submenu-trabajo ul li a {
+  color: #ADADAD;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+#proyect_steam .proyect_content_steam .submenu-trabajo ul li a:hover {
+  color: #4394D1;
+}
+#proyect_steam .proyect_content_steam #filosofia,
+#proyect_steam .proyect_content_steam #tipografia,
+#proyect_steam .proyect_content_steam #paleta,
+#proyect_steam .proyect_content_steam #logotipo,
+#proyect_steam .proyect_content_steam #isotipo,
+#proyect_steam .proyect_content_steam #hi-fi {
+  scroll-margin-top: 100px;
+}
+#proyect_steam .proyect_content_steam .imagen_centrada {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12rem;
+}
+#proyect_steam .proyect_content_steam #filosofia {
+  margin-top: 7rem;
+}
+#proyect_steam .proyect_content_steam #filosofia img {
+  width: 800px;
+}
+#proyect_steam .proyect_content_steam #tipografia #img1 {
+  width: 1200px;
+  margin-bottom: 10rem;
+}
+#proyect_steam .proyect_content_steam #tipografia #img2 {
+  width: 600px;
+}
+#proyect_steam .proyect_content_steam .imagen_centrada_columnas {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+#proyect_steam .proyect_content_steam #paleta {
+  width: 100%;
+}
+#proyect_steam .proyect_content_steam #paleta img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#proyect_steam .proyect_content_steam #logotipo {
+  margin-bottom: 10rem;
+}
+#proyect_steam .proyect_content_steam #logotipo img {
+  width: 1000px;
+}
+#proyect_steam .proyect_content_steam #logotipo #img_margin {
+  margin-top: 1rem;
+  margin-bottom: 12rem;
+}
+#proyect_steam .proyect_content_steam #logotipo #referencias {
+  margin-top: 10rem;
+  margin-bottom: 7rem;
+}
+#proyect_steam .proyect_content_steam #isotipo {
+  margin-bottom: 10rem;
+}
+#proyect_steam .proyect_content_steam #isotipo img {
+  margin-bottom: 3rem;
+}
+#proyect_steam .proyect_content_steam #isotipo #errores {
+  margin-top: 7rem;
+}
+#proyect_steam .proyect_content_steam #hi-fi img {
+  margin-bottom: 7rem;
+}
+#proyect_steam .proyect_content_steam .programas_steam {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 7rem;
+}
+#proyect_steam .proyect_content_steam .programas_steam .title {
+  font-size: 0.9rem;
+  color: whitesmoke;
+}
+#proyect_steam .proyect_content_steam .programas_steam .programas_icon {
   display: flex;
   justify-content: center;
   align-items: center;
