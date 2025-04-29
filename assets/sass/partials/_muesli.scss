@@ -114,15 +114,15 @@
         // =======================================================================
         // SECCIÓN: CATEGORÍAS DEL PROYECTO
         // =======================================================================
-        #categories {
+        .categories {
             margin: 0 auto;
             display: flex;
             width: 600px;
             @include body_text;
             padding: 0 2rem;
-            color: #797979;
+            color: $color_marron;
             font-weight: bold;
-            margin-bottom: 8rem;
+            margin-bottom: 5rem;
         }
 
         // =======================================================================
@@ -202,7 +202,7 @@
                 @include titulo_portfolio;
                 font-size: 1.75rem;
             }
-            .programa_content{
+            .logotipo_content{
                 display: flex;
                 gap: 2rem;
                 .galeria{
@@ -220,6 +220,7 @@
                     }
                     .columna_der{
                         img{
+                            @include imgs;
                             width: auto;
                             height: 435px;
                         }
@@ -232,6 +233,244 @@
             }
         }
 
+        // =======================================================================
+        // SECCIÓN: FORMATO Y MATERIALES
+        // =======================================================================
+        #formato {
+            @include margenes_contenido;
+            width: 100%;
+            max-width: 100vw;
+            padding: 0 10rem 0;
+            text-align: left;
+            margin-bottom: 5rem;
 
+            .title {
+                @include titulos_contenidos;
+                color: $color_azul;
+                margin-bottom: 1rem;
+            }
+            .formato_list {
+                @include body_text;
+                color: $color_marron;
+                list-style: none; // quitamos el estilo por defecto
+                padding-left: 1.75rem;
+                max-width: 600px;
+                margin-bottom: 2rem;
+
+                li {
+                    position: relative;
+                    padding-left: 1rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0.6em;
+                        width: 0.5em;
+                        height: 0.25em;
+                        background-color: $color_azul;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+
+        // =======================================================================
+        // SECCIÓN: SISTEMA GRAFICO
+        // =======================================================================
+        #sistema_grafico {
+            @include margenes_contenido;
+            width: 100%;
+            max-width: 100vw;
+            padding: 0 10rem 0;
+            text-align: left;
+            margin-bottom: 5rem;
+
+            .title {
+                @include titulos_contenidos;
+                color: $color_azul;
+                margin-bottom: 1rem;
+            }
+            .sistema_content{
+                color: $color_marron;
+                max-width: 600px;
+                .text{
+                    padding-bottom: 1rem; 
+                }
+                .list {
+                    @include body_text;
+                    color: $color_marron;
+                    list-style: none; // quitamos el estilo por defecto
+                    padding-left: 1.75rem;
+    
+                    margin-bottom: 2rem;
+    
+                    li {
+                        position: relative;
+                        padding-left: 1rem;
+    
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0.6em;
+                            width: 0.5em;
+                            height: 0.25em;
+                            background-color: $color_azul;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        // =======================================================================
+        // SECCIÓN: RESULTADOS
+        // =======================================================================
+        #resultados{
+            @include margenes_contenido;
+            width: 100%;
+            max-width: 100vw;
+            padding: 0 10rem 0;
+            text-align: left;
+            margin-bottom: 5rem;
+
+            .title {
+                @include titulos_contenidos;
+                color: $color_azul;
+                margin-bottom: 1rem;
+            }
+            .resultados_content{
+                color: $color_marron;
+                max-width: 600px;
+
+                .resultados_list{
+                    @include body_text;
+                    color: $color_marron;
+                    list-style: none; // quitamos el estilo por defecto
+                    padding-left: 1.75rem;
+                    
+                    margin-bottom: 2rem;
+    
+                    li {
+                        position: relative;
+                        padding-left: 1rem;
+    
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0.6em;
+                            width: 0.5em;
+                            height: 0.25em;
+                            background-color: $color_azul;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+                .resultados_images{
+                    display: flex;
+                    gap: 2rem;
+                    width: 100%;
+                    margin-bottom: 2rem;
+                    img{
+                        height: 200px;
+                        
+                    }
+                }
+                .carrusel-wrapper {
+                    position: relative;
+                    width: fit-content;
+                    margin-right: auto; // Esto alinea el carrusel a la derecha
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-size: cover;
+    
+                    .prev,
+                    .next {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background-color: transparent;
+                        border: none;
+                        font-size: 3rem;
+                        color: whitesmoke;
+                        padding: 1rem;
+                        cursor: pointer;
+                        z-index: 10;
+                        transition: color 0.3s;
+    
+                        &:hover {
+                            color: $color_rosa;
+                        }
+                    }
+    
+                    .prev {
+                        left: -3rem; // Ajuste para el botón de "anterior"
+                    }
+    
+                    .next {
+                        right: -3rem; // Ajuste para el botón de "siguiente"
+                    }
+    
+                    .carrusel-viewport {
+                        width: 877px;
+                        /* Ancho del contenedor de la imagen */
+                        height: 620px;
+                        /* Alto del contenedor de la imagen */
+                        background-size: cover;
+                        overflow: hidden;
+                        position: relative;
+                    }
+    
+                    .carrusel-track {
+                        display: flex;
+                        transition: transform 0.5s ease;
+                        // width: calc(877px * 19); /* Ajusta este valor según el número de imágenes */
+                    }
+    
+                    .slide {
+                        flex: 0 0 auto;
+                        width: 877px;
+                        /* Ancho del contenedor de la imagen */
+                        height: 620px;
+                        /* Alto del contenedor de la imagen */
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                            /* Asegura que la imagen no se deforme */
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        // =======================================================================
+        // SECCIÓN: PROGRAMAS (sección para mostrar programas o habilidades)
+        // =======================================================================
+        .programas_muesli {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 3rem;
+
+            .title {
+                @include programas_title;
+                color: $color_marron
+            }
+
+            .programas_icon {
+                @include icons_programa;
+            }
+        }
     }   
 }
