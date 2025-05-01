@@ -43,17 +43,69 @@
     }
 
     // =======================================================================
+        // SECCIÓN: MENU NAV
+        // =======================================================================
+        .submenu-trabajo {
+            position: sticky;
+            top: 49px; // Altura de tu header (ajústalo si es más alto)
+            background-color: #313B4C;
+            width: 100%;
+            z-index: 999;
+            padding: 10px 0;
+            margin-top: 0;
+            border-bottom: 1px solid $color_azul_steam;
+            border-top: 1px solid $color_azul_steam;
+
+            ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    margin: 0 20px;
+                    font-size: 0.75rem;
+
+                    a {
+                        color: $color_gray;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: $color_azul_steam;
+                        }
+                    }
+                }
+            }
+        }
+
+        #filosofia,
+        #tipografia,
+        #paleta,
+        #logotipo,
+        #isotipo,
+        #hi-fi {
+            scroll-margin-top: 100px; // ajusta según la suma del alto de tu nav + submenú
+        }
+
+    // =======================================================================
     // SECCIÓN: INFORMACIÓN DEL PROYECTO
     // =======================================================================
     .proyect_content_steam {
+        
         .info_proyect {
             margin: 0 auto;
             display: flex;
             justify-content: center;
             gap: 3rem;
-            width: 800px;
+            width: 700px;
             padding: 2.5rem 2rem 0 2rem;
             margin-bottom: 5rem;
+            margin-top: .5rem;
+            border-bottom: 1px solid $color_azul_steam;
+
 
             .brief {
                 margin: 0 auto;
@@ -150,53 +202,7 @@
 
 
 
-        // =======================================================================
-        // SECCIÓN: MENU NAV
-        // =======================================================================
-        .submenu-trabajo {
-            position: sticky;
-            top: 49px; // Altura de tu header (ajústalo si es más alto)
-            background-color: #313B4C;
-            width: 100%;
-            z-index: 999;
-            padding: 10px 0;
-            margin-top: 0;
-            border-bottom: 1px solid $color_azul_steam;
-            border-top: 1px solid $color_azul_steam;
-
-            ul {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-
-                li {
-                    margin: 0 20px;
-                    font-size: 0.75rem;
-
-                    a {
-                        color: $color_gray;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-
-                        &:hover {
-                            color: $color_azul_steam;
-                        }
-                    }
-                }
-            }
-        }
-
-        #filosofia,
-        #tipografia,
-        #paleta,
-        #logotipo,
-        #isotipo,
-        #hi-fi {
-            scroll-margin-top: 100px;
-        }
+        
 
 
 

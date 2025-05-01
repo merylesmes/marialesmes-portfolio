@@ -878,6 +878,7 @@ meter {
 .trabajos #galeria {
   padding: 2rem;
   margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 .trabajos #galeria .galeria_titulo {
   font-family: "Ophelia", sans-serif;
@@ -886,31 +887,31 @@ meter {
   color: rgb(255, 0, 119);
   margin-bottom: 2rem;
 }
-.trabajos #galeria .galeria_fotos {
+.trabajos #galeria .galeria_fotos_content {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
 }
-.trabajos #galeria .galeria_fotos a {
+.trabajos #galeria .galeria_fotos_content a {
   text-decoration: none;
 }
-.trabajos #galeria .galeria_fotos .foto_hover {
+.trabajos #galeria .galeria_fotos_content .foto_hover {
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
-.trabajos #galeria .galeria_fotos .foto_hover img {
-  width: 100%;
+.trabajos #galeria .galeria_fotos_content .foto_hover img {
+  width: 400px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: filter 0.3s ease;
   display: block;
 }
-.trabajos #galeria .galeria_fotos .foto_hover .texto_hover {
+.trabajos #galeria .galeria_fotos_content .foto_hover .texto_hover {
   position: absolute;
   text-align: left;
   z-index: 2;
@@ -918,25 +919,25 @@ meter {
   transition: opacity 0.3s ease;
   padding: 5rem 4rem;
 }
-.trabajos #galeria .galeria_fotos .foto_hover .texto_hover h3 {
+.trabajos #galeria .galeria_fotos_content .foto_hover .texto_hover h3 {
   font-family: "Ophelia", sans-serif;
   color: rgb(255, 0, 119);
   font-size: 3.5rem;
   margin-bottom: 0.5rem;
 }
-.trabajos #galeria .galeria_fotos .foto_hover .texto_hover p {
+.trabajos #galeria .galeria_fotos_content .foto_hover .texto_hover p {
   color: #ADADAD;
   font-size: 1.5rem;
   margin: 0;
 }
-.trabajos #galeria .galeria_fotos .foto_hover:hover {
+.trabajos #galeria .galeria_fotos_content .foto_hover:hover {
   border: 1px solid rgb(255, 0, 119);
   border-radius: 24px;
 }
-.trabajos #galeria .galeria_fotos .foto_hover:hover img {
+.trabajos #galeria .galeria_fotos_content .foto_hover:hover img {
   filter: brightness(0) invert(1);
 }
-.trabajos #galeria .galeria_fotos .foto_hover:hover .texto_hover {
+.trabajos #galeria .galeria_fotos_content .foto_hover:hover .texto_hover {
   opacity: 1;
 }
 
@@ -989,8 +990,9 @@ meter {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  width: 600px;
+  width: 700px;
   padding: 2.5rem 2rem 0 2rem;
+  margin-bottom: 8rem;
 }
 .proyect_patito .proyect_content_patito .info_proyect .brief {
   margin: 0 auto;
@@ -1005,8 +1007,15 @@ meter {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
+.proyect_patito .proyect_content_patito .info_proyect .brief .categories {
+  width: 600px;
+  font-size: 0.9rem;
+  color: whitesmoke;
+  font-weight: bold;
+}
 .proyect_patito .proyect_content_patito .info_proyect .plus_info {
   margin: 0 auto;
+  width: 150px;
 }
 .proyect_patito .proyect_content_patito .info_proyect .plus_info .asignatura #asignatura_title {
   color: whitesmoke;
@@ -1025,16 +1034,6 @@ meter {
   color: #ADADAD;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
-}
-.proyect_patito .proyect_content_patito .categories {
-  margin: 0 auto;
-  display: flex;
-  width: 600px;
-  font-size: 0.9rem;
-  padding: 0 2rem;
-  color: whitesmoke;
-  font-weight: bold;
-  margin-bottom: 3rem;
 }
 .proyect_patito .proyect_content_patito #video_proyect {
   background-image: url(/assets/img/hero.png);
@@ -1239,8 +1238,9 @@ meter {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  width: 600px;
+  width: 700px;
   padding: 2.5rem 2rem 0 2rem;
+  margin-bottom: 8rem;
 }
 .proyect_tribaldos .proyect_content_tribaldos .info_proyect .brief {
   margin: 0 auto;
@@ -1255,8 +1255,15 @@ meter {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
+.proyect_tribaldos .proyect_content_tribaldos .info_proyect .brief .categories {
+  width: 600px;
+  font-size: 0.9rem;
+  color: #797979;
+  font-weight: bold;
+}
 .proyect_tribaldos .proyect_content_tribaldos .info_proyect .plus_info {
   margin: 0 auto;
+  width: 150px;
 }
 .proyect_tribaldos .proyect_content_tribaldos .info_proyect .plus_info .asignatura #asignatura_title {
   color: black;
@@ -1275,16 +1282,6 @@ meter {
   color: #747474;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
-}
-.proyect_tribaldos .proyect_content_tribaldos .categories {
-  margin: 0 auto;
-  display: flex;
-  width: 600px;
-  font-size: 0.9rem;
-  padding: 0 2rem;
-  color: #797979;
-  font-weight: bold;
-  margin-bottom: 5rem;
 }
 .proyect_tribaldos .proyect_content_tribaldos #video_proyect {
   background-image: url(/assets/img/hero.png);
@@ -1459,8 +1456,10 @@ meter {
   right: -3rem;
 }
 .proyect_tribaldos .proyect_content_tribaldos .carrusel_tribaldos .carrusel-wrapper .carrusel-viewport {
-  width: 877px; /* Ancho del contenedor de la imagen */
-  height: 620px; /* Alto del contenedor de la imagen */
+  width: 877px;
+  /* Ancho del contenedor de la imagen */
+  height: 620px;
+  /* Alto del contenedor de la imagen */
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -1471,8 +1470,10 @@ meter {
 }
 .proyect_tribaldos .proyect_content_tribaldos .carrusel_tribaldos .carrusel-wrapper .slide {
   flex: 0 0 auto;
-  width: 877px; /* Ancho del contenedor de la imagen */
-  height: 620px; /* Alto del contenedor de la imagen */
+  width: 877px;
+  /* Ancho del contenedor de la imagen */
+  height: 620px;
+  /* Alto del contenedor de la imagen */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1481,7 +1482,8 @@ meter {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain; /* Asegura que la imagen no se deforme */
+     object-fit: contain;
+  /* Asegura que la imagen no se deforme */
   display: block;
 }
 .proyect_tribaldos .proyect_content_tribaldos .packaging {
@@ -1662,12 +1664,13 @@ meter {
   margin-bottom: 5rem;
 }
 .proyect_lehenik .proyect_content_lehenik #video_proyect {
-  background-image: url(/assets/img/hero.png);
-  margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6rem;
 }
 .proyect_lehenik .proyect_content_lehenik #investigacion {
   padding: 0 10rem 0;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #investigacion .title {
   color: rgb(255, 0, 119);
@@ -1677,7 +1680,7 @@ meter {
 }
 .proyect_lehenik .proyect_content_lehenik #investigacion .investigacion_content {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 .proyect_lehenik .proyect_content_lehenik #investigacion .investigacion_content .content_images {
   display: flex;
@@ -1694,7 +1697,7 @@ meter {
   width: 800px;
   margin-bottom: 3rem;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #naming .title {
   color: rgb(255, 0, 119);
@@ -1704,7 +1707,7 @@ meter {
 }
 .proyect_lehenik .proyect_content_lehenik #naming .content_naming {
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
 }
 .proyect_lehenik .proyect_content_lehenik #naming .content_naming img {
   width: 100%;
@@ -1721,19 +1724,17 @@ meter {
 .proyect_lehenik .proyect_content_lehenik #naming .content_naming .content_text .content_title {
   color: whitesmoke;
   font-size: large;
+  margin-bottom: 0.5rem;
 }
-.proyect_lehenik .proyect_content_lehenik #naming .content_naming .content_text .lehenik_text {
-  margin-bottom: 2rem;
-}
-.proyect_lehenik .proyect_content_lehenik #naming .content_naming .content_text .tematica_text {
-  margin-bottom: 2rem;
+.proyect_lehenik .proyect_content_lehenik #naming .content_naming .content_text .text {
+  margin-bottom: 1.5rem;
 }
 .proyect_lehenik .proyect_content_lehenik #paleta {
   padding: 0 10rem 0;
   width: 800px;
   margin-bottom: 3rem;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #paleta .title {
   color: rgb(255, 0, 119);
@@ -1758,30 +1759,29 @@ meter {
 .proyect_lehenik .proyect_content_lehenik #paleta .paleta_content .paleta_text .colores_title {
   color: whitesmoke;
   font-size: large;
+  margin-bottom: 0.5rem;
 }
 .proyect_lehenik .proyect_content_lehenik #paleta .paleta_content .paleta_text .colores_text {
   margin-bottom: 2rem;
-  margin-top: 0.75rem;
 }
 .proyect_lehenik .proyect_content_lehenik #tipografia {
   padding: 0 10rem 0;
   width: 800px;
   margin-bottom: 3rem;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #tipografia .title {
   color: rgb(255, 0, 119);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: "Ophelia", sans-serif;
   font-size: 1.75rem;
 }
 .proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content {
   font-size: 0.9rem;
   color: #ADADAD;
-  margin-bottom: 1rem;
   display: flex;
-  gap: 4rem;
+  gap: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content .tipo_text {
   max-width: 350px;
@@ -1789,10 +1789,10 @@ meter {
 .proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content .tipo_text .title_title {
   color: whitesmoke;
   font-size: large;
+  margin-bottom: 0.5rem;
 }
 .proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content .tipo_text .title_text {
   margin-bottom: 2rem;
-  margin-top: 0.75rem;
 }
 .proyect_lehenik .proyect_content_lehenik #tipografia .tipo_content .image_content img {
   width: 800px;
@@ -1802,20 +1802,19 @@ meter {
   width: 800px;
   margin-bottom: 3rem;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #logotipo .title {
   color: rgb(255, 0, 119);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: "Ophelia", sans-serif;
   font-size: 1.75rem;
 }
 .proyect_lehenik .proyect_content_lehenik #logotipo .logo_content {
   font-size: 0.9rem;
   color: #ADADAD;
-  margin-bottom: 1rem;
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
 }
 .proyect_lehenik .proyect_content_lehenik #logotipo .logo_content .logo_construccion {
   display: flex;
@@ -1847,18 +1846,17 @@ meter {
   width: 800px;
   margin-bottom: 3rem;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #tratamiento .title {
   color: rgb(255, 0, 119);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: "Ophelia", sans-serif;
   font-size: 1.75rem;
 }
 .proyect_lehenik .proyect_content_lehenik #tratamiento .tratamiento_content {
   font-size: 0.9rem;
   color: #ADADAD;
-  margin-bottom: 1rem;
   display: flex;
   gap: 3rem;
 }
@@ -1871,21 +1869,18 @@ meter {
 .proyect_lehenik .proyect_content_lehenik #tratamiento .tratamiento_content .tratamiento_text .content_title {
   color: whitesmoke;
   font-size: large;
-}
-.proyect_lehenik .proyect_content_lehenik #tratamiento .tratamiento_content .tratamiento_text .content_text {
-  margin-bottom: 2rem;
-  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 .proyect_lehenik .proyect_content_lehenik #senaletica {
   padding: 0 10rem 0;
   width: 800px;
   margin-bottom: 3rem;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #senaletica .title {
   color: rgb(255, 0, 119);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: "Ophelia", sans-serif;
   font-size: 1.75rem;
 }
@@ -1940,17 +1935,17 @@ meter {
   width: 800px;
   margin-bottom: 3rem;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #programa .title {
   color: rgb(255, 0, 119);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: "Ophelia", sans-serif;
   font-size: 1.75rem;
 }
 .proyect_lehenik .proyect_content_lehenik #programa .programa_content {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 .proyect_lehenik .proyect_content_lehenik #programa .programa_content .galeria {
   display: grid;
@@ -1979,11 +1974,11 @@ meter {
 .proyect_lehenik .proyect_content_lehenik #programa .programa_content .text_content .titulo {
   color: whitesmoke;
   font-size: large;
+  margin-bottom: 0.5rem;
 }
 .proyect_lehenik .proyect_content_lehenik #programa .programa_content .text_content .texto {
   color: #ADADAD;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 .proyect_lehenik .proyect_content_lehenik #aplicaciones {
   padding: 0 10rem 0;
@@ -1993,7 +1988,7 @@ meter {
   max-width: 100vw;
   padding: 0 10rem 0;
   text-align: left;
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 .proyect_lehenik .proyect_content_lehenik #aplicaciones .title {
   color: whitesmoke;
@@ -2153,8 +2148,10 @@ meter {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  width: 600px;
-  padding: 2.5rem 2rem 0 2rem;
+  width: 700px;
+  padding: 2.5rem 2rem 3rem 2rem;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid #747474;
 }
 #proyect_muesli .proyect_content_muesli .info_proyect .brief {
   margin: 0 auto;
@@ -2169,8 +2166,15 @@ meter {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
+#proyect_muesli .proyect_content_muesli .info_proyect .brief .categories {
+  width: 600px;
+  font-size: 0.9rem;
+  color: #747474;
+  font-weight: bold;
+}
 #proyect_muesli .proyect_content_muesli .info_proyect .plus_info {
   margin: 0 auto;
+  width: 150px;
 }
 #proyect_muesli .proyect_content_muesli .info_proyect .plus_info .asignatura #asignatura_title {
   color: black;
@@ -2189,16 +2193,6 @@ meter {
   color: #747474;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
-}
-#proyect_muesli .proyect_content_muesli .categories {
-  margin: 0 auto;
-  display: flex;
-  width: 600px;
-  font-size: 0.9rem;
-  padding: 0 2rem;
-  color: #747474;
-  font-weight: bold;
-  margin-bottom: 5rem;
 }
 #proyect_muesli .proyect_content_muesli #objetivos {
   padding: 0 10rem 0;
@@ -2265,7 +2259,7 @@ meter {
 }
 #proyect_muesli .proyect_content_muesli #logotipo .logotipo_content {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 #proyect_muesli .proyect_content_muesli #logotipo .logotipo_content .galeria {
   display: grid;
@@ -2399,7 +2393,6 @@ meter {
 }
 #proyect_muesli .proyect_content_muesli #resultados .resultados_content {
   color: #747474;
-  max-width: 600px;
 }
 #proyect_muesli .proyect_content_muesli #resultados .resultados_content .resultados_list {
   font-size: 0.9rem;
@@ -2426,7 +2419,7 @@ meter {
   display: flex;
   gap: 2rem;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 #proyect_muesli .proyect_content_muesli #resultados .resultados_content .resultados_images img {
   height: 200px;
@@ -2553,14 +2546,55 @@ meter {
   font-size: 1rem;
   color: whitesmoke;
 }
+#proyect_steam .submenu-trabajo {
+  position: sticky;
+  top: 49px;
+  background-color: #313B4C;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+  margin-top: 0;
+  border-bottom: 1px solid #4394D1;
+  border-top: 1px solid #4394D1;
+}
+#proyect_steam .submenu-trabajo ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#proyect_steam .submenu-trabajo ul li {
+  margin: 0 20px;
+  font-size: 0.75rem;
+}
+#proyect_steam .submenu-trabajo ul li a {
+  color: #ADADAD;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+#proyect_steam .submenu-trabajo ul li a:hover {
+  color: #4394D1;
+}
+#proyect_steam #filosofia,
+#proyect_steam #tipografia,
+#proyect_steam #paleta,
+#proyect_steam #logotipo,
+#proyect_steam #isotipo,
+#proyect_steam #hi-fi {
+  scroll-margin-top: 100px;
+}
 #proyect_steam .proyect_content_steam .info_proyect {
   margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 3rem;
-  width: 800px;
+  width: 700px;
   padding: 2.5rem 2rem 0 2rem;
   margin-bottom: 5rem;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid #4394D1;
 }
 #proyect_steam .proyect_content_steam .info_proyect .brief {
   margin: 0 auto;
@@ -2619,45 +2653,6 @@ meter {
 }
 #proyect_steam .proyect_content_steam #video_proyect {
   margin-bottom: 5rem;
-}
-#proyect_steam .proyect_content_steam .submenu-trabajo {
-  position: sticky;
-  top: 49px;
-  background-color: #313B4C;
-  width: 100%;
-  z-index: 999;
-  padding: 10px 0;
-  margin-top: 0;
-  border-bottom: 1px solid #4394D1;
-  border-top: 1px solid #4394D1;
-}
-#proyect_steam .proyect_content_steam .submenu-trabajo ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-#proyect_steam .proyect_content_steam .submenu-trabajo ul li {
-  margin: 0 20px;
-  font-size: 0.75rem;
-}
-#proyect_steam .proyect_content_steam .submenu-trabajo ul li a {
-  color: #ADADAD;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-#proyect_steam .proyect_content_steam .submenu-trabajo ul li a:hover {
-  color: #4394D1;
-}
-#proyect_steam .proyect_content_steam #filosofia,
-#proyect_steam .proyect_content_steam #tipografia,
-#proyect_steam .proyect_content_steam #paleta,
-#proyect_steam .proyect_content_steam #logotipo,
-#proyect_steam .proyect_content_steam #isotipo,
-#proyect_steam .proyect_content_steam #hi-fi {
-  scroll-margin-top: 100px;
 }
 #proyect_steam .proyect_content_steam .imagen_centrada {
   display: flex;
@@ -2731,6 +2726,391 @@ meter {
   color: whitesmoke;
 }
 #proyect_steam .proyect_content_steam .programas_steam .programas_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  gap: 0.75rem;
+}
+
+.galeria_fotos {
+  background-color: #D0CBB3;
+}
+.galeria_fotos .hero_proyect {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  background-image: url("/assets/img/galerias/galeria_fotografías/hero.png");
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  overflow: hidden;
+}
+.galeria_fotos .hero_proyect .hero_content {
+  position: relative;
+  max-width: 300px;
+  z-index: 2;
+  line-height: 3.75rem;
+  padding: 1rem;
+}
+.galeria_fotos .hero_proyect .hero_content h1 {
+  font-family: "Ophelia", sans-serif;
+  font-size: 4rem;
+  color: black;
+}
+.galeria_fotos .hero_proyect .hero_content h2 {
+  font-size: 1rem;
+  color: black;
+}
+.galeria_fotos #briefing {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 700px;
+  padding: 2.5rem 2rem 0 2rem;
+  margin-bottom: 5rem;
+  color: #747474;
+  margin-top: 0.5rem;
+}
+.galeria_fotos #briefing #categories_briefing {
+  font-weight: bold;
+}
+.galeria_fotos #imagenes {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 1.5rem;
+}
+.galeria_fotos #imagenes .img_grande {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.galeria_fotos #imagenes .imagenes_altas {
+  max-width: 1200px;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.galeria_fotos #imagenes .fotos-de-tres {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.galeria_fotos #imagenes .imagenes_pequenas {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.galeria_fotos #imagenes .imagenes_pequenas .img_peque .img_peque {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.galeria_fotos .programas {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 3rem;
+  margin-top: 5rem;
+}
+.galeria_fotos .programas .title {
+  font-size: 0.9rem;
+  color: #747474;
+}
+.galeria_fotos .programas .programas_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  gap: 0.75rem;
+}
+
+.galeria_visuales {
+  background-color: #3D3D3D;
+}
+.galeria_visuales .hero_proyect {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  background-image: url("/assets/img/galerias/galeria_visuales/hero.png");
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: whitesmoke;
+  overflow: hidden;
+}
+.galeria_visuales .hero_proyect .hero_content {
+  position: relative;
+  max-width: 300px;
+  z-index: 2;
+  line-height: 3.75rem;
+  padding: 1rem;
+}
+.galeria_visuales .hero_proyect .hero_content h1 {
+  font-family: "Ophelia", sans-serif;
+  font-size: 4rem;
+  color: whitesmoke;
+}
+.galeria_visuales .hero_proyect .hero_content h2 {
+  font-size: 1rem;
+  color: whitesmoke;
+}
+.galeria_visuales #briefing {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 700px;
+  padding: 2.5rem 2rem 4rem 2rem;
+  margin-bottom: 8rem;
+  color: #ADADAD;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid #ADADAD;
+}
+.galeria_visuales #briefing #categories_briefing {
+  font-weight: bold;
+}
+.galeria_visuales #trabajos {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 1.5rem;
+}
+.galeria_visuales #trabajos .trabajo_content {
+  margin-bottom: 5rem;
+}
+.galeria_visuales #trabajos .trabajo_content .title {
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+.galeria_visuales #trabajos .trabajo_content .explicacion {
+  font-size: 0.9rem;
+  color: #ADADAD;
+  margin-bottom: 1.5rem;
+  width: 800px;
+}
+.galeria_visuales #trabajos .trabajo_content .svg {
+  margin-top: 2rem;
+  max-width: 200px;
+}
+.galeria_visuales #trabajos .trabajo_content .svg .text {
+  font-size: 0.9rem;
+  color: rgb(255, 0, 119);
+  margin-bottom: 1rem;
+}
+.galeria_visuales #trabajos .trabajo_content .svg svg {
+  width: 100%;
+  height: auto;
+}
+.galeria_visuales #trabajos .trabajo_content .svg svg .logo .bg {
+  fill: url(#a);
+  stroke: #d54fa4;
+  stroke-width: 26px;
+  fill-opacity: 0;
+  stroke-dasharray: 3854;
+  stroke-dashoffset: 3854;
+  transition-property: fill-opacity, stroke-dashoffset;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  transition-delay: 700ms, 1000ms;
+}
+.galeria_visuales #trabajos .trabajo_content .svg svg .logo .recuadro {
+  fill: #fff;
+  transform-origin: center;
+  opacity: 0;
+  transform: scale(0);
+  transition-property: opacity transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  transition-delay: 300ms;
+}
+.galeria_visuales #trabajos .trabajo_content .svg svg .logo .objetivo {
+  fill: #fff;
+  opacity: 0;
+  transform: translateY(50px);
+  transition-property: opacity transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  transition-delay: 40ms;
+}
+.galeria_visuales #trabajos .trabajo_content .svg svg .logo .circulo {
+  fill: #fff;
+  opacity: 0;
+  transform: translateY(50px);
+  transition-property: opacity transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  transition-delay: 100ms;
+}
+.galeria_visuales #trabajos .trabajo_content .svg svg.active .logo .bg {
+  fill: url(#a);
+  fill-opacity: 1;
+  stroke-dashoffset: 0;
+  transition-property: fill-opacity, stroke-dashoffset;
+  transition-duration: 350ms, 350ms;
+  transition-timing-function: ease, ease;
+  transition-delay: 1000ms, 1200ms;
+}
+.galeria_visuales #trabajos .trabajo_content .svg svg.active .logo .recuadro {
+  fill: #fff;
+  opacity: 1;
+  transform: scale(1);
+  transition-property: opacity transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  transition-delay: 650ms;
+}
+.galeria_visuales #trabajos .trabajo_content .svg svg.active .logo .objetivo {
+  opacity: 1;
+  transform: translateY(0);
+  transition-property: opacity transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  transition-delay: 350ms;
+}
+.galeria_visuales #trabajos .trabajo_content .svg svg.active .logo .circulo {
+  opacity: 1;
+  transform: translateY(0);
+  transition-property: opacity transform;
+  transition-duration: 350ms;
+  transition-timing-function: ease;
+  transition-delay: 600ms;
+}
+.galeria_visuales .programas {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 3rem;
+  margin-top: 5rem;
+}
+.galeria_visuales .programas .title {
+  font-size: 0.9rem;
+  color: #ADADAD;
+}
+.galeria_visuales .programas .programas_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  gap: 0.75rem;
+}
+
+.galeria_renders {
+  background-color: #BABCBC;
+}
+.galeria_renders .hero_proyect {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  background-image: url("/assets/img/galerias/galeria_renders/hero.png");
+  display: flex;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: whitesmoke;
+  overflow: hidden;
+}
+.galeria_renders .hero_proyect .hero_content {
+  position: relative;
+  max-width: 300px;
+  z-index: 2;
+  line-height: 3.75rem;
+  padding: 1rem;
+}
+.galeria_renders .hero_proyect .hero_content h1 {
+  font-family: "Ophelia", sans-serif;
+  font-size: 4rem;
+  color: whitesmoke;
+}
+.galeria_renders .hero_proyect .hero_content h2 {
+  font-size: 1rem;
+  color: whitesmoke;
+}
+.galeria_renders #briefing {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 700px;
+  padding: 2.5rem 2rem 4rem 2rem;
+  margin-bottom: 8rem;
+  color: #6A6A6A;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid #747474;
+}
+.galeria_renders #briefing #categories_briefing {
+  font-weight: bold;
+}
+.galeria_renders #trabajos {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  gap: 1.5rem;
+}
+.galeria_renders #trabajos .trabajo_content {
+  margin-bottom: 5rem;
+}
+.galeria_renders #trabajos .trabajo_content .title {
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+.galeria_renders #trabajos .trabajo_content .explicacion {
+  font-size: 0.9rem;
+  color: #6A6A6A;
+  margin-bottom: 1.5rem;
+  width: 800px;
+}
+.galeria_renders .programas {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 3rem;
+  margin-top: 5rem;
+}
+.galeria_renders .programas .title {
+  font-size: 0.9rem;
+  color: #6A6A6A;
+}
+.galeria_renders .programas .programas_icon {
   display: flex;
   justify-content: center;
   align-items: center;
