@@ -90,6 +90,9 @@ document.addEventListener("mouseout", () => {
 });
 
 
+
+// CARRUSEL ///////////////////////////////////////////////////////////////////////////////
+
 document.addEventListener('DOMContentLoaded', () => {
     const track = document.querySelector('.carrusel-track');
     const prevButton = document.querySelector('.prev');
@@ -107,17 +110,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function goToPrevSlide() {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarrusel();
-        }
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarrusel();
     }
-
+    
     function goToNextSlide() {
-        if (currentIndex < slides.length - 1) {
-            currentIndex++;
-            updateCarrusel();
-        }
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarrusel();
     }
 
     // Botones
@@ -164,3 +163,9 @@ document.getElementById("scrollToTop").addEventListener("click", function(e) {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+
+document.addEventListener('click', () =>{
+    document.querySelector('svg').classList.toggle('active');
+})

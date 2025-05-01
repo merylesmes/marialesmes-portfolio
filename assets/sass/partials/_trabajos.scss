@@ -297,6 +297,7 @@
     #galeria {
         padding: 2rem;
         margin-top: 4rem;
+        margin-bottom: 4rem;
 
         .galeria_titulo {
             @include titulo_portfolio;
@@ -306,7 +307,7 @@
             margin-bottom: 2rem;
         }
 
-        .galeria_fotos {
+        .galeria_fotos_content {
             display: flex;
             flex-wrap: wrap;
             gap: 1.5rem;
@@ -324,7 +325,7 @@
                 justify-content: center;
 
                 img {
-                    width: 100%;
+                    width: 400px;
                     height: 100%;
                     object-fit: cover;
                     transition: filter 0.3s ease;
