@@ -98,12 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevButton = document.querySelector('.prev');
     const nextButton = document.querySelector('.next');
     const slides = document.querySelectorAll('.slide');
-    
+
     let currentIndex = 0;
-    
+
     // Determinamos el slideWidth dependiendo de la página
-    const slideWidth= slides[0].offsetWidth;
-        
+    const slideWidth = slides[0].offsetWidth;
+
     function updateCarrusel() {
         const offset = -currentIndex * slideWidth;
         track.style.transform = `translateX(${offset}px)`;
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         updateCarrusel();
     }
-    
+
     function goToNextSlide() {
         currentIndex = (currentIndex + 1) % slides.length;
         updateCarrusel();
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Mostrar la flecha cuando el usuario haga scroll hacia abajo
-window.onscroll = function() {
+window.onscroll = function () {
     const scrollButton = document.getElementById("scrollToTop");
 
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -159,13 +159,59 @@ window.onscroll = function() {
 };
 
 // Hacer que la flecha lleve al principio cuando se hace clic
-document.getElementById("scrollToTop").addEventListener("click", function(e) {
+document.getElementById("scrollToTop").addEventListener("click", function (e) {
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+/**************************************************************************************
+ * *******************   ANIMACION CSS (GALERIA VISUALES)  ******************************************************* */
+document.addEventListener('DOMContentLoaded', () => {
+    const circleTrigger = document.querySelector('#circle');
+    const svgElement = document.querySelector('svg');
+
+    if (circleTrigger && svgElement) {
+        circleTrigger.addEventListener('click', () => {
+            svgElement.classList.toggle('active');
+        });
+    }
+});
+
+/**************************************************************************************
+ * ******************   CARGAR IMÁGENES  ******************************************************* */
+document.querySelectorAll('img').forEach(img => {
+    img.loading = 'lazy';
+});
 
 
-document.addEventListener('click', () =>{
-    document.querySelector('svg').classList.toggle('active');
-})
+
+/**************************************************************************************
+ * *****************   NO PERMITIR DESCARGAR VÍDEOS ******************************************************* */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const videos = document.querySelectorAll("video");
+
+    videos.forEach(video => {
+        // Añadir controles si no los tiene
+        video.setAttribute("controls", "");
+
+        // Desactivar la descarga
+        video.setAttribute("controlsList", "nodownload");
+
+        // Desactivar clic derecho
+        video.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+    });
+});
+
+window.onload = function() {
+    // Verificar si hay un hash en la URL
+    if (window.location.hash) {
+        const target = document.querySelector(window.location.hash);
+        if (target) {
+            // Hacer scroll hacia el elemento con el hash
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+};
