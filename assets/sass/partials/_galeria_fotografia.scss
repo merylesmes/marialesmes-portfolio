@@ -43,10 +43,12 @@
         align-items: center;
         gap: 1rem;
         width: 700px;
-        padding: 2.5rem 2rem 0 2rem;
-        margin-bottom: 5rem;
+        padding: 2.5rem 2rem 4rem 2rem;
+        margin-bottom: 6rem;
         color: $color_marron;
         margin-top: .5rem;
+        border-bottom: 1px solid $color_gray;
+
 
         #categories_briefing {
             font-weight: bold;

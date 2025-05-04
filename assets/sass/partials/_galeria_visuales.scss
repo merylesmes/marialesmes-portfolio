@@ -17,7 +17,7 @@
 
         .hero_content {
             position: relative;
-            max-width: 300px;
+            max-width: 400px;
             z-index: 2;
             line-height: 3.75rem;
             padding: 1rem;
@@ -44,7 +44,7 @@
         gap: 1rem;
         width: 700px;
         padding: 2.5rem 2rem 4rem 2rem;
-        margin-bottom: 8rem;
+        margin-bottom: 6rem;
         color: $color_gray;
         margin-top: .5rem;
         border-bottom: 1px solid $color_gray;
@@ -56,16 +56,13 @@
     }
 
     #trabajos {
+        padding: 0 10rem 0;
         margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         width: 100%;
         max-width: 1200px;
-        gap: 1.5rem;
 
         .trabajo_content {
-            margin-bottom: 5rem;
+            margin-bottom: 6rem;
 
             .title {
                 @include titulo_portfolio;
@@ -80,154 +77,231 @@
                 margin-bottom: 1.5rem;
                 width: 800px;
             }
+        }
+    }
 
 
 
-            .svg {
-                margin-top: 2rem; // o el espaciado que desees
-                max-width: 200px; // ajusta según el tamaño deseado
-                // text-align: center;
-
-                // background-color: $color_gray;
-                .text {
-
-                @include body_text;
-                color: $color_rosa;
-                margin-bottom: 1rem;
-
-                }
-
-                svg {
-                    width: 100%;
-                    height: auto;
-
-                    .logo {
 
 
-                        .bg {
-                            fill: url(#a);
-                            stroke: #d54fa4;
-                            stroke-width: 26px;
-                            fill-opacity: 0;
-                            stroke-dasharray: 3854;
-                            stroke-dashoffset: 3854;
-                            transition-property: fill-opacity, stroke-dashoffset;
-                            transition-duration: 350ms;
-                            transition-timing-function: ease;
-                            transition-delay: 700ms, 1000ms;
-
-                        }
-
-                        .recuadro {
-                            fill: #fff;
-                            transform-origin: center;
-                            opacity: 0;
-                            transform: scale(0);
-                            transition-property: opacity transform;
-                            transition-duration: 350ms;
-                            transition-timing-function: ease;
-                            transition-delay: 300ms;
-
-                        }
-
-                        .objetivo {
-                            fill: #fff;
-                            opacity: 0;
-                            transform: translateY(50px);
-                            transition-property: opacity transform;
-                            transition-duration: 350ms;
-                            transition-timing-function: ease;
-                            transition-delay: 40ms;
 
 
-                        }
-
-                        .circulo {
-                            fill: #fff;
-                            opacity: 0;
-                            transform: translateY(50px);
-                            transition-property: opacity transform;
-                            transition-duration: 350ms;
-                            transition-timing-function: ease;
-                            transition-delay: 100ms;
+}
 
 
-                        }
+.svg_content {
+    margin-top: 2rem; // o el espaciado que desees
+    max-width: 200px; // ajusta según el tamaño deseado
+    // text-align: center;
 
-                    }
+    // background-color: $color_gray;
+
+    #svg_animacion_text {
+        display: flex;
+        width: 380px;
+        gap: 3rem;
+        margin-bottom: .5rem;
+        #text {
+
+            @include body_text;
+            color: $color_marron;
+            margin-bottom: 1rem;
+
+        }
+        #flecha{
+            font-size: 2rem;
+            color: $color_marron;
+        }
+
+        #circle {
+            font-size: 2rem;
+            color: $color_rosa;
+        }
+    }
 
 
-                    &.active {
-                        .logo {
+    svg {
+        width: 100%;
+        height: auto;
+
+        .logo {
 
 
-                            .bg {
-                                fill: url(#a);
-                                fill-opacity: 1;
-                                stroke-dashoffset: 0;
-                                transition-property: fill-opacity, stroke-dashoffset;
-                                transition-duration: 350ms, 350ms;
-                                transition-timing-function: ease, ease;
-                                transition-delay: 1000ms, 1200ms;
+            .bg {
+                fill: url(#a);
+                stroke: $color_rosa;
+                stroke-width: 26px;
+                fill-opacity: 0;
+                stroke-dasharray: 3854;
+                stroke-dashoffset: 3854;
+                transition-property: fill-opacity, stroke-dashoffset;
+                transition-duration: 350ms;
+                transition-timing-function: ease;
+                transition-delay: 700ms, 1000ms;
 
-                            }
-
-                            .recuadro {
-                                fill: #fff;
-                                opacity: 1;
-                                transform: scale(1);
-                                transition-property: opacity transform;
-                                transition-duration: 350ms;
-                                transition-timing-function: ease;
-                                transition-delay: 650ms;
-
-                            }
-
-                            .objetivo {
-                                opacity: 1;
-                                transform: translateY(0);
-                                transition-property: opacity transform;
-                                transition-duration: 350ms;
-                                transition-timing-function: ease;
-                                transition-delay: 350ms;
-
-                            }
-
-                            .circulo {
-                                opacity: 1;
-                                transform: translateY(0);
-                                transition-property: opacity transform;
-                                transition-duration: 350ms;
-                                transition-timing-function: ease;
-                                transition-delay: 600ms;
-
-                            }
-                        }
-                    }
-                }
             }
+
+            .recuadro {
+                fill: #fff;
+                transform-origin: center;
+                opacity: 0;
+                transform: scale(0);
+                transition-property: opacity transform;
+                transition-duration: 350ms;
+                transition-timing-function: ease;
+                transition-delay: 300ms;
+
+            }
+
+            .objetivo {
+                fill: #fff;
+                opacity: 0;
+                transform: translateY(50px);
+                transition-property: opacity transform;
+                transition-duration: 350ms;
+                transition-timing-function: ease;
+                transition-delay: 40ms;
+
+
+            }
+
+            .circulo {
+                fill: #fff;
+                opacity: 0;
+                transform: translateY(50px);
+                transition-property: opacity transform;
+                transition-duration: 350ms;
+                transition-timing-function: ease;
+                transition-delay: 100ms;
+
+
+            }
+
         }
 
 
+        &.active {
+            .logo {
 
+
+                .bg {
+                    fill: url(#a);
+                    fill-opacity: 1;
+                    stroke-dashoffset: 0;
+                    transition-property: fill-opacity, stroke-dashoffset;
+                    transition-duration: 350ms, 350ms;
+                    transition-timing-function: ease, ease;
+                    transition-delay: 1000ms, 1200ms;
+
+                }
+
+                .recuadro {
+                    fill: #fff;
+                    opacity: 1;
+                    transform: scale(1);
+                    transition-property: opacity transform;
+                    transition-duration: 350ms;
+                    transition-timing-function: ease;
+                    transition-delay: 650ms;
+
+                }
+
+                .objetivo {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition-property: opacity transform;
+                    transition-duration: 350ms;
+                    transition-timing-function: ease;
+                    transition-delay: 350ms;
+
+                }
+
+                .circulo {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition-property: opacity transform;
+                    transition-duration: 350ms;
+                    transition-timing-function: ease;
+                    transition-delay: 600ms;
+
+                }
+            }
+        }
+    }
+}
+
+#yardas_imagenes {
+    display: flex;
+    justify-content: space-between; // centra las imágenes horizontalmente
+    flex-wrap: wrap; // permite que bajen si no caben en una línea
+    // gap: 1rem; // espacio entre imágenes
+    width: 100%; // ocupa todo el ancho del padre (.trabajo_content)
+
+    img {
+        max-width: 100%; // que no se pasen del ancho del contenedor
+        width: 49%; // ocupan cada una un 45% del ancho aprox
+        height: auto;
+        // object-fit: contain;s
+    }
+}
+
+#cars_imagenes {
+    display: flex;
+    justify-content: space-between; // centra las imágenes horizontalmente
+    flex-wrap: wrap; // permite que bajen si no caben en una línea
+    // gap: 1rem; // espacio entre imágenes
+    width: 100%; // ocupa todo el ancho del padre (.trabajo_content)
+
+    img {
+        max-width: 100%; // que no se pasen del ancho del contenedor
+        // width: 49%; // ocupan cada una un 45% del ancho aprox
+        height: auto;
+        // object-fit: contain;s
+    }
+}
+
+
+
+
+// =======================================================================
+// SECCIÓN: FOOTE DE GALERIAS
+// =======================================================================
+.footer_galerias {
+    margin: 0 auto;
+    padding: 0 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .arrow_left {
+        display: flex;
+        gap: 1rem;
+        .text,
+        .arrow {
+            color: $color_rosa;
+            transition: color 0.3s ease;
+        }
+
+        &:hover {
+            .text,
+            .arrow {
+                color: $color_gray;
+            }
+        }
     }
 
-    // =======================================================================
-    // SECCIÓN: PROGRAMAS (sección para mostrar programas o habilidades)
-    // =======================================================================
     .programas {
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         gap: 1rem;
+        align-items: center;
         padding-bottom: 3rem;
-        margin-top: 5rem;
+
+        // margin-top: 5rem;
 
         .title {
             @include programas_title;
-            color: $color_gray;
+            color: #6A6A6A;
         }
 
         .programas_icon {
@@ -235,4 +309,21 @@
         }
     }
 
+    .arrow_right {
+        display: flex;gap: 1rem;
+
+
+        .text,
+        .arrow {
+            color: $color_rosa;
+            transition: color 0.3s ease;
+        }
+
+        &:hover {
+            .text,
+            .arrow {
+                color: $color_gray;
+            }
+    }
+}
 }
