@@ -163,7 +163,7 @@ meter {
   top: 0;
   left: 0;
 }
-.gradient-bg svg {
+.gradient-bg .gradient_svg {
   position: fixed;
   top: 0;
   left: 0;
