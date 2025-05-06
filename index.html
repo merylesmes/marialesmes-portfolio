@@ -62,7 +62,7 @@
                     <!-- <li><a href="#">Servicios</a></li> -->
                     <li><a href="html/about_me.html">Sobre mí</a></li>
                     <li><a href="#">Tienda</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#" id="contactTrigger">Contacto</a></li>
                 </ul>
             </nav>
 
@@ -128,8 +128,8 @@
                     para interactuar con el contenido]
                 </div>
                 <div class="correo">
-                    <a
-                        href="https://mail.google.com/mail/?view=cm&to=marialesmes87@gmail.com&su=Hola!&body=Quiero%20contactarte" target="_blank">MARIALESMES87@GMAIL.COM</a>
+                    <a href="https://mail.google.com/mail/?view=cm&to=marialesmes87@gmail.com&su=Hola!&body=Quiero%20contactarte"
+                        target="_blank">MARIALESMES87@GMAIL.COM</a>
                     <div class="arrow">
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
                             class="bi bi-arrow-up-right" viewBox="0 0 16 16">
@@ -139,10 +139,34 @@
                     </div>
                 </div>
             </div>
-        </div>
-    <div class="custom-cursor" id="cursor"></div>
 
-        <script src="/app/main.js"></script>
+        </div>
+        <div class="custom-cursor" id="cursor"></div>
+        <!-- Aquí va el modal -->
+        <section class="modal_windows" id="contactModal">
+            <article class="modal_window">
+                <div class="modal_window_header">
+                    <div class="title">Contacto</div>
+                    <div class="close_icon" id="closeModal">
+                        <span class="bi bi-x-circle-fill"></span>
+                    </div>
+                </div>
+                <div class="modal_window_body">
+                    <div class="modal_window_content">
+                        <p>Email: <a href="mailto:marialesmes87@gmail.com">marialesmes87@gmail.com</a>
+                        </p>
+                        <p><strong>Teléfono:</strong> +34 607 939 817</p>
+                        <p><strong>Instagram:</strong> <a href="https://instagram.com/tuusuario"
+                                target="_blank">@merylesmes</a></p>
+                        <p><strong>Behance:</strong> <a href="https://behance.net/tuusuario"
+                                target="_blank">behance.net/tuusuario</a></p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- Fin del modal -->
+    </div>
+    <script src="/app/main.js"></script>
 </body>
 
 

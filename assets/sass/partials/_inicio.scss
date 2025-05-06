@@ -59,6 +59,7 @@
             }
         }
     }
+
     .center-content {
         display: flex;
         align-items: center;
@@ -75,11 +76,13 @@
             span {
                 font-size: 1rem;
                 @include body_text;
-                &:hover{
+
+                &:hover {
                     color: $color_rosa;
                 }
             }
-            &:hover{
+
+            &:hover {
                 color: $color_rosa;
             }
         }
@@ -95,7 +98,8 @@
     padding: 10px;
     border-radius: 50%;
     font-size: 1.75rem;
-    display: none; /* Por defecto, está oculta */
+    display: none;
+    /* Por defecto, está oculta */
     z-index: 9999;
     transition: opacity 0.3s;
 }
@@ -181,7 +185,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 999;
 
     &.show {
         opacity: 1;
@@ -317,7 +321,7 @@
             }
 
             .arrow {
-                svg{
+                svg {
                     // width: 12px !important;
                     // height: 12px !important;
                 }
@@ -342,65 +346,90 @@
     }
 }
 
-// ===================== MEDIA QUERIES RESPONSIVE =====================
-@media screen and (max-width: 1024px) {
-    .container_info {
-        flex-direction: column;
-        align-items: baseline;
-        bottom: 100px;
+
+.modal_windows {
+    display: none;
+    /* El modal está oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Fondo oscuro */
+    z-index: 1000;
+    /* Para asegurarse de que el modal esté por encima de otros elementos */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_window {
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal_window_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal_window_body {
+    margin-top: 10px;
+}
+
+.close_icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: $color_rosa;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        // flex-direction: column;
+        // align-items: flex-start;
         padding: 1rem;
 
-        .title_portfolio {
-            font-size: clamp(2rem, 10vw, 8rem);
+        .icon_ml {
+            img {
+                width: 40px;
+            }
         }
 
-        .info_portfolio {
+        .center-content {
+            justify-content: center;
             width: 100%;
-            text-align: left;
-            font-size: 0.95rem; // REDUCE TAMAÑO DE TEXTO
+            gap: 1rem;
 
-            .info_work_button {
-                justify-content: flex-start;
-
-                .text {
+            .back-btn {
+                span {
                     font-size: 0.9rem;
                 }
             }
         }
-    }
 
-    .container_footer,
-    .container_footer_intro {
-        flex-direction: row; // MANTENEMOS EN FILA PARA NO CRECER EN ALTO
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.75rem 1rem;
+        .menu_button {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
 
-        .redes,
-        .correo {
-            font-size: 0.85rem;
-            gap: 0.25rem;
-        }
+            .btn {
+                font-size: 0.9rem;
+                padding: 6px 12px;
+            }
 
-        .info_background {
-            font-size: 0.7rem;
-        }
-    }
+            .menu {
+                width: 100%;
+                right: 0;
 
-    .nav {
-        padding: 1rem;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-between;
-
-        .icon_ml img {
-            width: 40px;
-        }
-
-        .menu_button .btn {
-            padding: 6px 12px;
-            font-size: 0.9rem;
+                a {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 
@@ -408,63 +437,69 @@
         width: 100%;
         padding: 1.5rem;
 
-        .menu-header span {
-            font-size: 1rem;
+        .menu-header {
+            span {
+                font-size: 1rem;
+            }
+
+            button {
+                font-size: 1.25rem;
+            }
         }
 
         ul li a {
             font-size: 1rem;
         }
     }
-}
 
-@media screen and (max-width: 430px) {
+    .scroll-to-top {
+        font-size: 1.5rem;
+        bottom: 15px;
+        right: 15px;
+    }
+
     .container_info {
-        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
 
         .title_portfolio {
-            font-size: clamp(2rem, 15vw, 5rem);
+            font-size: clamp(2rem, 15vw, 6rem);
+            line-height: normal;
+            text-align: center;
         }
 
         .info_portfolio {
-            width: 100%;
-            font-size: 0.85rem;
+            width: 90%;
+            text-align: center;
 
             .info_work_button {
-                .text {
-                    font-size: 0.8rem;
-                }
+                justify-content: center;
             }
-        }
-    }
-
-    .nav {
-        padding: 1rem;
-
-        .icon_ml img {
-            width: 36px;
-        }
-
-        .menu_button .btn {
-            font-size: 0.8rem;
         }
     }
 
     .container_footer,
     .container_footer_intro {
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.75rem 1rem;
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
 
         .redes,
         .correo {
-            font-size: 0.75rem;
+            justify-content: center;
         }
 
         .info_background {
-            font-size: 0.65rem;
+            display: none;
         }
+    }
+
+    .modal_window {
+        width: 95%;
+        padding: 1rem;
     }
 }
