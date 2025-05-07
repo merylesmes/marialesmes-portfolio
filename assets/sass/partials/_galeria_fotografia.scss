@@ -107,27 +107,92 @@
         }
 
     }
+
     // =======================================================================
-        // SECCIÓN: PROGRAMAS (sección para mostrar programas o habilidades)
-        // =======================================================================
-        .programas {
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            padding-bottom: 3rem;
-            
+    // SECCIÓN: PROGRAMAS (sección para mostrar programas o habilidades)
+    // =======================================================================
+    .programas {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding-bottom: 3rem;
 
-            .title {
-                @include programas_title;
-                color: $color_marron;
-            }
 
-            .programas_icon {
-                @include icons_programa;
+        .title {
+            @include programas_title;
+            color: $color_marron;
+        }
+
+        .programas_icon {
+            @include icons_programa;
+        }
+    }
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    .galeria_fotos {
+
+        .hero_proyect {
+            height: 30vh;
+
+            .hero_content {
+                max-width: 90%;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                h2 {
+                    font-size: 0.9rem;
+                }
             }
         }
 
+        #briefing {
+            width: 90%;
+            padding: 2rem 1rem;
+        }
+
+        #imagenes {
+            padding-inline: 1rem;
+
+            .imagenes_altas,
+            .fotos-de-tres,
+            .imagenes_pequenas {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+        }
+
+        .programas {
+            width: 100%;
+            padding: 1.5rem 0 2rem;
+            margin-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            border-bottom: 1px solid rgba(255, 255, 255, .12);
+            text-align: center;
+            gap: 1rem;
+
+            .title {
+                font-size: 1rem;
+            }
+
+            .programas_icon {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
 }

@@ -1,11 +1,11 @@
 #scrollProgress {
     position: fixed;
-    top: 48px; // justo debajo del nav de 80px de alto
+    top: 48px;
     left: 0;
     height: 3px;
     background-color: $color_rosa;
     width: 0%; // empieza vacía
-    z-index: 10000001;
+    z-index: 10;
     transition: width 0.2s ease-out;
 }
 
@@ -120,7 +120,7 @@
             height: 100%;
             width: 100%;
             background-color: rgba(0, 0, 0, 0.4);
-            z-index: 2;
+            z-index: 20;
         }
 
         h1,
@@ -200,9 +200,9 @@
             justify-content: right;
             align-items: center;
             color: $color_rosa;
-            z-index: 888;
+            z-index: 9;
             border-bottom: 1px solid $color_rosa;
-            
+
 
 
 
@@ -253,7 +253,7 @@
             justify-content: left;
             align-items: center;
             color: rgb(255, 0, 119);
-            z-index: 888;
+            z-index: 9;
             border-bottom: 1px solid rgb(255, 0, 119);
 
 
@@ -322,7 +322,7 @@
                 position: relative;
                 overflow: hidden;
                 display: flex;
-                align-items:flex-start;
+                align-items: flex-start;
                 justify-content: center;
 
                 img {
@@ -358,6 +358,7 @@
                 &:hover {
                     border: 1px solid $color_rosa;
                     border-radius: 24px;
+
                     img {
                         filter: brightness(0) invert(1); // Blanco
                     }
@@ -370,6 +371,149 @@
         }
     }
 
+
+    .modal_windows {
+        display: none;
+        /* El modal está oculto por defecto */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Fondo oscuro */
+        z-index: 1000;
+        /* Para asegurarse de que el modal esté por encima de otros elementos */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .modal_window {
+        background-color: white;
+        padding: 20px;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .modal_window_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .modal_window_body {
+        margin-top: 10px;
+    }
+    
+    .close_icon {
+        cursor: pointer;
+        font-size: 24px;
+        color: $color_rosa;
+    }
 }
 
 
+@media (max-width: 768px) {
+    
+    .nav{
+        height: 60px;
+    }
+    #scrollProgress {
+        top: 60px; // ajustado si el nav cambia de posición en móviles
+    }
+
+    .trabajos {
+        padding-top: 20px;
+
+        .hero {
+            height: 30vh;
+
+            h1#workId {
+                font-size: 3em;
+                text-align: center;
+            }
+
+            h2#trabajoId {
+                font-size: 1.5em;
+                text-align: center;
+            }
+        }
+
+        .gallery {
+            flex-direction: column;
+
+            .fotoR,
+            .fotoL {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 200px;
+                padding: 1rem;
+                text-align: center;
+                background-size: cover;  // Cambia a 'contain' para que la imagen se ajuste dentro del contenedor
+                background-position: center;  // Mantén la imagen centrada
+                height: 200px;  // Ajusta la altura a 200px en pantallas móviles
+                
+            }
+
+            .right,
+            .left {
+                font-size: 2.5rem;
+                padding: 0;
+                line-height: normal;
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+
+        #galeria {
+            padding: 1rem;
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            
+        
+            .galeria_titulo {
+                font-size: 3rem;
+                text-align: center; 
+            }
+        
+            .galeria_fotos_content {
+                gap: 1rem;                 
+                width: 75%;                  
+        
+                .foto_hover {
+                    width: 100%;            
+                    max-width: 400px;      
+        
+                    img {
+                        width: 100%;        
+                        object-fit: cover;  
+                        border-radius: 8px; 
+                    }
+        
+                    .texto_hover {
+                        padding: 2rem;
+                        text-align: center;
+        
+                        h3 {
+                            font-size: 2rem;
+                        }
+        
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    .modal_window {
+        width: 95%;
+        padding: 1rem;
+    }
+}
