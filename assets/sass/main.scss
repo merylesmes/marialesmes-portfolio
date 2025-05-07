@@ -72,3 +72,10 @@ body {
         backdrop-filter: blur(4px);
     }
 }
+
+
+@media (max-width: 768px) {
+    #cursor{
+        display: none;
+    }
+}

@@ -221,7 +221,7 @@
         width: 25ch;
         text-align: right;
 
-        .info_text {}
+        // .info_text {}
 
         .info_work_button {
             display: flex;
@@ -263,30 +263,30 @@
             display: flex;
             align-items: center;
 
-            .behance_nombre {}
+            // .behance_nombre {}
 
-            .arrow {}
+            // .arrow {}
         }
 
         .instagram {
             display: flex;
             align-items: center;
 
-            .instagram_nombre {}
+            // .instagram_nombre {}
 
-            .arrow {}
+            // .arrow {}
         }
     }
 
-    .info_background {}
+    // .info_background {}
 
     .correo {
         display: flex;
         align-items: center;
 
-        .correo_nombre {}
+        // .correo_nombre {}
 
-        .arrow {}
+        // .arrow {}
     }
 }
 
@@ -320,12 +320,7 @@
                 margin-right: 0.5rem;
             }
 
-            .arrow {
-                svg {
-                    // width: 12px !important;
-                    // height: 12px !important;
-                }
-            }
+            // .arrow {}
         }
     }
 
@@ -342,7 +337,7 @@
             margin-right: 0.5rem;
         }
 
-        .arrow {}
+        // .arrow {}
     }
 }
 
@@ -461,11 +456,12 @@
     .container_info {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
         padding: 1rem;
+        margin-bottom: 2.5rem;
 
         .title_portfolio {
-            font-size: clamp(2rem, 15vw, 6rem);
+            font-size: 5rem;
             line-height: normal;
             text-align: center;
         }
@@ -473,24 +469,27 @@
         .info_portfolio {
             width: 90%;
             text-align: center;
-
+            .info_text{
+                margin-bottom: .6rem;
+            }
             .info_work_button {
                 justify-content: center;
             }
         }
     }
-
+    
     .container_footer,
     .container_footer_intro {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
-        gap: 1rem;
-        padding: 1rem;
+        gap: .6rem;
+        padding: .8rem;
         text-align: center;
 
         .redes,
         .correo {
             justify-content: center;
+            font-size: 1rem;
         }
 
         .info_background {
@@ -502,4 +501,5 @@
         width: 95%;
         padding: 1rem;
     }
+
 }

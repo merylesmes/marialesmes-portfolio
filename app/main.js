@@ -1,37 +1,27 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("JavaScript cargado correctamente."); // Verifica que el archivo JS se cargue correctamente
-
     const contactTrigger = document.getElementById("contactTrigger");
     const modal = document.getElementById("contactModal");
     const closeBtn = document.getElementById("closeModal");
 
-    // Verificar que los elementos existan
-    if (!contactTrigger) {
-        console.log("El enlace de contacto no se encuentra.");
-    }
-    if (!modal) {
-        console.log("El modal no se encuentra.");
-    }
-    if (!closeBtn) {
-        console.log("El botón de cerrar no se encuentra.");
-    }
-
-    // Mostrar el modal cuando se haga clic en el enlace de contacto
     contactTrigger.addEventListener("click", function (e) {
         e.preventDefault();
-        modal.style.display = "flex"; // Mostrar modal
+
+        // Cerrar menú lateral si está abierto
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const overlay = document.getElementById('overlay');
+        dropdownMenu.classList.remove('show');
+        overlay.classList.remove('show');
+
+        // Mostrar modal
+        modal.style.display = "flex";
     });
 
-
     closeBtn.addEventListener("click", function () {
-
         modal.style.display = "none"; // Ocultar modal
     });
 
-    // Cerrar el modal si se hace clic fuera del modal
     window.addEventListener("click", function (e) {
         if (e.target === modal) {
-
             modal.style.display = "none"; // Ocultar modal
         }
     });
