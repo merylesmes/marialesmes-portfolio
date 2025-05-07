@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.addEventListener('click', closeMenuFunc);
 });
 
+//SCROLL BAR
 window.addEventListener('scroll', () => {
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;

@@ -213,4 +213,134 @@
     }
 }
 
+@media (max-width: 768px) {
+    .galeria_renders {
 
+        .hero_proyect {
+            height: 30vh;
+
+            .hero_content {
+                max-width: 90%;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                h2 {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        #briefing {
+            width: 90%;
+            padding: 2rem 1rem;
+        }
+
+        #trabajos {
+            padding-inline: 1rem;
+
+            .trabajo_content {
+                .title {
+                    font-size: 1.5rem;
+                }
+
+                .explicacion {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #carrusel_render_escultura {
+        .carrusel-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            .prev,
+            .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 2rem;
+                padding: 0.5rem;
+                background: rgba(0, 0, 0, 0.3);
+                border-radius: 50%;
+                color: white;
+                z-index: 5;
+                border: none;
+                cursor: pointer;
+                transition: background 0.3s;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.6);
+                }
+            }
+
+            .prev {
+                left: 0.5rem;
+            }
+
+            .next {
+                right: 0.5rem;
+            }
+
+            .carrusel-viewport {
+                width: 100% !important;
+                max-width: 100%;
+            }
+
+            .carrusel-track {
+                width: 100%;
+            }
+
+            .slide {
+                width: 100% !important;
+                max-width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+
+    .footer_galerias {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 1rem;
+
+        .arrow_left,
+        .arrow_right {
+            justify-content: center;
+        }
+
+        .programas {
+            width: 100%;
+            padding: 1.5rem 0 2rem;
+            margin-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, .12);
+            border-bottom: 1px solid rgba(255, 255, 255, .12);
+            text-align: center;
+            gap: 1rem;
+
+            .title {
+                font-size: 1rem;
+            }
+
+            .programas_icon {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+
+                img {
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

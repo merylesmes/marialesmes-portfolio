@@ -264,7 +264,7 @@ meter {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10000;
+  z-index: 10;
   width: 100%;
   height: 50px;
   background-color: whitesmoke;
@@ -365,7 +365,7 @@ meter {
   padding: 2rem;
   background-color: whitesmoke;
   transition: right 0.3s ease-in-out;
-  z-index: 10001;
+  z-index: 30;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
 }
 .side-menu * {
@@ -418,7 +418,7 @@ meter {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  z-index: 999;
+  z-index: 20;
 }
 .overlay.show {
   opacity: 1;
@@ -610,7 +610,7 @@ meter {
     font-size: 1rem;
   }
   .side-menu {
-    width: 100%;
+    width: 50%;
     padding: 1.5rem;
   }
   .side-menu .menu-header span {
@@ -680,7 +680,7 @@ meter {
   height: 3px;
   background-color: rgb(255, 0, 119);
   width: 0%;
-  z-index: 10000001;
+  z-index: 10;
   transition: width 0.2s ease-out;
 }
 
@@ -778,7 +778,7 @@ meter {
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  z-index: 2;
+  z-index: 20;
 }
 .trabajos .hero h1,
 .trabajos .hero h2 {
@@ -840,7 +840,7 @@ meter {
   justify-content: right;
   align-items: center;
   color: rgb(255, 0, 119);
-  z-index: 888;
+  z-index: 9;
   border-bottom: 1px solid rgb(255, 0, 119);
 }
 .trabajos .gallery .fotoR::after {
@@ -880,7 +880,7 @@ meter {
   justify-content: left;
   align-items: center;
   color: rgb(255, 0, 119);
-  z-index: 888;
+  z-index: 9;
   border-bottom: 1px solid rgb(255, 0, 119);
 }
 .trabajos .gallery .fotoL::after {
@@ -973,7 +973,127 @@ meter {
 .trabajos #galeria .galeria_fotos_content .foto_hover:hover .texto_hover {
   opacity: 1;
 }
+.trabajos .modal_windows {
+  display: none;
+  /* El modal está oculto por defecto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Fondo oscuro */
+  z-index: 1000;
+  /* Para asegurarse de que el modal esté por encima de otros elementos */
+  justify-content: center;
+  align-items: center;
+}
+.trabajos .modal_window {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.trabajos .modal_window_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trabajos .modal_window_body {
+  margin-top: 10px;
+}
+.trabajos .close_icon {
+  cursor: pointer;
+  font-size: 24px;
+  color: rgb(255, 0, 119);
+}
 
+@media (max-width: 768px) {
+  .nav {
+    height: 60px;
+  }
+  #scrollProgress {
+    top: 60px;
+  }
+  .trabajos {
+    padding-top: 20px;
+  }
+  .trabajos .hero {
+    height: 30vh;
+  }
+  .trabajos .hero h1#workId {
+    font-size: 3em;
+    text-align: center;
+  }
+  .trabajos .hero h2#trabajoId {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .trabajos .gallery {
+    flex-direction: column;
+  }
+  .trabajos .gallery .fotoR,
+  .trabajos .gallery .fotoL {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding: 1rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+  }
+  .trabajos .gallery .right,
+  .trabajos .gallery .left {
+    font-size: 2.5rem;
+    padding: 0;
+    line-height: normal;
+    max-width: 100%;
+    text-align: center;
+  }
+  .trabajos #galeria {
+    padding: 1rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .trabajos #galeria .galeria_titulo {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .trabajos #galeria .galeria_fotos_content {
+    gap: 1rem;
+    width: 75%;
+  }
+  .trabajos #galeria .galeria_fotos_content .foto_hover {
+    width: 100%;
+    max-width: 400px;
+  }
+  .trabajos #galeria .galeria_fotos_content .foto_hover img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 8px;
+  }
+  .trabajos #galeria .galeria_fotos_content .foto_hover .texto_hover {
+    padding: 2rem;
+    text-align: center;
+  }
+  .trabajos #galeria .galeria_fotos_content .foto_hover .texto_hover h3 {
+    font-size: 2rem;
+  }
+  .trabajos #galeria .galeria_fotos_content .foto_hover .texto_hover p {
+    font-size: 1rem;
+  }
+  .modal_window {
+    width: 95%;
+    padding: 1rem;
+  }
+}
 .proyect_patito {
   width: 100%;
   background-color: #101010;
@@ -2902,6 +3022,53 @@ meter {
   gap: 0.75rem;
 }
 
+@media (max-width: 768px) {
+  .galeria_fotos .hero_proyect {
+    height: 30vh;
+  }
+  .galeria_fotos .hero_proyect .hero_content {
+    max-width: 90%;
+  }
+  .galeria_fotos .hero_proyect .hero_content h1 {
+    font-size: 2.5rem;
+  }
+  .galeria_fotos .hero_proyect .hero_content h2 {
+    font-size: 0.9rem;
+  }
+  .galeria_fotos #briefing {
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+  .galeria_fotos #imagenes {
+    padding-inline: 1rem;
+  }
+  .galeria_fotos #imagenes .imagenes_altas,
+  .galeria_fotos #imagenes .fotos-de-tres,
+  .galeria_fotos #imagenes .imagenes_pequenas {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .galeria_fotos .programas {
+    width: 100%;
+    padding: 1.5rem 0 2rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    gap: 1rem;
+  }
+  .galeria_fotos .programas .title {
+    font-size: 1rem;
+  }
+  .galeria_fotos .programas .programas_icon {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .galeria_fotos .programas .programas_icon img {
+    width: 30px;
+  }
+}
 .galeria_visuales {
   background-color: #3D3D3D;
 }
@@ -3461,6 +3628,110 @@ meter {
   gap: 1rem;
 }
 
+@media (max-width: 768px) {
+  .galeria_renders .hero_proyect {
+    height: 30vh;
+  }
+  .galeria_renders .hero_proyect .hero_content {
+    max-width: 90%;
+  }
+  .galeria_renders .hero_proyect .hero_content h1 {
+    font-size: 2.5rem;
+  }
+  .galeria_renders .hero_proyect .hero_content h2 {
+    font-size: 0.9rem;
+  }
+  .galeria_renders #briefing {
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+  .galeria_renders #trabajos {
+    padding-inline: 1rem;
+  }
+  .galeria_renders #trabajos .trabajo_content .title {
+    font-size: 1.5rem;
+  }
+  .galeria_renders #trabajos .trabajo_content .explicacion {
+    width: 100%;
+  }
+  #carrusel_render_escultura .carrusel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  #carrusel_render_escultura .carrusel-wrapper .prev,
+  #carrusel_render_escultura .carrusel-wrapper .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    color: white;
+    z-index: 5;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  #carrusel_render_escultura .carrusel-wrapper .prev:hover,
+  #carrusel_render_escultura .carrusel-wrapper .next:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  #carrusel_render_escultura .carrusel-wrapper .prev {
+    left: 0.5rem;
+  }
+  #carrusel_render_escultura .carrusel-wrapper .next {
+    right: 0.5rem;
+  }
+  #carrusel_render_escultura .carrusel-wrapper .carrusel-viewport {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  #carrusel_render_escultura .carrusel-wrapper .carrusel-track {
+    width: 100%;
+  }
+  #carrusel_render_escultura .carrusel-wrapper .slide {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  #carrusel_render_escultura .carrusel-wrapper .slide img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .footer_galerias {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+  }
+  .footer_galerias .arrow_left,
+  .footer_galerias .arrow_right {
+    justify-content: center;
+  }
+  .footer_galerias .programas {
+    width: 100%;
+    padding: 1.5rem 0 2rem;
+    margin-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    gap: 1rem;
+  }
+  .footer_galerias .programas .title {
+    font-size: 1rem;
+  }
+  .footer_galerias .programas .programas_icon {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .footer_galerias .programas .programas_icon img {
+    width: 30px;
+  }
+}
 .about-section {
   flex-grow: 1;
   min-height: calc(100vh - 50px);

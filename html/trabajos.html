@@ -33,12 +33,10 @@
                 <button id="closeMenu">&times;</button>
             </div>
             <ul>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="trabajos.html">Trabajos</a></li>
-                <!-- <li><a href="#">Servicios</a></li> -->
                 <li><a href="/html/about_me.html">Sobre mí</a></li>
-
-                <!-- <li><a href="#">Tienda</a></li> -->
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#" id="contactTrigger">Contacto</a></li>
             </ul>
         </nav>
         <div id="scrollProgress"></div>
@@ -46,7 +44,7 @@
             <div class="hero">
                 <!-- Background gradient added here -->
                 <div class="gradient-bg">
-                    <svg xmlns="http://www.w3.org/2000/svg"class=gradient_svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class=gradient_svg>
                         <defs>
                             <filter id="goo">
                                 <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
@@ -186,6 +184,33 @@
 
     </div>
     <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Aquí va el modal -->
+    <section class="modal_windows" id="contactModal">
+        <article class="modal_window">
+            <div class="modal_window_header">
+                <div class="title">Contacto</div>
+                <div class="close_icon" id="closeModal">
+                    <span class="bi bi-x-circle-fill"></span>
+                </div>
+            </div>
+            <div class="modal_window_body">
+                <div class="modal_window_content">
+                    <p>Email: <a
+                            href="https://mail.google.com/mail/?view=cm&to=marialesmes87@gmail.com&su=Hola!&body=Quiero%20contactarte"
+                            target="_blank">marialesmes87@gmail.com</a>
+                    </p>
+                    <p><strong>Teléfono:</strong> +34 607 939 817</p>
+                    <p><strong>Instagram:</strong> <a href="https://instagram.com/tuusuario"
+                            target="_blank">@merylesmes</a></p>
+                    <p><strong>Behance:</strong> <a href="https://behance.net/tuusuario"
+                            target="_blank">behance.net/tuusuario</a></p>
+                </div>
+            </div>
+        </article>
+    </section>
+    <!-- Fin del modal -->
+
 
     <script src="/app/main.js"></script>
 </body>
