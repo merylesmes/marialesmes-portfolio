@@ -42,7 +42,7 @@
         top: 49px; // Altura de tu header (ajústalo si es más alto)
         background-color: rgba(0, 0, 0, 0.9);
         width: 100%;
-        z-index: 999;
+        z-index: 5;
         padding: 10px 0;
         margin-top: 0;
         border-bottom: 1px solid $color_rosa;
@@ -125,7 +125,7 @@
                 // SECCIÓN: CATEGORÍAS DEL PROYECTO
                 // =======================================================================
                 .categories {
-                    
+
                     width: 600px;
                     @include body_text;
                     color: $color_gray;
@@ -250,13 +250,6 @@
                     .text {
                         margin-bottom: 1.5rem;
                     }
-
-
-
-                    // .target_text{
-                    //     margin-bottom: 67px;
-
-                    // }
                 }
             }
         }
@@ -725,6 +718,358 @@
             .programas_icon {
                 @include icons_programa;
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .proyect_lehenik {
+        padding-top: 30px;
+
+        .hero_proyect {
+            height: 30vh;
+
+            .hero_content {
+                max-width: 250px;
+            }
+        }
+
+        .submenu-trabajo {
+            display: none;
+        }
+
+        .proyect_content_lehenik {
+            .info_proyect {
+                flex-direction: column;
+                width: 90%;
+                padding: 2rem 1rem;
+                gap: 2rem;
+
+                .brief {
+                    max-width: 100%;
+
+                    .categories {
+                        width: 100%;
+                    }
+                }
+
+                .plus_info {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1.5rem;
+
+                    .asignatura,
+                    .tiempo {
+                        width: 100%;
+                    }
+                }
+            }
+
+
+            #investigacion,
+            #naming,
+            #paleta,
+            #tipografia,
+            #logotipo,
+            #tratamiento,
+            #senaletica,
+            #programa,
+            #aplicaciones {
+                padding: 0 2rem;
+                width: 100%;
+                margin-bottom: 4rem;
+
+                .title {
+                    font-size: 1.5rem;
+                }
+            }
+
+            #investigacion {
+                .investigacion_content {
+                    flex-direction: column-reverse;
+                    gap: 2rem;
+                    width: 90%;
+
+                    .content_images {
+                        flex-direction: column;
+                        height: auto;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .content_text {
+                        width: 100%;
+                    }
+                }
+            }
+
+
+            #naming {
+                .content_naming {
+                    flex-direction: column-reverse;
+                    gap: 2rem;
+                    width: 90%;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+
+                    .content_text {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+
+            #paleta {
+                .paleta_content {
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
+                    gap: 2rem;
+                    width: 90%;
+
+                    .paleta_img {
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .paleta_text {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            #tipografia {
+                .tipo_content {
+                    flex-direction: column;
+                    gap: 1rem;
+                    width: 90%;
+
+                    .tipo_text {
+                        max-width: 100%;
+                    }
+
+                    .image_content {
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+            }
+
+            #logotipo {
+                .logo_content {
+                    flex-direction: column;
+                    gap: 2rem;
+                    width: 90%;
+
+                    .logo_construccion {
+                        .logo_superior {
+                            flex-direction: column-reverse;
+                            gap: 1.5rem;
+
+                            .logo_img {
+                                img {
+                                    width: 100%;
+                                    height: auto;
+                                }
+                            }
+
+                            .logo_text {
+                                max-width: 100%;
+                            }
+                        }
+
+                        .logo_colores {
+                            flex-direction: column;
+                            align-items: left;
+                            gap: 1rem;
+
+                            .logo_bn,
+                            .logo_color {
+                                img {
+                                    width: 100%;
+                                    max-width: 283px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #tratamiento {
+                .tratamiento_content {
+                    flex-direction: column-reverse;
+                    gap: 2rem;
+                    width: 90%;
+
+                    .tratamiento_image {
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    .tratamiento_text {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            #senaletica {
+                .texto_superior {
+                    p {
+                        font-size: 0.95rem;
+                        max-width: 100%;
+                    }
+                }
+
+                .contenedor_iconos {
+                    width: 90%;
+                    gap: 2.5rem;
+                    justify-content: center;
+
+                    .icono_item {
+                        width: 80%;
+                        align-items: center;
+                        text-align: center;
+                        // margin-bottom: 2rem;
+
+                        .titulo,
+                        .descripcion {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            #programa {
+                .programa_content {
+                    flex-direction: column-reverse;
+                    gap: 2rem;
+                    width: 90%;
+
+                    .galeria {
+                        display: flex;
+                        flex-direction: column-reverse;
+                        width: 100%;
+
+                        .columna_izq {
+                            flex-direction: row;
+                            justify-content: center;
+                            flex-wrap: wrap;
+
+                            img {
+                                height: auto;
+                                max-width: 47.5%;
+                            }
+                        }
+
+                        .columna_der {
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    .text_content {
+                        max-width: 100%;
+                        text-align: left;
+
+
+                        .titulo {
+                            font-size: 1.2rem;
+                        }
+
+                        .texto {
+                            font-size: 0.95rem;
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+
+            #aplicaciones {
+                .aplicaciones_list {
+                    padding-left: 0;
+
+                    li {
+                        padding-left: 1.25rem;
+                        text-align: left;
+
+                        &::before {
+                            top: 0.6em;
+                            left: 0.25rem;
+                        }
+                    }
+                }
+
+                .carrusel-wrapper {
+                    position: relative;
+                    width: 90%;
+                    overflow: hidden;
+
+                    .prev,
+                    .next {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 2rem;
+                        padding: 0.5rem;
+                        border-radius: 50%;
+                        color: white;
+                        z-index: 5;
+                        border: none;
+                        cursor: pointer;
+                        transition: background 0.3s;
+
+                        &:hover {
+                            background: rgba(0, 0, 0, 0.6);
+                        }
+                    }
+
+                    .prev {
+                        left: 0.5rem;
+                    }
+
+                    .next {
+                        right: 0.5rem;
+                    }
+
+                    .carrusel-viewport {
+                        width: 100% !important;
+                        max-width: 100%;
+                    }
+
+                    .carrusel-track {
+                        width: 100%;
+                    }
+
+                    .slide {
+                        width: 100% !important;
+                        max-width: 100%;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                            object-fit: contain;
+                        }
+                    }
+
+                }
+            }
+
+
         }
     }
 }

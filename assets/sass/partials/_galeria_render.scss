@@ -215,9 +215,10 @@
 
 @media (max-width: 768px) {
     .galeria_renders {
-
+        
         .hero_proyect {
             height: 30vh;
+            
 
             .hero_content {
                 max-width: 90%;
@@ -239,6 +240,8 @@
 
         #trabajos {
             padding-inline: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
 
             .trabajo_content {
                 .title {

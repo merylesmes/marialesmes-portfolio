@@ -356,32 +356,51 @@
     /* Para asegurarse de que el modal esté por encima de otros elementos */
     justify-content: center;
     align-items: center;
+
+    .modal_window {
+        background-color: white;
+        padding: 20px;
+        width: 24%;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        .modal_window_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .close_icon {
+                cursor: pointer;
+                font-size: 24px;
+                color: $color_rosa;
+            }
+
+            .title {
+                font-size: large;
+                color: $color_rosa;
+                font-weight: bold;
+            }
+        }
+
+        .modal_window_body {
+            margin-top: 10px;
+
+            strong {
+                font-weight: bold;
+            }
+
+            p {
+                margin-bottom: .4rem;
+            }
+
+            a:hover {
+                color: $color_rosa;
+            }
+        }
+    }
 }
 
-.modal_window {
-    background-color: white;
-    padding: 20px;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
 
-.modal_window_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.modal_window_body {
-    margin-top: 10px;
-}
-
-.close_icon {
-    cursor: pointer;
-    font-size: 24px;
-    color: $color_rosa;
-}
 
 @media (max-width: 768px) {
     .nav {
@@ -394,15 +413,7 @@
         }
 
         .center-content {
-            justify-content: center;
-            width: 100%;
-            gap: 1rem;
-
-            .back-btn {
-                span {
-                    font-size: 0.9rem;
-                }
-            }
+            display: none;
         }
 
         .menu_button {
@@ -467,15 +478,17 @@
         .info_portfolio {
             width: 90%;
             text-align: center;
-            .info_text{
+
+            .info_text {
                 margin-bottom: .6rem;
             }
+
             .info_work_button {
                 justify-content: center;
             }
         }
     }
-    
+
     .container_footer,
     .container_footer_intro {
         flex-direction: column-reverse;
@@ -495,9 +508,27 @@
         }
     }
 
-    .modal_window {
-        width: 95%;
-        padding: 1rem;
+    .modal_windows {
+        .modal_window {
+            width: 80%;
+            padding: 15px;
+        }
+
+        .modal_window_header {
+            .title {
+                font-size: 1.25rem;
+            }
+        }
+
+        .modal_window_body {
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .close_icon {
+            font-size: 20px;
+        }
     }
 
 }

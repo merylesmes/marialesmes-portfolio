@@ -187,6 +187,12 @@
                 color: whitesmoke;
             }
         }
+        #reloj_percepcion{
+            background-image: url('/assets/img/reloj_percepcion/hero.png');
+            &:hover{
+                color: whitesmoke;
+            }
+        }
 
         .fotoR {
             display: flex;
@@ -282,7 +288,6 @@
 
         .left {
             z-index: 988;
-
             max-width: 500px;
             @include titulo_portfolio;
             font-size: 6rem;
@@ -416,12 +421,8 @@
 
 
 @media (max-width: 768px) {
-    
-    .nav{
-        height: 60px;
-    }
     #scrollProgress {
-        top: 60px; // ajustado si el nav cambia de posición en móviles
+        top: 50px; // ajustado si el nav cambia de posición en móviles
     }
 
     .trabajos {
@@ -511,9 +512,5 @@
             }
         }
         
-    }
-    .modal_window {
-        width: 95%;
-        padding: 1rem;
     }
 }

@@ -1,0 +1,553 @@
+// ==============================================================================
+// SECCIÓN: .proyect
+// ==============================================================================
+#proyect_reloj_percepcion {
+    width: 100%;
+    background-color: #191919;
+    @include imgs; // Incluir imágenes de fondo y otros estilos reutilizables
+    padding-top: 46px;
+
+    // =======================================================================
+    // SECCIÓN: HERO PROYECTO
+    // =======================================================================
+    .hero_proyect {
+        position: relative;
+        width: 100%;
+        height: 40vh; // Altura de la sección hero, puede ajustarse a 100vh si se desea pantalla completa
+        background-image: url('/assets/img/reloj_percepcion/hero.png'); // Imagen de fondo del proyecto
+        display: flex;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+
+        // Contenido principal dentro de la sección hero
+        .hero_content {
+            position: relative;
+            max-width: 400px;
+            z-index: 2;
+            line-height: 3.75rem;
+            padding: 1rem;
+
+            h1 {
+                @include titulo_portfolio; // Estilo de título reutilizable
+                font-size: 4rem;
+                color: $color_azul;
+            }
+
+            h2 {
+                font-size: 1rem;
+                color: $color_azul;
+            }
+        }
+    }
+
+    // =======================================================================
+    // SECCIÓN: INFORMACIÓN DEL PROYECTO
+    // =======================================================================
+    .proyect_content_reloj {
+        .info_proyect {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            width: 700px;
+            padding: 2.5rem 2rem 3rem 2rem;
+            margin-bottom: 5rem;
+            border-bottom: 1px solid $color_marron;
+
+            .brief {
+                margin: 0 auto;
+                max-width: 60%; // Ancho máximo para la sección brief
+
+                .info_brief {
+                    // Estilos para la información de briefing
+
+                    #briefing_title {
+                        color: whitesmoke;
+                        margin-bottom: 1rem;
+                    }
+
+                    #briefing_content {
+                        color: $color_gray; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text; // Estilo de texto reutilizable
+                    }
+                }
+
+                // =======================================================================
+                // SECCIÓN: CATEGORÍAS DEL PROYECTO
+                // =======================================================================
+                .categories {
+                    width: 600px;
+                    @include body_text;
+                    color: $color_gray;
+                    font-weight: bold;
+                }
+            }
+
+            .plus_info {
+                margin: 0 auto;
+                width: 150px;
+
+                .asignatura {
+                    // Estilos para la asignatura
+
+                    #asignatura_title {
+                        color: whitesmoke;
+                        margin-bottom: 1rem;
+                    }
+
+                    #asignatura_content {
+                        color: $color_marron; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text;
+                    }
+                }
+
+                .tiempo {
+                    // Estilos para la duración
+
+                    #tiempo_title {
+                        color: whitesmoke;
+                        margin-bottom: 1rem;
+                    }
+
+                    #tiempo_content {
+                        color: $color_gray; // Sustituido por variable $color_gray
+                        margin-bottom: 1.5rem;
+                        @include body_text;
+                    }
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: PROBLEMA DE INVESTIGACION
+        // =======================================================================
+
+        #problema {
+            padding: 0 10rem 0;
+            width: 800px;
+            margin-bottom: 5rem;
+            color: $color_marron;
+
+            .title {
+                color: $color_azul;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .content {
+                display: flex;
+                gap: 0.8rem;
+                flex-direction: column;
+
+                .problema_title {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        // =======================================================================
+        // SECCIÓN: PROBLEMA DE DISEÑO
+        // =======================================================================
+        #diseno {
+            padding: 0 10rem 0;
+            width: 750px;
+            margin-bottom: 5rem;
+            color: $color_marron;
+
+            .title {
+                color: $color_azul;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+        }
+
+        // =======================================================================  
+        // SECCIÓN: DISEÑO VISUAL
+        // =======================================================================
+        #diseno_visual {
+            padding: 0 10rem 0;
+            width: 800px;
+            margin-bottom: 5rem;
+            color: $color_marron;
+
+            .title {
+                color: $color_azul;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .diseno_visual_content {
+                p {
+                    margin-bottom: 1em;
+                }
+
+                .visual_list {
+                    @include body_text;
+                    list-style: none; // quitamos el estilo por defecto
+                    padding-left: 1.75rem;
+                    margin-bottom: 2rem;
+
+                    li {
+                        position: relative;
+                        padding-left: 1rem;
+
+                        strong {
+                            font-weight: bold;
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0.6em;
+                            width: 0.5em;
+                            height: 0.25em;
+                            background-color: $color_azul;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        // =======================================================================  
+        // SECCIÓN: INTERACCION
+        // =======================================================================
+        #interaccion {
+            padding: 0 10rem 0;
+            width: 100%;
+            margin-bottom: 5rem;
+            color: $color_marron;
+
+            .title {
+                color: $color_azul;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .interaccion_content {
+                display: flex;
+                gap: 7rem;
+                width: 100%;
+
+                .interaccion_text {
+                    width: 600px;
+
+                    .interaccion_list {
+                        @include body_text;
+                        list-style: none; // quitamos el estilo por defecto
+                        padding-left: 1.75rem;
+                        margin-bottom: 2rem;
+
+                        li {
+                            position: relative;
+                            padding-left: 1rem;
+
+                            strong {
+                                font-weight: bold;
+                            }
+
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0.6em;
+                                width: 0.5em;
+                                height: 0.25em;
+                                background-color: $color_azul;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+
+                .interaccion_img {
+                    display: flex;
+                    width: 40%;
+                    gap: 1.5rem;
+
+                    img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        // =======================================================================  
+        // SECCIÓN: DESARROLLO TECNICO
+        // =======================================================================
+        #desarrollo_tecnico {
+            padding: 0 10rem 0;
+            width: 100%;
+            margin-bottom: 5rem;
+            color: $color_marron;
+
+            .title {
+                color: $color_azul;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .desarrollo_content {
+                strong {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        // =======================================================================  
+        // SECCIÓN: Pantalla final // Reflexión
+        // =======================================================================
+        #final {
+            padding: 0 10rem 0;
+            width: 100%;
+            margin-bottom: 5rem;
+            color: $color_marron;
+
+            .title {
+                color: $color_azul;
+                margin-bottom: 1rem;
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+            }
+
+            .final_content {
+                width: 600px;
+
+                strong {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        // =======================================================================  
+        // SECCIÓN: VIDEO
+        // =======================================================================
+        #video_proyect {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-direction: column;
+            gap: 3rem;
+            margin-bottom: 5rem;
+
+            .video {
+                margin: 0 auto;
+            }
+
+            .button {
+                margin: 0 auto;
+                padding: 10px 20px;
+                background-color: #6ba4a4;
+                color: whitesmoke;
+                width: 350px;
+                border-radius: 10px;
+                text-decoration: none;
+                @include titulo_portfolio;
+                font-size: 30px;
+                text-align: center;
+                transition: background-color 0.3s ease;
+            }
+        }
+
+        // =======================================================================  
+        // SECCIÓN: PROGRAMAS
+        // =======================================================================
+        .programas_reloj {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 3rem;
+
+            .title {
+                @include programas_title;
+                color: white;
+            }
+
+            .programas_icon {
+                @include icons_programa;
+            }
+        }
+
+    }
+
+
+    .modal_windows {
+        display: none;
+        /* El modal está oculto por defecto */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Fondo oscuro */
+        z-index: 1000;
+        /* Para asegurarse de que el modal esté por encima de otros elementos */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal_window {
+        background-color: white;
+        padding: 20px;
+        width: 80%;
+        max-width: 500px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal_window_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal_window_body {
+        margin-top: 10px;
+    }
+
+    .close_icon {
+        cursor: pointer;
+        font-size: 24px;
+        color: $color_rosa;
+    }
+}
+
+@media (max-width: 768px) {
+    #proyect_reloj_percepcion {
+        padding-top: 30px;
+
+        .hero_proyect {
+            height: 30vh;
+
+            .hero_content {
+                max-width: 90%;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                h2 {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .proyect_content_reloj {
+            .info_proyect {
+                flex-direction: column;
+                width: 90%;
+                padding: 2rem 1rem;
+                gap: 2rem;
+
+                .brief {
+                    max-width: 100%;
+
+                    .categories {
+                        width: 100%;
+                    }
+                }
+
+                .plus_info {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1.5rem;
+
+                    .asignatura,
+                    .tiempo {
+                        width: 100%;
+                    }
+                }
+            }
+
+            #problema,
+            #diseno,
+            #diseno_visual,
+            #interaccion,
+            #desarrollo_tecnico,
+            #final {
+                padding: 0 2rem;
+                width: 100%;
+
+                .title {
+                    font-size: 1.5rem;
+                }
+            }
+
+            #interaccion {
+                .interaccion_content {
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    .interaccion_text {
+                        width: 100%;
+                    }
+
+                    .interaccion_img {
+                        width: 100%;
+                        justify-content: center;
+
+                        img {
+                            height: auto;
+                            width: 100%;
+                            max-width: 150px;
+                        }
+                    }
+                }
+            }
+
+            #final {
+                padding: 0 2rem;
+                width: 100%;
+                margin-bottom: 3rem;
+
+                .title {
+                    font-size: 1.5rem;
+                }
+
+                .final_content {
+                    width: 100%;
+
+                    strong {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+
+            #video_proyect {
+                .video {
+                    width: 100%;
+                }
+
+                .button {
+                    width: 90%;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .programas_reloj {
+                padding: 2rem 1rem;
+                text-align: center;
+
+            }
+        }
+    }
+}

@@ -10,14 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
     <title>Lehenik</title>
 </head>
 
 <body>
     <div class="app">
         <header class="nav">
-
-
             <!-- Logo a la izquierda -->
             <div class="icon_ml">
                 <a href="../index.html">
@@ -53,7 +52,7 @@
                 <!-- <li><a href="#">Servicios</a></li> -->
                 <li><a href="#">Sobre mí</a></li>
                 <!-- <li><a href="#">Tienda</a></li> -->
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#" id="contactTrigger">Contacto</a></li>
             </ul>
         </nav>
         <div id="scrollProgress"></div>
@@ -103,7 +102,6 @@
                             </div>
                         </div>
                         <div class="categories"> Branding - Fotografías - Edición</div>
-
                     </div>
                     <div class="plus_info">
                         <div class="asignatura">
@@ -503,6 +501,32 @@
 
     </div>
     <div class="custom-cursor" id="cursor"></div>
+
+
+    <!-- Aquí va el modal -->
+        <section class="modal_windows" id="contactModal">
+            <article class="modal_window">
+                <div class="modal_window_header">
+                    <div class="title">Contacto</div>
+                    <div class="close_icon" id="closeModal">
+                        <span class="bi bi-x-circle-fill"></span>
+                    </div>
+                </div>
+                <div class="modal_window_body">
+                    <div class="modal_window_content">
+                        <p><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&to=marialesmes87@gmail.com&su=Hola!&body=Quiero%20contactarte"
+                            target="_blank">marialesmes87@gmail.com</a>
+                        </p>
+                        <p><strong>Teléfono:</strong> +34 607 939 817</p>
+                        <p><strong>Instagram:</strong> <a href="https://instagram.com/tuusuario"
+                                target="_blank">@merylesmes</a></p>
+                        <p><strong>Behance:</strong> <a href="https://behance.net/tuusuario"
+                                target="_blank">behance.net/tuusuario</a></p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- Fin del modal -->
 
     <script src="/app/main.js"></script>
 </body>

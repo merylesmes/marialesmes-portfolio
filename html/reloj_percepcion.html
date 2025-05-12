@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../assets/img/icon_ml.png" type="image/png">
+    <link rel="stylesheet" href="/assets/sass/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <title>Percepción del tiempo</title>
+</head>
+
+<body>
+    <div class="app">
+        <header class="nav">
+            <!-- Logo a la izquierda -->
+            <div class="icon_ml">
+                <a href="../index.html">
+                    <img src="../../assets/img/icon_ml.png" alt="Logo">
+                </a>
+            </div>
+            <!-- Flecha de Volver y texto "Trabajos" -->
+            <div class="center-content">
+                <a href="trabajos.html" class="back-btn">
+                    <span>&larr;
+
+                    </span> Trabajos
+                </a>
+
+            </div>
+            <!-- Botón de menú a la derecha -->
+            <div class="menu_button">
+                <a class="btn" href="#" id="menuToggle">Menú</a>
+            </div>
+        </header>
+
+
+
+
+        <!-- Menú lateral -->
+        <nav id="dropdownMenu" class="side-menu">
+            <div class="menu-header">
+                <span>Menú</span>
+                <button id="closeMenu">&times;</button>
+            </div>
+            <ul>
+                <li><a href="trabajos.html">Trabajos</a></li>
+                <!-- <li><a href="#">Servicios</a></li> -->
+                <li><a href="#">Sobre mí</a></li>
+                <!-- <li><a href="#">Tienda</a></li> -->
+                <li><a href="#" id="contactTrigger">Contacto</a></li>
+            </ul>
+        </nav>
+        <div id="scrollProgress"></div>
+
+        <!-- ========================================================================================================
+        =====================================SECCIÓN: .proyect ==================================================-->
+        <div id="proyect_reloj_percepcion">
+            <div class="hero_proyect">
+                <div class="overlay"></div>
+                <div class="hero_content">
+                    <h1 id="workId">Percepción del tiempo</h1>
+                    <h2 id="trabajoId">Processing - Programación - Experimental</h2>
+                </div>
+            </div>
+
+            <div class="proyect_content_reloj">
+                <div class="info_proyect">
+                    <div class="brief">
+                        <div class="info_brief">
+                            <div id="briefing_title">Briefing</div>
+                            <div id="briefing_content">
+                                Rediseño completo de la línea de Muesli Crunchy de Hacendado, adaptado a la venta
+                                online. El objetivo principal era modernizar la identidad visual del producto, mejorar
+                                la presencia en fotografía digital y comunicar valores como sostenibilidad,
+                                calidad-precio y cercanía
+                            </div>
+                        </div>
+                        <div class="categories"> Processing - Programación - Experimental </div>
+
+                    </div>
+                    <div class="plus_info">
+                        <div class="asignatura">
+                            <div id="asignatura_title">Asignatura</div>
+                            <div id="asignatura_content">
+                                Programación creativa y proyectos experimentales <br>
+                                4º diseño gráfico
+                            </div>
+                        </div>
+                        <div class="tiempo">
+                            <div id="tiempo_title">Duración</div>
+                            <div id="tiempo_content">1 mes</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- ========================================================================================================
+        =====================================SECCIÓN: PROBLEMA DE INVESTIGACION ==================================================-->
+                <div id="problema">
+                    <div class="title">Problema de investigación</div>
+                    <div class="content">
+                        <p class="problema_title">¿Alguna vez sentiste que el tiempo pasa volando cuando te lo estás
+                            pasando
+                            bien, o que se detiene cuando estás aburrido?</p>
+                        <p class="problema_content">Este proyecto parte de esa sensación universal. Se basa en la idea
+                            de que la
+                            percepción del
+                            tiempo es subjetiva y depende de nuestras emociones, atención y acciones. El objetivo es
+                            hacer
+                            visible esa percepción distorsionada, comparándola con el tiempo real.</p>
+                    </div>
+
+                </div>
+
+                <!-- ========================================================================================================
+        =====================================SECCIÓN: PRPUESTA DE DISEÑO ==================================================-->
+                <div id="diseno">
+                    <div class="title">Propuesta de diseño</div>
+                    <p class="diseno_content">
+                        El proyecto consiste en un reloj visual interactivo que no sigue el tiempo real, sino que lo
+                        genera según las acciones del usuario.
+                        <br><br>
+                        Se compone de tres anillos concéntricos que representan horas, minutos y segundos.
+                        Cada vez que se pulsa una tecla del teclado ('h', 'm', 's'), el reloj avanza según esa acción.
+                        <br><br>
+                        Al final, se muestra una comparación entre la hora real del sistema y la hora que ha generado el
+                        usuario, acompañada de una reflexión sobre la percepción del tiempo.
+                    </p>
+                </div>
+
+                <!-- ========================================================================================================
+        =====================================SECCIÓN: DISEÑO VISUAL ==================================================-->
+                <div id="diseno_visual">
+                    <div class="title">Diseño visual</div>
+                    <div class="diseno_visual_content">
+                        <p><strong>Diseño circular:</strong> inspirado en relojes con anillos concéntricos que
+                            representan el paso del tiempo de forma no convencional.</p>
+                        <strong>Colores simbólicos:</strong>
+                        <ul class="visual_list">
+                            <li><strong>Segundos</strong> (naranja): velocidad, fugacidad.</li>
+                            <li><strong>Minutos</strong> (verde): equilibrio, transición.</li>
+                            <li><strong>Horas</strong> (azul): estabilidad, constancia.</li>
+                        </ul>
+                        <p>Este diseño busca representar cómo el tiempo se percibe de formas distintas según su
+                            escala y nuestra atención.</p>
+                    </div>
+                </div>
+
+                <!-- ========================================================================================================
+        =====================================SECCIÓN: INTERACCION ==================================================-->
+                <div id="interaccion">
+                    <div class="title">Interacción</div>
+                    <div class="interaccion_content">
+                        <div class="interaccion_text">
+                            El usuario interactúa mediante el teclado:
+                            <ul class="interaccion_list">
+                                <li>Tecla “s”: añade un segundo.</li>
+                                <li>Tecla “m”: añade un minuto.</li>
+                                <li>Tecla “h”: añade una hora</li>
+                            </ul>
+                            Cada interacción genera una línea en el reloj y aumenta un contador.
+                            <ul class="interaccion_list">
+                                <li>Cuando se completa un ciclo (60 segundos → 1 minuto, 60 minutos → 1 hora), se crean
+                                    “telarañas temporales”: líneas que conectan los anillos, simbolizando momentos
+                                    significativos.</li>
+                            </ul>
+                            Estas telarañas representan cómo nuestras acciones van tejiendo una red de percepciones del
+                            tiempo únicas y personales.
+                        </div>
+                        <div class="interaccion_img">
+                            <img src="/assets/img/reloj_percepcion/interaccion1.png" alt="interaccion1">
+                            <img src="/assets/img/reloj_percepcion/interaccion2.png" alt="interaccion2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========================================================================================================
+        =====================================SECCIÓN: DESARROLLO TECNICO ==================================================-->
+                <div id="desarrollo_tecnico">
+                    <div class="title">Desarrollo técnico</div>
+                    <p class="desarrollo_content">
+                        <strong>Lenguaje original:</strong> Processing. <br>
+                        <strong>Adaptación a web:</strong> p5.js, HTML y CSS, usando Visual Studio.
+                    </p>
+                </div>
+                <!-- ========================================================================================================
+        =====================================SECCIÓN: Pantalla final // Reflexión ==================================================-->
+                <div id="final">
+                    <div class="title">Pantalla final // Reflexión</div>
+                    <div class="final_content">
+                        Este proyecto culmina con una pantalla que no solo muestra el resultado de la interacción,
+                        sino que plantea una reflexión profunda sobre nuestra relación con el tiempo:
+                        <br><br>
+                        El tiempo no es solo una medida, es una experiencia personal.Al interactuar con el reloj,
+                        has creado tu propia versión del tiempo.Cada pulsación ha modificado su curso, mostrando que
+                        nuestras acciones y decisiones pueden transformar lo que creemos fijo en algo único y
+                        subjetivo.
+                        <br><br>
+                        <strong>Este reloj no marca “la hora”, sino tu forma de vivirla</strong>
+                    </div>
+                </div>
+
+                <!-- ========================================================================================================
+        =====================================SECCIÓN: VIDEO ==================================================-->
+                <div id="video_proyect">
+                    <video class="video" width="900" controls>
+                        <source src="/assets/img/reloj_percepcion/reloj_web_video.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                    <a class="button" href="https://percepciondeltiempo.netlify.app/">Pulsa para probar</a>
+                </div>
+
+                <a href="#" class="scroll-to-top" id="scrollToTop">
+                    ↑
+                </a>
+
+                <div class="programas_reloj">
+                    <div class="title">Programas utilizados para el proyecto</div>
+                    <div class="programas_icon">
+                        <img src="/assets/img/iconos apps/processing.png" alt="">
+                        <img src="/assets/img/iconos apps/visual.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!--FOOTER INDIVIDUALES -->
+    <div class="container_footer">
+        <div class="redes">
+            <div class="behance">
+                <div class="behance_nombre">
+                    BEHANCE
+                </div>
+                <div class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="instagram">
+                <div class="instagram_nombre">
+                    INSTAGRAM
+                </div>
+                <div class="arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                        class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="correo">
+            <a href="https://mail.google.com/mail/?view=cm&to=marialesmes87@gmail.com&su=Hola!&body=Quiero%20contactarte"
+                target="_blank">MARIALESMES87@GMAIL.COM</a>
+            <div class="arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
+                    class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!-- Fondo desenfocado -->
+    <div id="overlay" class="overlay"></div>
+
+    </div>
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Aquí va el modal -->
+        <section class="modal_windows" id="contactModal">
+            <article class="modal_window">
+                <div class="modal_window_header">
+                    <div class="title">Contacto</div>
+                    <div class="close_icon" id="closeModal">
+                        <span class="bi bi-x-circle-fill"></span>
+                    </div>
+                </div>
+                <div class="modal_window_body">
+                    <div class="modal_window_content">
+                        <p>Email: <a href="https://mail.google.com/mail/?view=cm&to=marialesmes87@gmail.com&su=Hola!&body=Quiero%20contactarte"
+                            target="_blank">marialesmes87@gmail.com</a>
+                        </p>
+                        <p><strong>Teléfono:</strong> +34 607 939 817</p>
+                        <p><strong>Instagram:</strong> <a href="https://instagram.com/tuusuario"
+                                target="_blank">@merylesmes</a></p>
+                        <p><strong>Behance:</strong> <a href="https://behance.net/tuusuario"
+                                target="_blank">behance.net/tuusuario</a></p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- Fin del modal -->
+
+
+
+    <script src="/app/main.js"></script>
+</body>
+
+</html>
