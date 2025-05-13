@@ -447,8 +447,12 @@ meter {
   line-height: 7rem;
 }
 .container_info .info_portfolio {
-  width: 25ch;
+  width: 26ch;
   text-align: right;
+}
+.container_info .info_portfolio .info_text {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 .container_info .info_portfolio .info_work_button {
   display: flex;
@@ -648,10 +652,15 @@ meter {
     text-align: center;
   }
   .container_info .info_portfolio .info_text {
-    margin-bottom: 0.6rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
   }
   .container_info .info_portfolio .info_work_button {
+    gap: 0.1rem;
     justify-content: center;
+  }
+  .container_info .info_portfolio .info_work_button .text {
+    font-size: 1rem;
   }
   .container_footer,
   .container_footer_intro {
@@ -1110,8 +1119,8 @@ meter {
   width: 100%;
   background-color: #101010;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   padding-top: 46px;
 }
@@ -1191,15 +1200,6 @@ meter {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
-.proyect_patito .proyect_content_patito .info_proyect .plus_info .tiempo #tiempo_title {
-  color: whitesmoke;
-  margin-bottom: 1rem;
-}
-.proyect_patito .proyect_content_patito .info_proyect .plus_info .tiempo #tiempo_content {
-  color: #ADADAD;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
 .proyect_patito .proyect_content_patito #video_proyect {
   margin: 0 auto;
   display: flex;
@@ -1256,8 +1256,8 @@ meter {
 }
 .proyect_patito .proyect_content_patito #contracubierta #contenedor_cubiertas #imagenes_cubiertas img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   width: 1200px;
 }
@@ -1368,8 +1368,8 @@ meter {
   width: 100%;
   background-color: #cecece;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   padding-top: 46px;
 }
@@ -1443,15 +1443,6 @@ meter {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
-.proyect_tribaldos .proyect_content_tribaldos .info_proyect .plus_info .tiempo #tiempo_title {
-  color: black;
-  margin-bottom: 1rem;
-}
-.proyect_tribaldos .proyect_content_tribaldos .info_proyect .plus_info .tiempo #tiempo_content {
-  color: #747474;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
 .proyect_tribaldos .proyect_content_tribaldos #video_proyect {
   margin: 0 auto;
   display: flex;
@@ -1499,8 +1490,8 @@ meter {
 }
 .proyect_tribaldos .proyect_content_tribaldos .contracubierta .contenedor_cubiertas .imagenes_cubiertas img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   width: 350px;
 }
@@ -1560,8 +1551,8 @@ meter {
 }
 .proyect_tribaldos .proyect_content_tribaldos .acabados .immagenes_acabados_content .acabados_img img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   width: 180px;
 }
@@ -1571,8 +1562,8 @@ meter {
 }
 .proyect_tribaldos .proyect_content_tribaldos .acabados .immagenes_acabados_content .acabados_img2 img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   width: 300px;
 }
@@ -1684,8 +1675,8 @@ meter {
 }
 .proyect_tribaldos .proyect_content_tribaldos .packaging .images_packaging img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   width: 300px;
 }
@@ -1715,8 +1706,8 @@ meter {
   background-color: black;
   color: rgb(255, 0, 119);
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   padding-top: 46px;
 }
@@ -1826,15 +1817,6 @@ meter {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
-.proyect_lehenik .proyect_content_lehenik .info_proyect .plus_info .tiempo #tiempo_title {
-  color: whitesmoke;
-  margin-bottom: 1rem;
-}
-.proyect_lehenik .proyect_content_lehenik .info_proyect .plus_info .tiempo #tiempo_content {
-  color: #ADADAD;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
 .proyect_lehenik .proyect_content_lehenik #video_proyect {
   display: flex;
   justify-content: center;
@@ -1883,8 +1865,8 @@ meter {
 }
 .proyect_lehenik .proyect_content_lehenik #naming .content_naming img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   width: 350px;
 }
@@ -2308,10 +2290,6 @@ meter {
     justify-content: space-between;
     gap: 1.5rem;
   }
-  .proyect_lehenik .proyect_content_lehenik .info_proyect .plus_info .asignatura,
-  .proyect_lehenik .proyect_content_lehenik .info_proyect .plus_info .tiempo {
-    width: 100%;
-  }
   .proyect_lehenik .proyect_content_lehenik #investigacion,
   .proyect_lehenik .proyect_content_lehenik #naming,
   .proyect_lehenik .proyect_content_lehenik #paleta,
@@ -2539,11 +2517,10 @@ meter {
   }
 }
 #proyect_muesli {
-  width: 100%;
   background-color: #E5E5E5;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   padding-top: 46px;
 }
@@ -2618,15 +2595,6 @@ meter {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
-#proyect_muesli .proyect_content_muesli .info_proyect .plus_info .tiempo #tiempo_title {
-  color: black;
-  margin-bottom: 1rem;
-}
-#proyect_muesli .proyect_content_muesli .info_proyect .plus_info .tiempo #tiempo_content {
-  color: #747474;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
 #proyect_muesli .proyect_content_muesli #objetivos {
   padding: 0 10rem 0;
   width: 800px;
@@ -2654,17 +2622,17 @@ meter {
   gap: 6rem;
   align-items: center;
 }
-#proyect_muesli .proyect_content_muesli #diseno .content span {
+#proyect_muesli .proyect_content_muesli #diseno .content .diseno_text {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
-  max-width: 400px;
+  width: 400px;
   color: #747474;
 }
-#proyect_muesli .proyect_content_muesli #diseno .content span li {
+#proyect_muesli .proyect_content_muesli #diseno .content .diseno_text li {
   position: relative;
   padding-left: 1.8em;
 }
-#proyect_muesli .proyect_content_muesli #diseno .content span li::before {
+#proyect_muesli .proyect_content_muesli #diseno .content .diseno_text li::before {
   content: "";
   position: absolute;
   left: 0.8em;
@@ -2674,8 +2642,14 @@ meter {
   background-color: #72A0A3;
   border-radius: 50%;
 }
-#proyect_muesli .proyect_content_muesli #diseno .content img {
-  height: 500px;
+#proyect_muesli .proyect_content_muesli #diseno .content .pliego {
+  width: 65%;
+}
+#proyect_muesli .proyect_content_muesli #diseno .content .pliego img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
 }
 #proyect_muesli .proyect_content_muesli #logotipo {
   padding: 0 10rem 0;
@@ -2710,11 +2684,11 @@ meter {
 }
 #proyect_muesli .proyect_content_muesli #logotipo .logotipo_content .galeria .columna_der img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
-  width: auto;
   height: 435px;
+  object-fit: contain;
 }
 #proyect_muesli .proyect_content_muesli #logotipo .logotipo_content .text_content {
   color: #747474;
@@ -2965,8 +2939,8 @@ meter {
   width: 100%;
   background-color: #292F3C;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   padding-top: 46px;
   color: #ADADAD;
@@ -3076,15 +3050,6 @@ meter {
   margin-bottom: 1rem;
 }
 #proyect_steam .proyect_content_steam .info_proyect .plus_info .asignatura #asignatura_content {
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
-#proyect_steam .proyect_content_steam .info_proyect .plus_info .tiempo #tiempo_title {
-  color: whitesmoke;
-  margin-bottom: 1rem;
-}
-#proyect_steam .proyect_content_steam .info_proyect .plus_info .tiempo #tiempo_content {
-  color: #ADADAD;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
@@ -3244,8 +3209,8 @@ meter {
 }
 .galeria_fotos #imagenes .img_grande {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
 }
 .galeria_fotos #imagenes .imagenes_altas {
@@ -3270,8 +3235,8 @@ meter {
 }
 .galeria_fotos #imagenes .imagenes_pequenas .img_peque .img_peque {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
 }
 .galeria_fotos .programas {
@@ -4011,8 +3976,8 @@ meter {
   width: 100%;
   background-color: #191919;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   padding-top: 46px;
 }
@@ -4083,15 +4048,6 @@ meter {
 }
 #proyect_reloj_percepcion .proyect_content_reloj .info_proyect .plus_info .asignatura #asignatura_content {
   color: #747474;
-  margin-bottom: 1.5rem;
-  font-size: 0.9rem;
-}
-#proyect_reloj_percepcion .proyect_content_reloj .info_proyect .plus_info .tiempo #tiempo_title {
-  color: whitesmoke;
-  margin-bottom: 1rem;
-}
-#proyect_reloj_percepcion .proyect_content_reloj .info_proyect .plus_info .tiempo #tiempo_content {
-  color: #ADADAD;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
@@ -4364,10 +4320,6 @@ meter {
     justify-content: space-between;
     gap: 1.5rem;
   }
-  #proyect_reloj_percepcion .proyect_content_reloj .info_proyect .plus_info .asignatura,
-  #proyect_reloj_percepcion .proyect_content_reloj .info_proyect .plus_info .tiempo {
-    width: 100%;
-  }
   #proyect_reloj_percepcion .proyect_content_reloj #problema,
   #proyect_reloj_percepcion .proyect_content_reloj #diseno,
   #proyect_reloj_percepcion .proyect_content_reloj #diseno_visual,
@@ -4473,8 +4425,8 @@ meter {
 }
 .about-section .about-wrapper .right-side img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   width: 650px;
 }
@@ -4546,8 +4498,8 @@ meter {
 }
 .about-section .skills .categorias_content .categorias .programs img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
   width: 30px;
 }

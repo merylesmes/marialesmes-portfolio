@@ -2,7 +2,6 @@
 // SECCIÓN: .proyect
 // ==============================================================================
 #proyect_muesli {
-    width: 100%;
     background-color: #E5E5E5;
     @include imgs; // Incluir imágenes de fondo y otros estilos reutilizables
     padding-top: 46px;
@@ -106,21 +105,6 @@
                         @include body_text;
                     }
                 }
-
-                .tiempo {
-                    // Estilos para la duración
-
-                    #tiempo_title {
-                        color: black;
-                        margin-bottom: 1rem;
-                    }
-
-                    #tiempo_content {
-                        color: $color_marron; // Sustituido por variable $color_gray
-                        margin-bottom: 1.5rem;
-                        @include body_text;
-                    }
-                }
             }
         }
 
@@ -163,10 +147,10 @@
                 gap: 6rem;
                 align-items: center;
 
-                span {
+                .diseno_text {
                     margin-bottom: 1.5rem;
                     @include body_text;
-                    max-width: 400px;
+                    width: 400px;
                     color: $color_marron;
 
                     li {
@@ -186,9 +170,13 @@
                     }
                 }
 
-                img {
-                    height: 500px;
+                .pliego {
+                    width: 65%;
+                    img {
+                        @include imgs;
+                    }
                 }
+
             }
         }
 
@@ -230,9 +218,9 @@
 
                     .columna_der {
                         img {
-                            @include imgs;
-                            width: auto;
+                            @include imgs; 
                             height: 435px;
+                            object-fit: contain ;
                         }
                     }
                 }
@@ -401,18 +389,20 @@
 
         //
 
-        #carrusel_muesli{
+        #carrusel_muesli {
             @include margenes_contenido;
             width: 100%;
             max-width: 100vw;
             padding: 0 10rem 0;
             text-align: left;
             margin-bottom: 5rem;
-            .title{
+
+            .title {
                 @include titulos_contenidos;
                 color: $color_azul;
                 margin-bottom: 1rem;
             }
+
             .carrusel-wrapper {
                 position: relative;
                 width: fit-content;

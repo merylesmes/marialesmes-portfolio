@@ -153,21 +153,6 @@
                         @include body_text;
                     }
                 }
-
-                .tiempo {
-                    // Estilos para la duración
-
-                    #tiempo_title {
-                        color: whitesmoke;
-                        margin-bottom: 1rem;
-                    }
-
-                    #tiempo_content {
-                        color: $color_gray; // Sustituido por variable $color_gray
-                        margin-bottom: 1.5rem;
-                        @include body_text;
-                    }
-                }
             }
         }
 

@@ -218,10 +218,13 @@
     }
 
     .info_portfolio {
-        width: 25ch;
+        width: 26ch;
         text-align: right;
 
-        // .info_text {}
+        .info_text {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
 
         .info_work_button {
             display: flex;
@@ -480,11 +483,16 @@
             text-align: center;
 
             .info_text {
-                margin-bottom: .6rem;
+                margin-bottom: 1rem;
+                font-size: 1rem;
             }
 
             .info_work_button {
+                gap: 0.1rem;
                 justify-content: center;
+                .text{
+                    font-size: 1rem;
+                }
             }
         }
     }

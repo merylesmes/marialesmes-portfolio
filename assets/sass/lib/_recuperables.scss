@@ -38,6 +38,6 @@
 
 @mixin imgs {
     width: 100%;
-    object-fit: cover; // o 'contain' si querés que no se recorte nada
+    object-fit: contain; // o 'contain' si querés que no se recorte nada
     display: block;
 }
