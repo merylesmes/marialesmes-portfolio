@@ -55,7 +55,7 @@
             width: 700px;
             padding: 2.5rem 2rem 3rem 2rem;
             margin-bottom: 5rem;
-            border-bottom: 1px solid $color_marron;
+            border-bottom: 1px solid $color_gray;
 
             .brief {
                 margin: 0 auto;
@@ -100,7 +100,7 @@
                     }
 
                     #asignatura_content {
-                        color: $color_marron; // Sustituido por variable $color_gray
+                        color: $color_gray; // Sustituido por variable $color_gray
                         margin-bottom: 1.5rem;
                         @include body_text;
                     }
@@ -116,7 +116,7 @@
             padding: 0 10rem 0;
             width: 800px;
             margin-bottom: 5rem;
-            color: $color_marron;
+            color: $color_gray;
 
             .title {
                 color: $color_azul;
@@ -143,7 +143,7 @@
             padding: 0 10rem 0;
             width: 750px;
             margin-bottom: 5rem;
-            color: $color_marron;
+            color: $color_gray;
 
             .title {
                 color: $color_azul;
@@ -160,7 +160,7 @@
             padding: 0 10rem 0;
             width: 800px;
             margin-bottom: 5rem;
-            color: $color_marron;
+            color: $color_gray;
 
             .title {
                 color: $color_azul;
@@ -212,7 +212,7 @@
             padding: 0 10rem 0;
             width: 100%;
             margin-bottom: 5rem;
-            color: $color_marron;
+            color: $color_gray;
 
             .title {
                 color: $color_azul;
@@ -276,7 +276,7 @@
             padding: 0 10rem 0;
             width: 100%;
             margin-bottom: 5rem;
-            color: $color_marron;
+            color: $color_gray;
 
             .title {
                 color: $color_azul;
@@ -299,7 +299,7 @@
             padding: 0 10rem 0;
             width: 100%;
             margin-bottom: 5rem;
-            color: $color_marron;
+            color: $color_gray;
 
             .title {
                 color: $color_azul;

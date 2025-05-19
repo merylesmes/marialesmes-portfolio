@@ -251,43 +251,93 @@ window.onload = function () {
 
 /**************************************************************************************
  * *****************   SALTAR DE LINEA PARA TEXTOS ******************************************************* */
-function unirUltimasPalabras(texto, cantidad = 3) {
-    return texto.replace(
-        new RegExp(`(\\S+(?:\\s+\\S+){${cantidad - 1}})(\\s+)(\\S+)\\s*$`),
-        (match, grupo1, espacio, grupoFinal) => {
-            const todas = (grupo1 + ' ' + grupoFinal).split(/\s+/);
-            return '&nbsp;' + todas.join('&nbsp;');
+function reemplazarDoblesBRenDOM(elementoRaiz) {
+    const hijos = Array.from(elementoRaiz.childNodes);
+    for (let i = 0; i < hijos.length - 1; i++) {
+        const nodoActual = hijos[i];
+        const siguienteNodo = hijos[i + 1];
+
+        if (
+            nodoActual.nodeName === 'BR' &&
+            siguienteNodo.nodeName === 'BR'
+        ) {
+            const div = document.createElement('div');
+            div.className = 'salto-parrafo';
+            div.style.marginBottom = '0.75rem';
+
+            elementoRaiz.replaceChild(div, siguienteNodo);
+            elementoRaiz.replaceChild(document.createTextNode(''), nodoActual);
+            i++;
         }
-    );
+    }
 }
 
-function procesarParrafo(parrafo, minPalabras = 3) {
-    return unirUltimasPalabras(parrafo, minPalabras);
-}
+function agregarSaltoLineaVisual(nodo, clasesAExcluir = []) {
+    if (nodo.nodeType === Node.ELEMENT_NODE) {
+        // Si el nodo tiene alguna clase a excluir, no procesar ni sus hijos
+        for (const clase of clasesAExcluir) {
+            if (nodo.classList.contains(clase)) return;
+        }
+    }
 
-function aplicarMargenAutomatico(bloque) {
-    // Si el bloque tiene <br><br>, agregamos un estilo con margin
-    return `<div class="salto-parrafo" style="margin-bottom: 0.75rem;">${bloque}</div>`;
-}
+    if (nodo.nodeType === Node.TEXT_NODE) {
+        const texto = nodo.textContent;
+        const parent = nodo.parentNode;
 
-function evitarSaltosFeos(clase = 'saltoSilaba', minPalabras = 3) {
-    const elementos = document.querySelectorAll(`.${clase}`);
+        // Creamos un Range para medir posiciones
+        const range = document.createRange();
 
-    elementos.forEach(el => {
-        const contenidoOriginal = el.innerHTML;
+        let offset = 0;
+        const posicionesPuntos = [];
 
-        // Dividir el contenido por <br><br> (dobles saltos)
-        const bloques = contenidoOriginal.split(/(?:<br\s*\/?>\s*){2,}/i);
+        // Buscar puntos para analizar
+        while (true) {
+            const index = texto.indexOf('.', offset);
+            if (index === -1) break;
+            posicionesPuntos.push(index);
+            offset = index + 1;
+        }
 
-        const bloquesProcesados = bloques.map(bloque => {
-            const bloqueProcesado = procesarParrafo(bloque, minPalabras);
-            return aplicarMargenAutomatico(bloqueProcesado);
+        if (posicionesPuntos.length === 0) return;
+
+        let nuevoHTML = '';
+        let ultimoIndex = 0;
+
+        posicionesPuntos.forEach(pos => {
+            // Medimos posición del punto
+            range.setStart(nodo, pos);
+            range.setEnd(nodo, pos + 1);
+            const rectPunto = range.getBoundingClientRect();
+
+            // Medimos posición del contenedor para calcular espacio restante en la línea
+            const rectTexto = nodo.parentNode.getBoundingClientRect();
+
+            const espacioRestante = rectTexto.right - rectPunto.right;
+
+            // Ajusta según tamaño de fuente, ejemplo 8px por carácter x 8 chars = 64px
+            const ancho8chars = 8 * 8;
+
+            if (espacioRestante < ancho8chars) {
+                nuevoHTML += texto.slice(ultimoIndex, pos + 1) + '<br>';
+                ultimoIndex = pos + 1;
+            }
         });
 
-        el.innerHTML = bloquesProcesados.join('');
-    });
+        nuevoHTML += texto.slice(ultimoIndex);
+
+        if (nuevoHTML !== texto) {
+            const span = document.createElement('span');
+            span.innerHTML = nuevoHTML;
+            parent.replaceChild(span, nodo);
+
+            reemplazarDoblesBRenDOM(span.parentNode);
+        }
+    } else {
+        nodo.childNodes.forEach(child => agregarSaltoLineaVisual(child, clasesAExcluir));
+    }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    evitarSaltosFeos('saltoSilaba', 3);
+    const clasesAExcluir = ['container_footer', 'modal_windows'];
+    agregarSaltoLineaVisual(document.body, clasesAExcluir);
 });
