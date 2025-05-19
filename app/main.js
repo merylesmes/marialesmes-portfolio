@@ -248,3 +248,46 @@ window.onload = function () {
         }
     }
 };
+
+/**************************************************************************************
+ * *****************   SALTAR DE LINEA PARA TEXTOS ******************************************************* */
+function unirUltimasPalabras(texto, cantidad = 3) {
+  return texto.replace(
+    new RegExp(`(\\S+(?:\\s+\\S+){${cantidad - 1}})(\\s+)(\\S+)\\s*$`),
+    (match, grupo1, espacio, grupoFinal) => {
+      const todas = (grupo1 + ' ' + grupoFinal).split(/\s+/);
+      return '&nbsp;' + todas.join('&nbsp;');
+    }
+  );
+}
+
+function procesarParrafo(parrafo, minPalabras = 3) {
+  return unirUltimasPalabras(parrafo, minPalabras);
+}
+
+function aplicarMargenAutomatico(bloque) {
+  // Si el bloque tiene <br><br>, agregamos un estilo con margin
+  return `<div class="salto-parrafo" style="margin-bottom: 0.75rem;">${bloque}</div>`;
+}
+
+function evitarSaltosFeos(clase = 'saltoSilaba', minPalabras = 3) {
+  const elementos = document.querySelectorAll(`.${clase}`);
+
+  elementos.forEach(el => {
+    const contenidoOriginal = el.innerHTML;
+
+    // Dividir el contenido por <br><br> (dobles saltos)
+    const bloques = contenidoOriginal.split(/(?:<br\s*\/?>\s*){2,}/i);
+
+    const bloquesProcesados = bloques.map(bloque => {
+      const bloqueProcesado = procesarParrafo(bloque, minPalabras);
+      return aplicarMargenAutomatico(bloqueProcesado);
+    });
+
+    el.innerHTML = bloquesProcesados.join('');
+  });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  evitarSaltosFeos('saltoSilaba', 3);
+});

@@ -2059,7 +2059,7 @@ meter {
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 200px;
+  width: 150px;
 }
 .proyect_lehenik .proyect_content_lehenik #senaletica .contenedor_iconos .icono_item .icono {
   height: auto;
