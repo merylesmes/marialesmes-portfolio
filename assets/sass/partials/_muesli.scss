@@ -171,7 +171,8 @@
                 }
 
                 .pliego {
-                    width: 65%;
+                    width: 55%;
+
                     img {
                         @include imgs;
                     }
@@ -199,30 +200,36 @@
             .logotipo_content {
                 display: flex;
                 gap: 3rem;
+                ;
 
                 .galeria {
                     display: grid;
-                    grid-template-columns: 1fr 2fr; // Izquierda: 2 imágenes apiladas, derecha: 1 grande
+                    grid-template-columns: 1fr 2fr;
                     gap: 1rem;
+                    align-items: center;
+                    width: 100%;
 
                     .columna_izq {
                         display: flex;
                         flex-direction: column;
                         gap: 1rem;
-
+                        // height: 420px;
                         img {
+                            @include imgs;
                             width: auto;
-                            height: 210px;
+                            height: 50%;
                         }
                     }
 
                     .columna_der {
                         img {
-                            @include imgs; 
-                            height: 435px;
-                            object-fit: contain ;
+                            @include imgs;
+                            height: 100%;
+                            
                         }
                     }
+
+
                 }
 
                 .text_content {
@@ -231,6 +238,7 @@
                 }
             }
         }
+
 
         // =======================================================================
         // SECCIÓN: FORMATO Y MATERIALES

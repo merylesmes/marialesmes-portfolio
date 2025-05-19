@@ -249,17 +249,35 @@
 
 #cars_imagenes {
     display: flex;
-    justify-content: space-between; // centra las imágenes horizontalmente
+     // centra las imágenes horizontalmente
     flex-wrap: wrap; // permite que bajen si no caben en una línea
-    // gap: 1rem; // espacio entre imágenes
+    gap: 2rem; // espacio entre imágenes
     width: 100%; // ocupa todo el ancho del padre (.trabajo_content)
 
-    img {
-        max-width: 100%; // que no se pasen del ancho del contenedor
-        // width: 49%; // ocupan cada una un 45% del ancho aprox
-        height: auto;
-        // object-fit: contain;s
+    .img_camisetas {
+        justify-content: space-between;
+        display: flex;
+        width: 100%;
+
+        img {
+            max-width: 100%; // que no se pasen del ancho del contenedor
+            height: auto;
+        }
     }
+
+    .img_packaging {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        // justify-content: center;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
 }
 
 
@@ -375,17 +393,18 @@
                 font-size: 1rem;
             }
         }
-        
+
         /* ---------- TRABAJOS ---------- */
         #trabajos {
             padding: 0 1rem;
 
             .trabajo_content {
                 margin-bottom: 4rem;
+
                 .title {
                     font-size: 1.3rem;
                     text-align: center;
-                    
+
                 }
 
                 .explicacion {
@@ -455,7 +474,8 @@
                 font-size: 1rem;
             }
         }
-        .arrow_right{
+
+        .arrow_right {
             margin-bottom: 4rem;
         }
 

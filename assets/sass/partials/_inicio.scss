@@ -218,7 +218,7 @@
     }
 
     .info_portfolio {
-        width: 26ch;
+        width: 30ch;
         text-align: right;
 
         .info_text {
@@ -226,20 +226,30 @@
             font-size: 1.2rem;
         }
 
-        .info_work_button {
+
+
+        .proyectos_text {
             display: flex;
             gap: 0.5rem;
-            justify-content: flex-end;
+            margin-left: auto;
+            border-bottom: 2px solid $color_rosa;
+            width:min-content;
+            font-size: 1.1rem;
 
-            .text {
-                border-bottom: 2px solid rgb(255, 0, 119);
-                width: fit-content;
+            .info_work_button{
+                display: flex;
+                gap: 0.5rem;
+                &:hover{
+                    color: $color_rosa;
+                }
             }
-
             .arrow {
                 color: $color_rosa;
             }
         }
+
+
+
     }
 }
 
@@ -487,12 +497,14 @@
                 font-size: 1rem;
             }
 
-            .info_work_button {
+            .proyectos_text {
                 gap: 0.1rem;
                 justify-content: center;
-                .text{
+                .info_work_button{
                     font-size: 1rem;
                 }
+                
+                
             }
         }
     }

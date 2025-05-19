@@ -1,5 +1,4 @@
 .galeria_fotos {
-
     background-color: #D0CBB3;
 
     .hero_proyect {
@@ -56,7 +55,7 @@
 
     }
 
-    #imagenes {
+    #trabajos {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -64,53 +63,36 @@
         width: 100%;
         max-width: 1200px;
         gap: 1.5rem;
-        margin-bottom: 5rem;
 
-        // Imagen grande ocupa todo el ancho del contenedor
-        .img_grande {
-            @include imgs;
-        }
-
-        .imagenes_altas {
-            max-width: 1200px;
-            width: 60%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); // Dos columnas iguales
-            gap: 1.5rem; // Espacio entre columnas y filas
-
-        }
-
-        .fotos-de-tres {
-            max-width: 1200px;
+        .trabajo_content {
+            margin-bottom: 5rem;
             width: 100%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); // Dos columnas iguales
-            gap: 1.5rem; // Espacio entre columnas y filas
-
-        }
-
-        // Contenedor para las imágenes pequeñas en filas de dos
-        .imagenes_pequenas {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); // Dos columnas iguales
-            gap: 1.5rem; // Espacio entre columnas y filas
-
-            .img_peque {
-                // width: 500px;
-
-                .img_peque {
-                    @include imgs;
-
-                }
+            .title {
+                @include titulo_portfolio;
+                font-size: 1.75rem;
+                color: black;
+                margin-bottom: 1rem;
+            }
+            .explicacion {
+                @include body_text;
+                color: #6A6A6A;
+                margin-bottom: 2rem;
+                width: 800px;
+            }
+            #triple_foto{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+            img{
+                margin-bottom: 2rem;
             }
         }
-
     }
-
     // =======================================================================
     // SECCIÓN: PROGRAMAS (sección para mostrar programas o habilidades)
     // =======================================================================
+    
     .programas {
         margin: 0 auto;
         display: flex;

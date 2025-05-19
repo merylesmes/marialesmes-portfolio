@@ -447,24 +447,30 @@ meter {
   line-height: 7rem;
 }
 .container_info .info_portfolio {
-  width: 26ch;
+  width: 30ch;
   text-align: right;
 }
 .container_info .info_portfolio .info_text {
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
-.container_info .info_portfolio .info_work_button {
+.container_info .info_portfolio .proyectos_text {
   display: flex;
   gap: 0.5rem;
-  justify-content: flex-end;
-}
-.container_info .info_portfolio .info_work_button .text {
+  margin-left: auto;
   border-bottom: 2px solid rgb(255, 0, 119);
-  width: -moz-fit-content;
-  width: fit-content;
+  width: -moz-min-content;
+  width: min-content;
+  font-size: 1.1rem;
 }
-.container_info .info_portfolio .info_work_button .arrow {
+.container_info .info_portfolio .proyectos_text .info_work_button {
+  display: flex;
+  gap: 0.5rem;
+}
+.container_info .info_portfolio .proyectos_text .info_work_button:hover {
+  color: rgb(255, 0, 119);
+}
+.container_info .info_portfolio .proyectos_text .arrow {
   color: rgb(255, 0, 119);
 }
 
@@ -655,11 +661,11 @@ meter {
     margin-bottom: 1rem;
     font-size: 1rem;
   }
-  .container_info .info_portfolio .info_work_button {
+  .container_info .info_portfolio .proyectos_text {
     gap: 0.1rem;
     justify-content: center;
   }
-  .container_info .info_portfolio .info_work_button .text {
+  .container_info .info_portfolio .proyectos_text .info_work_button {
     font-size: 1rem;
   }
   .container_footer,
@@ -2643,7 +2649,7 @@ meter {
   border-radius: 50%;
 }
 #proyect_muesli .proyect_content_muesli #diseno .content .pliego {
-  width: 65%;
+  width: 55%;
 }
 #proyect_muesli .proyect_content_muesli #diseno .content .pliego img {
   width: 100%;
@@ -2672,6 +2678,8 @@ meter {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
+  align-items: center;
+  width: 100%;
 }
 #proyect_muesli .proyect_content_muesli #logotipo .logotipo_content .galeria .columna_izq {
   display: flex;
@@ -2679,16 +2687,19 @@ meter {
   gap: 1rem;
 }
 #proyect_muesli .proyect_content_muesli #logotipo .logotipo_content .galeria .columna_izq img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
   width: auto;
-  height: 210px;
+  height: 50%;
 }
 #proyect_muesli .proyect_content_muesli #logotipo .logotipo_content .galeria .columna_der img {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
-  height: 435px;
-  object-fit: contain;
+  height: 100%;
 }
 #proyect_muesli .proyect_content_muesli #logotipo .logotipo_content .text_content {
   color: #747474;
@@ -2976,7 +2987,7 @@ meter {
   top: 49px;
   background-color: #313B4C;
   width: 100%;
-  z-index: 999;
+  z-index: 10;
   padding: 10px 0;
   margin-top: 0;
   border-bottom: 1px solid #4394D1;
@@ -3068,7 +3079,12 @@ meter {
   max-width: 600px;
 }
 #proyect_steam .proyect_content_steam #video_proyect {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   margin-bottom: 5rem;
+  padding: 0 0 5rem 0;
+  border-bottom: 1px solid #4394D1;
 }
 #proyect_steam .proyect_content_steam .imagen_centrada {
   display: flex;
@@ -3197,7 +3213,7 @@ meter {
 .galeria_fotos #briefing #categories_briefing {
   font-weight: bold;
 }
-.galeria_fotos #imagenes {
+.galeria_fotos #trabajos {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -3205,39 +3221,30 @@ meter {
   width: 100%;
   max-width: 1200px;
   gap: 1.5rem;
+}
+.galeria_fotos #trabajos .trabajo_content {
   margin-bottom: 5rem;
-}
-.galeria_fotos #imagenes .img_grande {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  display: block;
 }
-.galeria_fotos #imagenes .imagenes_altas {
-  max-width: 1200px;
-  width: 60%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+.galeria_fotos #trabajos .trabajo_content .title {
+  font-family: "Ophelia", sans-serif;
+  font-size: 1.75rem;
+  color: black;
+  margin-bottom: 1rem;
 }
-.galeria_fotos #imagenes .fotos-de-tres {
-  max-width: 1200px;
-  width: 100%;
+.galeria_fotos #trabajos .trabajo_content .explicacion {
+  font-size: 0.9rem;
+  color: #6A6A6A;
+  margin-bottom: 2rem;
+  width: 800px;
+}
+.galeria_fotos #trabajos .trabajo_content #triple_foto {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 2rem;
 }
-.galeria_fotos #imagenes .imagenes_pequenas {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-}
-.galeria_fotos #imagenes .imagenes_pequenas .img_peque .img_peque {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  display: block;
+.galeria_fotos #trabajos .trabajo_content img {
+  margin-bottom: 2rem;
 }
 .galeria_fotos .programas {
   margin: 0 auto;
@@ -3493,13 +3500,29 @@ meter {
 
 #cars_imagenes {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 2rem;
   width: 100%;
 }
-#cars_imagenes img {
+#cars_imagenes .img_camisetas {
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+}
+#cars_imagenes .img_camisetas img {
   max-width: 100%;
   height: auto;
+}
+#cars_imagenes .img_packaging {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+#cars_imagenes .img_packaging img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .footer_galerias {
@@ -4017,7 +4040,7 @@ meter {
   width: 700px;
   padding: 2.5rem 2rem 3rem 2rem;
   margin-bottom: 5rem;
-  border-bottom: 1px solid #747474;
+  border-bottom: 1px solid #ADADAD;
 }
 #proyect_reloj_percepcion .proyect_content_reloj .info_proyect .brief {
   margin: 0 auto;
@@ -4047,7 +4070,7 @@ meter {
   margin-bottom: 1rem;
 }
 #proyect_reloj_percepcion .proyect_content_reloj .info_proyect .plus_info .asignatura #asignatura_content {
-  color: #747474;
+  color: #ADADAD;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
@@ -4055,7 +4078,7 @@ meter {
   padding: 0 10rem 0;
   width: 800px;
   margin-bottom: 5rem;
-  color: #747474;
+  color: #ADADAD;
 }
 #proyect_reloj_percepcion .proyect_content_reloj #problema .title {
   color: #72A0A3;
@@ -4075,7 +4098,7 @@ meter {
   padding: 0 10rem 0;
   width: 750px;
   margin-bottom: 5rem;
-  color: #747474;
+  color: #ADADAD;
 }
 #proyect_reloj_percepcion .proyect_content_reloj #diseno .title {
   color: #72A0A3;
@@ -4087,7 +4110,7 @@ meter {
   padding: 0 10rem 0;
   width: 800px;
   margin-bottom: 5rem;
-  color: #747474;
+  color: #ADADAD;
 }
 #proyect_reloj_percepcion .proyect_content_reloj #diseno_visual .title {
   color: #72A0A3;
@@ -4125,7 +4148,7 @@ meter {
   padding: 0 10rem 0;
   width: 100%;
   margin-bottom: 5rem;
-  color: #747474;
+  color: #ADADAD;
 }
 #proyect_reloj_percepcion .proyect_content_reloj #interaccion .title {
   color: #72A0A3;
@@ -4176,7 +4199,7 @@ meter {
   padding: 0 10rem 0;
   width: 100%;
   margin-bottom: 5rem;
-  color: #747474;
+  color: #ADADAD;
 }
 #proyect_reloj_percepcion .proyect_content_reloj #desarrollo_tecnico .title {
   color: #72A0A3;
@@ -4191,7 +4214,7 @@ meter {
   padding: 0 10rem 0;
   width: 100%;
   margin-bottom: 5rem;
-  color: #747474;
+  color: #ADADAD;
 }
 #proyect_reloj_percepcion .proyect_content_reloj #final .title {
   color: #72A0A3;
