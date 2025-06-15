@@ -249,7 +249,7 @@
 
 #cars_imagenes {
     display: flex;
-     // centra las imágenes horizontalmente
+    // centra las imágenes horizontalmente
     flex-wrap: wrap; // permite que bajen si no caben en una línea
     gap: 2rem; // espacio entre imágenes
     width: 100%; // ocupa todo el ancho del padre (.trabajo_content)
@@ -262,6 +262,8 @@
         img {
             max-width: 100%; // que no se pasen del ancho del contenedor
             height: auto;
+            object-fit: cover;
+
         }
     }
 
@@ -282,9 +284,8 @@
 
 
 
-
 // =======================================================================
-// SECCIÓN: FOOTE DE GALERIAS
+// SECCIÓN: FOOTER DE GALERÍAS
 // =======================================================================
 .footer_galerias {
     margin: 0 auto;
@@ -319,8 +320,6 @@
         align-items: center;
         padding-bottom: 3rem;
 
-        // margin-top: 5rem;
-
         .title {
             @include programas_title;
             color: #6A6A6A;
@@ -334,7 +333,6 @@
     .arrow_right {
         display: flex;
         gap: 1rem;
-
 
         .text,
         .arrow {
@@ -352,135 +350,159 @@
     }
 }
 
-/* ───────────────────────────────────────── MOBILE ≤768px ───────────────────────────────────────── */
-@media (max-width: 768px) {
+.footer_galerias-footer {
+    display: none; // Por defecto oculto (desktop)
+}
 
-    /* ---------- HERO ---------- */
+@media (max-width: 768px) {
     .galeria_visuales {
+        font-size: .9rem;
+
         .hero_proyect {
-            height: 50vh;
-            background-size: cover;
-            background-position: center;
-            padding: 0 1rem;
+            // height: 30vh;
+
 
             .hero_content {
-                max-width: 100%;
-                padding: .5rem;
-                line-height: 2.4rem;
-                text-align: center;
+                margin-top: 4rem;
+                max-width: 90%;
 
-                h1 {
-                    font-size: 2.2rem;
-                    line-height: 2.4rem;
-                    word-break: break-word;
+                #workId {
+                    font-size: 3rem;
                 }
 
-                h2 {
-                    font-size: .95rem;
-                    line-height: 1.2rem;
+                #trabajoId {
+                    font-size: 0.9rem;
                 }
             }
         }
 
-        /* ---------- BRIEFING ---------- */
         #briefing {
-            width: 100%;
+            width: 90%;
             padding: 2rem 1rem;
             margin-bottom: 3rem;
+            
             text-align: center;
-
-            #categories_briefing {
-                font-size: 1rem;
-            }
         }
 
-        /* ---------- TRABAJOS ---------- */
         #trabajos {
-            padding: 0 1rem;
+            padding-inline: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-size: .9rem;
+
 
             .trabajo_content {
-                margin-bottom: 4rem;
+                margin-bottom: 2rem;
 
                 .title {
-                    font-size: 1.3rem;
-                    text-align: center;
+                    font-size: 1.5rem;
+                }
 
+                img {
+                    width: 100%;
+                    margin-bottom: .7rem; // margen entre todas las imágenes dentro de trabajo_content
                 }
 
                 .explicacion {
                     width: 100%;
-                    font-size: .8rem;
-                    text-align: center;
+                }
+
+                #svg_animacion_text {
+                    gap: .5rem;
+                    flex-direction: column;
+
+                    #flecha {
+                        display: none;
+                    }
+                }
+
+                video {
+                    width: 100%;
+                }
+
+                #cars_imagenes {
+                    gap: 0rem;
+
+                    .img_camisetas {
+                        display: block;
+                    }
+
+
                 }
             }
         }
     }
 
-    /* ---------- SVG / CTA ---------- */
-    .svg_content {
-        margin-top: 2rem;
-        max-width: 100%;
-        padding: 0 1rem;
-
-        #svg_animacion_text {
-            flex-direction: column;
+    #carrusel_render_escultura {
+        .carrusel-wrapper {
+            position: relative;
             width: 100%;
-            gap: 1rem;
-            align-items: center;
-            text-align: center;
+            overflow: hidden;
 
-            #text {
-                font-size: 1rem;
+            .prev,
+            .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 2rem;
+                padding: 0.5rem;
+                background: rgba(0, 0, 0, 0.3);
+                border-radius: 50%;
+                color: white;
+                z-index: 5;
+                border: none;
+                cursor: pointer;
+                transition: background 0.3s;
+
+                &:hover {
+                    background: rgba(0, 0, 0, 0.6);
+                }
             }
 
-            #flecha,
-            #circle {
-                font-size: 1.8rem;
+            .prev {
+                left: 0.5rem;
             }
-        }
 
-        svg {
-            width: 100%;
+            .next {
+                right: 0.5rem;
+            }
+
+            .carrusel-viewport {
+                width: 100% !important;
+                max-width: 100%;
+            }
+
+            .carrusel-track {
+                width: 100%;
+            }
+
+            .slide {
+                width: 100% !important;
+                max-width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                }
+            }
         }
     }
 
-    /* ---------- GALERÍAS DE IMÁGENES ---------- */
-    #yardas_imagenes,
-    #cars_imagenes {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-
-        img {
-            width: 100%;
-            // margin-bottom: 1rem;
-        }
-    }
-
-    /* ---------- FOOTER GALERÍAS ---------- */
     .footer_galerias {
+        display: none;
+    }
+
+    .footer_galerias_movil {
+        display: block;
         flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 3rem 1rem;
+        // align-items: center;
+        gap: 2rem;
+        padding: 2rem 2rem;
 
-        .arrow_left,
-        .arrow_right {
-            justify-content: center;
-            gap: .5rem;
 
-            .text,
-            .arrow {
-                font-size: 1rem;
-            }
-        }
-
-        .arrow_right {
-            margin-bottom: 4rem;
-        }
 
         .programas {
-            /* separador visual para que no se pierda en el gris */
             width: 100%;
             padding: 1.5rem 0 2rem;
             margin-top: 1rem;
@@ -490,8 +512,11 @@
             gap: 1rem;
 
             .title {
-                font-size: 1rem;
+                @include programas_title;
+                color: #6A6A6A;
+                margin-bottom: 1rem;
             }
+
 
             .programas_icon {
                 display: flex;
@@ -503,20 +528,20 @@
                 }
             }
         }
-    }
 
-    /* ---------- SCROLL‑TO‑TOP ---------- */
-    .scroll-to-top {
-        bottom: 40px;
-        /* un poco más arriba para que no tape el footer */
-        right: 20px;
-        font-size: 1.5rem;
-    }
+        .flechas {
+            display: flex;
+            justify-content: space-between;
+            gap: .25rem;
+            margin-top: 1.5rem;
+            color: $color_rosa;
 
-    /* ---------- VIDEO DE FONDO (si existiera) ---------- */
-    video {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
+            .arrow_left,
+            .arrow_right {
+                display: flex;
+                gap: 1rem;
+                justify-content: space-between;
+            }
+        }
     }
 }

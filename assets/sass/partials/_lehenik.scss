@@ -708,19 +708,29 @@
 }
 
 @media (max-width: 768px) {
+
     .proyect_lehenik {
         padding-top: 30px;
 
         .hero_proyect {
-            height: 30vh;
+            // height: 30vh;
 
             .hero_content {
+                h2 {
+                    font-size: 0.9rem;
+
+                }
+
                 max-width: 250px;
             }
         }
 
         .submenu-trabajo {
             display: none;
+        }
+
+        video {
+            width: 100%;
         }
 
         .proyect_content_lehenik {
@@ -747,6 +757,9 @@
                 }
             }
 
+            video {
+                width: 100%;
+            }
 
             #investigacion,
             #naming,
@@ -943,6 +956,7 @@
                         display: flex;
                         flex-direction: column-reverse;
                         width: 100%;
+                        gap: 0;
 
                         .columna_izq {
                             flex-direction: row;
@@ -951,14 +965,18 @@
 
                             img {
                                 height: auto;
-                                max-width: 47.5%;
+                                // max-width: 47.5%;
+                                display: flex;
                             }
                         }
 
                         .columna_der {
+                            margin-bottom: 1rem;
+
                             img {
                                 width: 100%;
                                 height: auto;
+                                display: flex;
                             }
                         }
                     }
@@ -981,6 +999,8 @@
             }
 
             #aplicaciones {
+
+                // margin-bottom: 0;
                 .aplicaciones_list {
                     padding-left: 0;
 
@@ -1004,7 +1024,7 @@
                     .next {
                         position: absolute;
                         top: 50%;
-                        transform: translateY(-50%);
+                        // transform: translateY(-50%);
                         font-size: 2rem;
                         padding: 0.5rem;
                         border-radius: 50%;
@@ -1030,6 +1050,7 @@
                     .carrusel-viewport {
                         width: 100% !important;
                         max-width: 100%;
+                        height: auto;
                     }
 
                     .carrusel-track {
@@ -1039,6 +1060,7 @@
                     .slide {
                         width: 100% !important;
                         max-width: 100%;
+                        height: 221px;
 
                         img {
                             width: 100%;

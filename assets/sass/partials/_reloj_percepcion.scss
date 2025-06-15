@@ -344,6 +344,11 @@
                 font-size: 30px;
                 text-align: center;
                 transition: background-color 0.3s ease;
+
+
+                &:hover {
+                    background-color: #477070;
+                }
             }
         }
 
@@ -416,16 +421,16 @@
 
 @media (max-width: 768px) {
     #proyect_reloj_percepcion {
-        padding-top: 30px;
+        padding-top: 50px;
 
         .hero_proyect {
-            height: 30vh;
+            // height: 30vh;
 
             .hero_content {
                 max-width: 90%;
 
                 h1 {
-                    font-size: 2.5rem;
+                    font-size: 3rem;
                 }
 
                 h2 {
@@ -433,6 +438,8 @@
                 }
             }
         }
+
+
 
         .proyect_content_reloj {
             .info_proyect {
@@ -514,13 +521,18 @@
 
 
             #video_proyect {
-                .video {
-                    width: 100%;
+                margin-bottom: 2rem;
+                video {
+                    width: 90%;
                 }
 
                 .button {
                     width: 90%;
                     font-size: 1.5rem;
+
+                    &:hover {
+                        background-color: #4c7575;
+                    }
                 }
             }
 

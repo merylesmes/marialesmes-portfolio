@@ -213,18 +213,24 @@
     }
 }
 
+.footer_galerias_movil {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .galeria_renders {
-        
+
         .hero_proyect {
-            height: 30vh;
-            
+            // height: 30vh;
+
 
             .hero_content {
+                margin-top: 4rem;
+
                 max-width: 90%;
 
                 h1 {
-                    font-size: 2.5rem;
+                    font-size: 3rem;
                 }
 
                 h2 {
@@ -236,6 +242,9 @@
         #briefing {
             width: 90%;
             padding: 2rem 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+
         }
 
         #trabajos {
@@ -243,7 +252,10 @@
             padding-left: 2rem;
             padding-right: 2rem;
 
+
             .trabajo_content {
+            margin-bottom: 2rem;
+
                 .title {
                     font-size: 1.5rem;
                 }
@@ -251,6 +263,9 @@
                 .explicacion {
                     width: 100%;
                 }
+            }
+            video{
+                width: 100%;
             }
         }
     }
@@ -312,15 +327,17 @@
     }
 
     .footer_galerias {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-        padding: 2rem 1rem;
+        display: none;
+    }
 
-        .arrow_left,
-        .arrow_right {
-            justify-content: center;
-        }
+    .footer_galerias_movil {
+        display: block;
+        flex-direction: column;
+        // align-items: center;
+        gap: 2rem;
+        padding: 2rem 2rem;
+
+
 
         .programas {
             width: 100%;
@@ -332,8 +349,11 @@
             gap: 1rem;
 
             .title {
-                font-size: 1rem;
+                @include programas_title;
+                color: #6A6A6A;
+                margin-bottom: 1rem;
             }
+
 
             .programas_icon {
                 display: flex;
@@ -343,6 +363,21 @@
                 img {
                     width: 30px;
                 }
+            }
+        }
+
+        .flechas {
+            display: flex;
+            justify-content: space-between;
+            gap: .25rem;
+            margin-top: 1.5rem;
+            color: $color_rosa;
+
+            .arrow_left,
+            .arrow_right {
+                display: flex;
+                gap: 1rem;
+                justify-content: space-between;
             }
         }
     }
