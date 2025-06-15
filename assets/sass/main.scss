@@ -27,7 +27,7 @@
 
 
 * {
-    // border: solid 1px salmon;
+    border: solid 1px salmon;
     font-family: "Sora";
     // background-color: whitesmoke;
     cursor: none !important;
@@ -79,4 +79,8 @@ body {
     #cursor{
         display: none;
     }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }

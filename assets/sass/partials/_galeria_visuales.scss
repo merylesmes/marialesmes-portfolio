@@ -356,14 +356,15 @@
 
 @media (max-width: 768px) {
     .galeria_visuales {
-        font-size: .9rem;
+        width: 100%;
+        // font-size: .9rem;
 
         .hero_proyect {
             // height: 30vh;
 
 
             .hero_content {
-                margin-top: 4rem;
+                margin-top: 50px;
                 max-width: 90%;
 
                 #workId {
@@ -377,10 +378,9 @@
         }
 
         #briefing {
-            width: 90%;
             padding: 2rem 1rem;
             margin-bottom: 3rem;
-            
+            width: 90%;
             text-align: center;
         }
 
@@ -388,7 +388,6 @@
             padding-inline: 1rem;
             padding-left: 2rem;
             padding-right: 2rem;
-            font-size: .9rem;
 
 
             .trabajo_content {
@@ -407,12 +406,15 @@
                     width: 100%;
                 }
 
-                #svg_animacion_text {
-                    gap: .5rem;
-                    flex-direction: column;
+                .svg_content {
+                    #svg_animacion_text {
+                        width: 100%;
+                        gap: .5rem;
+                        flex-direction: column;
 
-                    #flecha {
-                        display: none;
+                        #flecha {
+                            display: none;
+                        }
                     }
                 }
 

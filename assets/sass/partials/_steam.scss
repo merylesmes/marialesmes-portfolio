@@ -344,17 +344,7 @@
         }
 
         .submenu-trabajo {
-            ul {
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                text-align: center;
-                justify-content: center;
-
-                li {
-                    margin: 0 15px;
-                    font-size: 0.7rem;
-                }
-            }
+            display: none;
         }
 
         .proyect_content_steam {
