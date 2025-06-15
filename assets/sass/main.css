@@ -2495,7 +2495,7 @@ meter {
 
 @media (max-width: 768px) {
   .proyect_lehenik {
-    padding-top: 30px;
+    padding-top: 50px;
   }
   .proyect_lehenik .hero_proyect .hero_content {
     max-width: 250px;
@@ -3569,15 +3569,8 @@ meter {
   #proyect_steam .hero_proyect .hero_content h2 {
     font-size: 0.9rem;
   }
-  #proyect_steam .submenu-trabajo ul {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    text-align: center;
-    justify-content: center;
-  }
-  #proyect_steam .submenu-trabajo ul li {
-    margin: 0 15px;
-    font-size: 0.7rem;
+  #proyect_steam .submenu-trabajo {
+    display: none;
   }
   #proyect_steam .proyect_content_steam .info_proyect {
     flex-direction: column;
@@ -3824,14 +3817,11 @@ meter {
 }
 
 @media (max-width: 768px) {
-  .galeria_fotos .hero_proyect {
-    height: 30vh;
-  }
   .galeria_fotos .hero_proyect .hero_content {
     max-width: 90%;
   }
   .galeria_fotos .hero_proyect .hero_content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .galeria_fotos .hero_proyect .hero_content h2 {
     font-size: 0.9rem;
@@ -4260,10 +4250,10 @@ meter {
 
 @media (max-width: 768px) {
   .galeria_visuales {
-    font-size: 0.9rem;
+    width: 100%;
   }
   .galeria_visuales .hero_proyect .hero_content {
-    margin-top: 4rem;
+    margin-top: 50px;
     max-width: 90%;
   }
   .galeria_visuales .hero_proyect .hero_content #workId {
@@ -4273,16 +4263,15 @@ meter {
     font-size: 0.9rem;
   }
   .galeria_visuales #briefing {
-    width: 90%;
     padding: 2rem 1rem;
     margin-bottom: 3rem;
+    width: 90%;
     text-align: center;
   }
   .galeria_visuales #trabajos {
     padding-inline: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    font-size: 0.9rem;
   }
   .galeria_visuales #trabajos .trabajo_content {
     margin-bottom: 2rem;
@@ -4297,11 +4286,12 @@ meter {
   .galeria_visuales #trabajos .trabajo_content .explicacion {
     width: 100%;
   }
-  .galeria_visuales #trabajos .trabajo_content #svg_animacion_text {
+  .galeria_visuales #trabajos .trabajo_content .svg_content #svg_animacion_text {
+    width: 100%;
     gap: 0.5rem;
     flex-direction: column;
   }
-  .galeria_visuales #trabajos .trabajo_content #svg_animacion_text #flecha {
+  .galeria_visuales #trabajos .trabajo_content .svg_content #svg_animacion_text #flecha {
     display: none;
   }
   .galeria_visuales #trabajos .trabajo_content video {
@@ -4544,6 +4534,72 @@ meter {
   display: block;
 }
 
+#carrusel_render_airpods {
+  margin-bottom: 0;
+  padding: 0;
+}
+#carrusel_render_airpods .carrusel-wrapper {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+}
+#carrusel_render_airpods .carrusel-wrapper .prev,
+#carrusel_render_airpods .carrusel-wrapper .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  color: whitesmoke;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s;
+}
+#carrusel_render_airpods .carrusel-wrapper .prev:hover,
+#carrusel_render_airpods .carrusel-wrapper .next:hover {
+  color: rgb(255, 0, 119);
+}
+#carrusel_render_airpods .carrusel-wrapper .prev {
+  left: -3rem;
+}
+#carrusel_render_airpods .carrusel-wrapper .next {
+  right: -3rem;
+}
+#carrusel_render_airpods .carrusel-wrapper .carrusel-viewport {
+  width: 877px;
+  /* Ancho del contenedor de la imagen */
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+#carrusel_render_airpods .carrusel-wrapper .carrusel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+#carrusel_render_airpods .carrusel-wrapper .slide {
+  flex: 0 0 auto;
+  width: 877px;
+  /* Ancho del contenedor de la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#carrusel_render_airpods .carrusel-wrapper .slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* Asegura que la imagen no se deforme */
+  display: block;
+}
+
 .footer_galerias {
   margin: 0 auto;
   padding: 0 4rem 0;
@@ -4654,6 +4710,53 @@ meter {
     max-width: 100%;
   }
   #carrusel_render_escultura .carrusel-wrapper .slide img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  #carrusel_render_airpods .carrusel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  #carrusel_render_airpods .carrusel-wrapper .prev,
+  #carrusel_render_airpods .carrusel-wrapper .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    color: white;
+    z-index: 5;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  #carrusel_render_airpods .carrusel-wrapper .prev:hover,
+  #carrusel_render_airpods .carrusel-wrapper .next:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  #carrusel_render_airpods .carrusel-wrapper .prev {
+    left: 0.5rem;
+  }
+  #carrusel_render_airpods .carrusel-wrapper .next {
+    right: 0.5rem;
+  }
+  #carrusel_render_airpods .carrusel-wrapper .carrusel-viewport {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  #carrusel_render_airpods .carrusel-wrapper .carrusel-track {
+    width: 100%;
+  }
+  #carrusel_render_airpods .carrusel-wrapper .slide {
+    width: 100% !important;
+    max-width: 100%;
+  }
+  #carrusel_render_airpods .carrusel-wrapper .slide img {
     width: 100%;
     height: auto;
     -o-object-fit: contain;
@@ -5322,6 +5425,7 @@ meter {
 }
 
 * {
+  border: solid 1px salmon;
   font-family: "Sora";
   cursor: none !important;
   scroll-behavior: smooth;
@@ -5367,4 +5471,7 @@ body::-webkit-scrollbar {
   #cursor {
     display: none;
   }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
 }/*# sourceMappingURL=main.css.map */
