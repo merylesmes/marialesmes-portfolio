@@ -84,14 +84,15 @@
                         @include body_text; // Estilo de texto reutilizable
                     }
                 }
+
                 .categories {
-                width: 600px;
+                    width: 600px;
                     @include body_text;
                     color: whitesmoke;
                     font-weight: bold;
                 }
             }
-            
+
 
             .plus_info {
                 margin: 0 auto;
@@ -183,7 +184,7 @@
 
                     img {
                         @include imgs;
-                        width: 1200px;
+                        width: 1000px;
                     }
                 }
 
@@ -304,3 +305,148 @@
 // ==============================================================================
 // REUTILIZABLES (Estilos reutilizables como fuentes, iconos, etc.)
 // ==============================================================================
+
+@media (max-width: 768px) {
+    .proyect_patito {
+        padding-top: 50px;
+
+        // ============================
+        // SECCIÓN: HERO PROYECTO
+        // ============================
+        .hero_proyect {
+
+
+            .hero_content {
+                max-width: 90%;
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        // ============================
+        // SECCIÓN: INFORMACIÓN DEL PROYECTO
+        // ============================
+        .proyect_content_patito {
+            .info_proyect {
+                flex-direction: column;
+                width: 90%;
+                padding: 2rem 1rem;
+                gap: 2rem;
+                margin-bottom: 1rem;
+
+                .brief {
+                    max-width: 100%;
+
+                    .categories {
+                        width: 100%;
+                    }
+                }
+
+                .title {
+                    font-size: 1.5rem;
+                }
+
+                .plus_info {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1.5rem;
+                }
+            }
+
+            // ============================
+            // SECCIÓN: VIDEO
+            // ============================
+            #video_proyect {
+                video {
+                    width: 90%;
+                }
+            }
+
+            .referencias,
+            #contracubierta,
+            #carrusel {
+                padding: 0 2rem;
+                width: 100%;
+                margin-bottom: 4rem;
+            }
+
+            // ============================
+            // SECCIÓN: CONTRACUBIERTA
+            // ============================
+            #contracubierta {
+                #contenedor_cubiertas {
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    #imagenes_cubiertas {
+                        flex-direction: column;
+                        gap: 1rem;
+
+                        img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+
+                    #cubierta_content {
+                        width: 100%;
+                    }
+                }
+            }
+
+            // ============================
+            // SECCIÓN: CARRUSEL
+            // ============================
+            #carrusel {
+                padding: 0 2rem;
+
+                .carrusel-wrapper {
+                    width: 100%;
+
+                    .prev,
+                    .next {
+                        top: 50%;
+                        font-size: 2rem;
+                        padding: 0.5rem;
+                        border-radius: 50%;
+
+                        &:hover {
+                            background: rgba(0, 0, 0, 0.6);
+                        }
+                    }
+
+                    .prev {
+                        left: 0.5rem;
+                    }
+
+                    .next {
+                        right: 0.5rem;
+                    }
+
+                    .carrusel-viewport,
+                    .slide,
+                    .slide img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+
+            // ============================
+            // SECCIÓN: PROGRAMAS
+            // ============================
+            .programas {
+                padding: 2rem 1rem;
+                text-align: center;
+            }
+        }
+    }
+}

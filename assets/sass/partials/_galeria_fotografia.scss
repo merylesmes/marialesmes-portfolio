@@ -67,45 +67,74 @@
         .trabajo_content {
             margin-bottom: 5rem;
             width: 100%;
+
             .title {
                 @include titulo_portfolio;
                 font-size: 1.75rem;
                 color: black;
                 margin-bottom: 1rem;
             }
+
             .explicacion {
                 @include body_text;
                 color: #6A6A6A;
                 margin-bottom: 2rem;
                 width: 800px;
             }
-            #triple_foto{
+
+            #triple_foto {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 2rem;
             }
-            img{
+
+            img {
                 margin-bottom: 2rem;
             }
         }
     }
-    // =======================================================================
-    // SECCIÓN: PROGRAMAS (sección para mostrar programas o habilidades)
-    // =======================================================================
-    
+
+}
+
+// =======================================================================
+// SECCIÓN: FOOTER DE GALERÍAS
+// =======================================================================
+.footer_galerias {
+    margin: 0 auto;
+    padding: 0 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .arrow_left {
+        display: flex;
+        gap: 1rem;
+
+        .text,
+        .arrow {
+            color: $color_rosa;
+            transition: color 0.3s ease;
+        }
+
+        &:hover {
+
+            .text,
+            .arrow {
+                color: $color_gray;
+            }
+        }
+    }
+
     .programas {
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         gap: 1rem;
+        align-items: center;
         padding-bottom: 3rem;
-
 
         .title {
             @include programas_title;
-            color: $color_marron;
+            color: #6A6A6A;
         }
 
         .programas_icon {
@@ -113,6 +142,28 @@
         }
     }
 
+    .arrow_right {
+        display: flex;
+        gap: 1rem;
+
+        .text,
+        .arrow {
+            color: $color_rosa;
+            transition: color 0.3s ease;
+        }
+
+        &:hover {
+
+            .text,
+            .arrow {
+                color: $color_gray;
+            }
+        }
+    }
+}
+
+.footer_galerias-footer {
+    display: none; // Por defecto oculto (desktop)
 }
 
 
@@ -141,37 +192,198 @@
             padding: 2rem 1rem;
         }
 
-        #imagenes {
+        #trabajos {
             padding-inline: 1rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
 
-            .imagenes_altas,
-            .fotos-de-tres,
-            .imagenes_pequenas {
-                grid-template-columns: 1fr;
-                width: 100%;
+            .trabajo_content {
+                .title {
+                    font-size: 1.5rem;
+                }
+
+                .explicacion {
+                    width: 100%;
+                }
+
+                #triple_foto {
+                    flex-direction: column;
+
+                    img {
+                        width: 100%;
+                        margin-bottom: 1rem;
+                    }
+                }
             }
         }
 
-        .programas {
-            width: 100%;
-            padding: 1.5rem 0 2rem;
-            margin-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, .12);
-            border-bottom: 1px solid rgba(255, 255, 255, .12);
-            text-align: center;
-            gap: 1rem;
+        .footer_galerias {
+            display: none;
+        }
 
-            .title {
-                font-size: 1rem;
-            }
+        .footer_galerias_movil {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem 2rem;
 
-            .programas_icon {
-                display: flex;
-                justify-content: center;
+            .programas {
+                width: 100%;
+                padding: 1.5rem 0 2rem;
+                margin-top: 1rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.12);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+                text-align: center;
                 gap: 1rem;
 
+                .title {
+                    @include programas_title;
+                    color: #6A6A6A;
+                    margin-bottom: 1rem;
+                }
+
+                .programas_icon {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+
+            .flechas {
+                display: flex;
+                justify-content: space-between;
+                gap: 0.25rem;
+                margin-top: 1.5rem;
+                color: $color_rosa;
+
+                .arrow_left,
+                .arrow_right {
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .galeria_fotos {
+        .hero_proyect {
+            // height: 30vh;
+
+            .hero_content {
+                margin-top: 4rem;
+                max-width: 90%;
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                h2 {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        #briefing {
+            width: 90%;
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-bottom: 3rem;
+
+
+        }
+
+        #trabajos {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            font-size: .9rem;
+
+
+            .trabajo_content {
+                margin-bottom: 2rem;
+
                 img {
-                    width: 30px;
+                    width: 100%;
+                    margin-bottom: .7rem; // margen entre todas las imágenes dentro de trabajo_content
+                }
+
+                .title {
+                    font-size: 1.5rem;
+                }
+
+                .explicacion {
+                    width: 100%;
+                }
+
+                #triple_foto {
+                    display: block;
+
+                    img {
+                        width: 100%;
+                        // margin-bottom: 0.2rem;
+                    }
+                }
+            }
+        }
+
+        .footer_galerias {
+            display: none;
+        }
+
+        .footer_galerias_movil {
+            display: block;
+            flex-direction: column;
+            // align-items: center;
+            gap: 2rem;
+            padding: 2rem 2rem;
+
+
+
+            .programas {
+                width: 100%;
+                padding: 1.5rem 0 2rem;
+                margin-top: 1rem;
+                border-top: 1px solid rgba(255, 255, 255, .12);
+                border-bottom: 1px solid rgba(255, 255, 255, .12);
+                text-align: center;
+                gap: 1rem;
+
+                .title {
+                    @include programas_title;
+                    color: #6A6A6A;
+                    margin-bottom: 1rem;
+                }
+
+
+                .programas_icon {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+
+            .flechas {
+                display: flex;
+                justify-content: space-between;
+                gap: .25rem;
+                margin-top: 1.5rem;
+                color: $color_rosa;
+
+                .arrow_left,
+                .arrow_right {
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: space-between;
                 }
             }
         }

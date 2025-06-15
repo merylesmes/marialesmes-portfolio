@@ -43,58 +43,58 @@
     }
 
     // =======================================================================
-        // SECCIÓN: MENU NAV
-        // =======================================================================
-        .submenu-trabajo {
-            position: sticky;
-            top: 49px; // Altura de tu header (ajústalo si es más alto)
-            background-color: #313B4C;
-            width: 100%;
-            z-index: 10;
-            padding: 10px 0;
-            margin-top: 0;
-            border-bottom: 1px solid $color_azul_steam;
-            border-top: 1px solid $color_azul_steam;
+    // SECCIÓN: MENU NAV
+    // =======================================================================
+    .submenu-trabajo {
+        position: sticky;
+        top: 50px; // Altura de tu header (ajústalo si es más alto)
+        background-color: #313B4C;
+        width: 100%;
+        z-index: 10;
+        padding: 10px 0;
+        margin-top: 0;
+        border-bottom: 1px solid $color_azul_steam;
+        border-top: 1px solid $color_azul_steam;
 
-            ul {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                list-style: none;
-                margin: 0;
-                padding: 0;
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
 
-                li {
-                    margin: 0 20px;
-                    font-size: 0.75rem;
+            li {
+                margin: 0 20px;
+                font-size: 0.75rem;
 
-                    a {
-                        color: $color_gray;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
+                a {
+                    color: $color_gray;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
 
-                        &:hover {
-                            color: $color_azul_steam;
-                        }
+                    &:hover {
+                        color: $color_azul_steam;
                     }
                 }
             }
         }
+    }
 
-        #filosofia,
-        #tipografia,
-        #paleta,
-        #logotipo,
-        #isotipo,
-        #hi-fi {
-            scroll-margin-top: 100px; // ajusta según la suma del alto de tu nav + submenú
-        }
+    #filosofia,
+    #tipografia,
+    #paleta,
+    #logotipo,
+    #isotipo,
+    #hi-fi {
+        scroll-margin-top: 100px; // ajusta según la suma del alto de tu nav + submenú
+    }
 
     // =======================================================================
     // SECCIÓN: INFORMACIÓN DEL PROYECTO
     // =======================================================================
     .proyect_content_steam {
-        
+
         .info_proyect {
             margin: 0 auto;
             display: flex;
@@ -192,7 +192,7 @@
 
 
 
-        
+
 
 
 
@@ -204,9 +204,11 @@
             justify-content: center;
             margin-bottom: 12rem;
         }
-        #filosofia{
+
+        #filosofia {
             margin-top: 7rem;
-            img{
+
+            img {
                 width: 800px;
             }
         }
@@ -215,16 +217,18 @@
         // =======================================================================
         // SECCIÓN: TIPOGRAFIA
         // =======================================================================
-        #tipografia{
-            #img1{
+        #tipografia {
+            #img1 {
                 width: 1200px;
                 margin-bottom: 10rem;
             }
-            #img2{
-                width:600px;
+
+            #img2 {
+                width: 600px;
             }
         }
-        .imagen_centrada_columnas{
+
+        .imagen_centrada_columnas {
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -234,9 +238,10 @@
         // =======================================================================
         // SECCIÓN: PALETA
         // =======================================================================
-        #paleta{
+        #paleta {
             width: 100%;
-            img{
+
+            img {
                 width: 100%;
                 height: auto;
                 display: block;
@@ -246,16 +251,19 @@
         // =======================================================================
         // SECCIÓN: LOGOTIPO
         // =======================================================================
-        #logotipo{
+        #logotipo {
             margin-bottom: 10rem;
-            img{
+
+            img {
                 width: 1000px;
             }
-            #img_margin{
+
+            #img_margin {
                 margin-top: 1rem;
                 margin-bottom: 12rem;
             }
-            #referencias{
+
+            #referencias {
                 margin-top: 10rem;
                 margin-bottom: 7rem;
             }
@@ -264,12 +272,14 @@
         // =======================================================================
         // SECCIÓN: ISOTIPO
         // =======================================================================
-        #isotipo{
+        #isotipo {
             margin-bottom: 10rem;
-            img{
+
+            img {
                 margin-bottom: 3rem;
             }
-            #errores{
+
+            #errores {
                 margin-top: 7rem;
             }
         }
@@ -278,11 +288,11 @@
         // =======================================================================
         // SECCIÓN: ISOTIPO
         // =======================================================================
-        #hi-fi{
-            img{
+        #hi-fi {
+            img {
                 margin-bottom: 7rem;
             }
-            
+
         }
 
 
@@ -306,6 +316,186 @@
 
             .programas_icon {
                 @include icons_programa;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #proyect_steam {
+        padding-top: 50px;
+
+        .hero_proyect {
+            background-position: center right;
+
+
+            .hero_content {
+                max-width: 90%;
+
+                img {
+                    width: 90%;
+
+                }
+
+                h2 {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        .submenu-trabajo {
+            ul {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                text-align: center;
+                justify-content: center;
+
+                li {
+                    margin: 0 15px;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        .proyect_content_steam {
+            .info_proyect {
+                flex-direction: column;
+                width: 90%;
+                padding: 2rem 1rem;
+                gap: .5rem;
+
+                margin-bottom: 2rem;
+
+                .brief {
+                    max-width: 100%;
+
+                    .info_brief {
+                        #briefing_title {}
+
+                        .categories {
+                            width: 100%;
+                            flex-direction: column;
+                            align-items: start;
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+
+                .plus_info {
+                    width: 100%;
+                }
+            }
+
+            .seccion_inicio {
+                padding: 0 2rem;
+                width: 100%;
+                margin-bottom: 4rem;
+
+                .content_text {}
+            }
+
+            #video_proyect {
+                margin-bottom: 2rem;
+video{
+width: 90%;}            }
+
+            // Centrado general de imágenes
+
+            #tipografia,
+            #logotipo,
+            #isotipo,
+            #hi-fi {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 90%;
+
+                img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .imagen_centrada {
+                margin: 0 auto;
+                width: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #filosofia {
+                margin-bottom: 4rem;
+                margin-top: 2rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+
+
+            #tipografia {
+                #img1 {
+                    width: 100%;
+                    margin-bottom: 3rem;
+                }
+
+                #img2 {
+                    width: 100%;
+                }
+            }
+
+            #logotipo {
+                margin-bottom: 3rem;
+
+                img {
+                    width: 100%;
+                }
+
+                #img_margin {
+                    margin-top: 1rem;
+                    margin-bottom: 3rem;
+                }
+
+                #referencias {
+                    margin-top: 4rem;
+                    margin-bottom: 3rem;
+                }
+            }
+
+            #paleta {
+                margin-bottom: 1rem;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            #isotipo {
+                margin-bottom: 0.1rem;
+
+                img {}
+
+                #errores {
+                    margin-top: 3rem;
+                }
+            }
+
+            #hi-fi {
+                img {
+                    margin-bottom: 3rem;
+                }
+            }
+
+            .programas_steam {
+                padding: 0 1rem 4rem;
             }
         }
     }
