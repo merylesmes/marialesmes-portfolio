@@ -5126,7 +5126,7 @@ meter {
 
 @media (max-width: 768px) {
   #proyect_reloj_percepcion {
-    padding-top: 50px;
+    padding-top: 70px;
   }
   #proyect_reloj_percepcion .hero_proyect .hero_content {
     max-width: 90%;
@@ -5425,7 +5425,6 @@ meter {
 }
 
 * {
-  border: solid 1px salmon;
   font-family: "Sora";
   cursor: none !important;
   scroll-behavior: smooth;
