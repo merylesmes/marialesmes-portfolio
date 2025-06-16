@@ -324,3 +324,32 @@ window.addEventListener('DOMContentLoaded', () => {
     const clasesAExcluir = ['container_footer', 'modal_windows'];
     agregarSaltoLineaVisual(document.body, clasesAExcluir);
 });
+
+
+
+/**************************************************************************************
+ * *****************   resize imagenes a 72ppp**************
+ * ******************************************************* *******************************************************/
+function resizeImage(imgElement, maxWidth, maxHeight, quality = 0.7) {
+    const canvas = document.createElement('canvas');
+    let width = imgElement.naturalWidth;
+    let height = imgElement.naturalHeight;
+
+    if (width > maxWidth) {
+        height = Math.round((height * maxWidth) / width);
+        width = maxWidth;
+    }
+    if (height > maxHeight) {
+        width = Math.round((width * maxHeight) / height);
+        height = maxHeight;
+    }
+
+    canvas.width = width;
+    canvas.height = height;
+
+    const ctx = canvas.getContext('2d');
+    ctx.drawImage(imgElement, 0, 0, width, height);
+
+    return canvas.toDataURL('image/jpeg', quality); // devuelve imagen comprimida en base64
+}
+
