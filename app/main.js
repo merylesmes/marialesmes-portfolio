@@ -125,59 +125,42 @@ document.addEventListener("mouseout", () => {
 
 
 // CARRUSEL ///////////////////////////////////////////////////////////////////////////////
-
 document.addEventListener('DOMContentLoaded', () => {
-    const track = document.querySelector('.carrusel-track');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    const slides = document.querySelectorAll('.slide');
+    const carruseles = document.querySelectorAll('.carrusel-wrapper');
 
-    let currentIndex = 0;
+    carruseles.forEach(wrapper => {
+        const track = wrapper.querySelector('.carrusel-track');
+        const prevButton = wrapper.querySelector('.prev');
+        const nextButton = wrapper.querySelector('.next');
+        const slides = wrapper.querySelectorAll('.slide');
 
-    // Determinamos el slideWidth dependiendo de la página
-    const slideWidth = slides[0].offsetWidth;
+        let currentIndex = 0;
+        let slideWidth = slides[0]?.offsetWidth || 0;
 
-    function updateCarrusel() {
-        const offset = -currentIndex * slideWidth;
-        track.style.transform = `translateX(${offset}px)`;
-    }
-
-    function goToPrevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        updateCarrusel();
-    }
-
-    function goToNextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        updateCarrusel();
-    }
-
-    // Botones
-    prevButton.addEventListener('click', goToPrevSlide);
-    nextButton.addEventListener('click', goToNextSlide);
-
-    // Teclado
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') {
-            goToPrevSlide();
-        } else if (e.key === 'ArrowRight') {
-            goToNextSlide();
+        function updateCarrusel() {
+            const offset = -currentIndex * slideWidth;
+            track.style.transform = `translateX(${offset}px)`;
         }
-    });
 
-    // Si las imágenes cambian de tamaño dinámicamente o si la ventana cambia de tamaño, recalculamos el slideWidth
-    window.addEventListener('resize', () => {
-        if (document.body.classList.contains('pagina-877px')) {
-            slideWidth = 877;
-        } else if (document.body.classList.contains('pagina-964px')) {
-            slideWidth = 964;
-        } else {
-            slideWidth = slides[0].offsetWidth;
+        function goToPrevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarrusel();
         }
-        updateCarrusel();
+
+        function goToNextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarrusel();
+        }
+
+        prevButton?.addEventListener('click', goToPrevSlide);
+        nextButton?.addEventListener('click', goToNextSlide);
+
+        window.addEventListener('resize', () => {
+            slideWidth = slides[0]?.offsetWidth || 0;
+            updateCarrusel();
+        });
     });
 });
-
 
 
 // Mostrar la flecha cuando el usuario haga scroll hacia abajo

@@ -187,9 +187,15 @@
                 color: whitesmoke;
             }
         }
-        #reloj_percepcion{
+
+        #reloj_percepcion {
             background-image: url('/assets/img/reloj_percepcion/hero.png');
-            &:hover{
+
+            .left {
+                max-width: 700px // aquí cambias el max-width SOLO para #reloj_percepcion .left
+            }
+
+            &:hover {
                 color: whitesmoke;
             }
         }
@@ -319,6 +325,7 @@
             gap: 1.5rem;
             justify-content: center;
 
+
             a {
                 text-decoration: none;
             }
@@ -329,11 +336,14 @@
                 display: flex;
                 align-items: flex-start;
                 justify-content: center;
+                height: 445px; // altura fija para el contenedor
+                border-radius: 1rem;
+                box-sizing: border-box;
 
                 img {
                     width: 400px;
-                    height: 100%;
-                    object-fit: cover;
+                    height: 445px; // que tome toda la altura del contenedor
+                    object-fit: cover; // se amplía y recorta si es necesario
                     transition: filter 0.3s ease;
                     display: block;
                 }
@@ -362,7 +372,7 @@
 
                 &:hover {
                     border: 1px solid $color_rosa;
-                    border-radius: 24px;
+                    border-radius: 1rem;
 
                     img {
                         filter: brightness(0) invert(1); // Blanco
@@ -392,7 +402,7 @@
         justify-content: center;
         align-items: center;
     }
-    
+
     .modal_window {
         background-color: white;
         padding: 20px;
@@ -401,17 +411,17 @@
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    
+
     .modal_window_header {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    
+
     .modal_window_body {
         margin-top: 10px;
     }
-    
+
     .close_icon {
         cursor: pointer;
         font-size: 24px;
@@ -453,10 +463,10 @@
                 height: 200px;
                 padding: 1rem;
                 text-align: center;
-                background-size: cover;  // Cambia a 'contain' para que la imagen se ajuste dentro del contenedor
-                background-position: center;  // Mantén la imagen centrada
-                height: 200px;  // Ajusta la altura a 200px en pantallas móviles
-                
+                background-size: cover; // Cambia a 'contain' para que la imagen se ajuste dentro del contenedor
+                background-position: center; // Mantén la imagen centrada
+                height: 200px; // Ajusta la altura a 200px en pantallas móviles
+
             }
 
             .right,
@@ -474,36 +484,40 @@
             margin: 2rem 0;
             display: flex;
             flex-direction: column;
-            align-items: center; 
-            
-        
+            align-items: center;
+
+
             .galeria_titulo {
                 font-size: 3rem;
-                text-align: center; 
+                text-align: center;
             }
-        
+
             .galeria_fotos_content {
-                gap: 1rem;                 
-                width: 75%;                  
-        
+                gap: 1rem;
+                width: 75%;
+
                 .foto_hover {
-                    width: 100%;            
-                    max-width: 400px;      
-        
+                    width: 100%;
+                    max-width: 400px;
+                    height: 230px;//ome toda la altura del contenedor
+
+
                     img {
-                        width: 100%;        
-                        object-fit: cover;  
-                        border-radius: 8px; 
+                    height:230px;//que tome toda la altura del contenedor
+
+                        width: 100%;
+                        object-fit: cover;
+                        border-radius: 8px;
                     }
-        
+
                     .texto_hover {
                         padding: 2rem;
                         text-align: center;
-        
+
                         h3 {
                             font-size: 2rem;
                         }
-        
+
                         p {
                             font-size: 1rem;
                         }
@@ -511,6 +525,6 @@
                 }
             }
         }
-        
+
     }
 }
